@@ -91,7 +91,9 @@ The current corpus emphasizes:
 | AI Agents | Tool use, computer use, memory, orchestration, multi-agent workflows, autonomy, and agent evaluation. |
 | Efficient AI | Optimization, systems, inference, training efficiency, compression, kernels, and hardware-aware methods. |
 | Trustworthy AI | Safety, alignment, interpretability, robustness, monitoring, auditing, governance, and risk evaluation. |
-| Research Craft | Evaluation methodology, research taste, scientific process, writing, adjudication, and field-building. |
+| Research Craft | Evaluation methodology, benchmark design, statistical rigor, reproducibility standards, and field-building. |
+| Frontier | Critical analysis of frontier model releases, open-weight ecosystem shifts, lab technical roadmaps, and deployment-facing capability assessment. |
+| How to Research | First-person research practice: paper writing, experiment habits, research code, reproduction studies, and reflections on advising and scientific careers. |
 
 ## Editorial Standard
 
@@ -103,7 +105,7 @@ BlogrXiv prioritizes posts that satisfy at least one of the following criteria:
 - They synthesize a research area with clear references, diagrams, examples, or careful argumentation.
 - They surface important perspectives from academic groups, independent researchers, research labs, engineering teams, and technical communities.
 
-The index deliberately excludes low-information summaries, shallow announcements, purely promotional writing, and paper-only listings that do not add independent technical insight.
+The index deliberately excludes lab homepages, GitHub organization indexes, product landing pages, shallow announcements, purely promotional writing, and paper-only pages that do not add independent technical narrative.
 
 ## Selection Protocol
 
