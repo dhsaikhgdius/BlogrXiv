@@ -501,6 +501,67 @@ h6 {
     line-height: 1.6;
 }
 
+.taxonomy-panel {
+    margin: 0 0 2.75rem;
+    padding: 1.7rem 1.85rem 1.45rem;
+    border: 1px solid var(--page-rule);
+    background: color-mix(in srgb, var(--page-paper-deep) 78%, transparent);
+}
+
+.taxonomy-panel-kicker {
+    margin: 0 0 0.35rem;
+    color: var(--page-accent);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.taxonomy-panel h2 {
+    margin: 0 0 0.7rem;
+    font-family: var(--page-serif);
+    font-size: 1.55rem;
+    font-weight: 600;
+}
+
+.taxonomy-panel > p {
+    max-width: 74ch;
+    margin: 0 0 1.2rem;
+    color: var(--page-muted);
+    line-height: 1.65;
+}
+
+.taxonomy-rule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.95rem 1.35rem;
+}
+
+.taxonomy-rule {
+    margin: 0;
+}
+
+.taxonomy-rule dt {
+    margin: 0 0 0.22rem;
+    font-size: 0.94rem;
+    font-weight: 600;
+}
+
+.taxonomy-rule dd {
+    margin: 0;
+    color: var(--page-muted);
+    font-size: 0.84rem;
+    line-height: 1.55;
+}
+
+.category-boundary {
+    margin: -0.35rem 0 1rem;
+    color: var(--page-muted);
+    font-size: 0.78rem;
+    line-height: 1.5;
+    max-width: 46ch;
+}
+
 .category-tags .tag,
 .blog-tags .tag,
 .author-card .tag {

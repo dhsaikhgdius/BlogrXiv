@@ -83,19 +83,19 @@ The corpus is organized into eleven categories:
 
 | Category | Scope |
 | --- | --- |
-| Foundation Model | Pretraining, model architecture, data mixtures and curation, scaling behavior, open training artifacts, and representation learning. |
-| LLM & MLLM | Language and multimodal language models as systems: reasoning, instruction tuning and post-training, retrieval-augmented generation, tool integration, hallucination, and evaluation. |
-| Multimodal Model | Vision-language and audio-language modeling, OCR and document understanding, grounding, and unified multimodal architectures. |
-| Visual Generation | Diffusion and flow matching, image, video, and 3D synthesis, controllability, editing, and the evaluation of generative output. |
-| World Model | Learned simulators, video world models, robotics and vision-language-action systems, spatial reasoning, and model-based planning. |
-| AI Agents | Tool use, memory, agent harnesses, computer use, multi-agent coordination, and agent evaluation. |
-| Efficient AI | Inference and training systems, kernels, quantization, compression, parallelism, serving, and hardware-aware method design. |
-| Trustworthy AI | Alignment, interpretability, robustness, red teaming, monitoring, governance, and risk evaluation. |
-| Research Craft | Evaluation methodology, experiment design, LLM-as-judge practice, research taste, scientific process, and field-building. |
-| Frontier | Lab and model capability shifts, open-weight ecosystem movement, compute and energy trend reports, and the geopolitically relevant research landscape — not every model or product launch. |
-| How to Research | Research-experience writing: paper writing, advising and apprenticeship, research-taste exercises, reproducibility habits, and scientific workflow reflections. |
+| Foundation Model | Pretraining, datasets, architecture, scaling, training dynamics, and open-weight recipes. Not model-launch marketing pages. |
+| LLM & MLLM | Language and multimodal language-model behavior: reasoning, mixture-of-experts, retrieval, instruction tuning, and post-training. |
+| Multimodal Model | Vision-language, audio-language, grounding, and fused perception. Not pure image or video generators. |
+| Visual Generation | Diffusion, flow matching, latent modeling, controllability, and image or video synthesis systems. |
+| World Model | Learned simulators, robotics/VLA, dynamics, spatial representations, and model-based planning. |
+| AI Agents | Tool use, harnesses, memory, multi-agent workflows, computer use, and agent evaluation. |
+| Efficient AI | Kernels, parallelism, quantization, speculative decoding, and training or inference systems. |
+| Trustworthy AI | Safety, alignment, interpretability, control evaluations, security, monitoring, and risk evaluation. |
+| Research Craft | Evaluation methodology, experiment design, data analysis, LLM-as-judge, and reproducibility as scientific practice. |
+| Frontier | Individual frontier reports and technically substantive capability, compute, or power essays. Not lab homepages or news indexes. |
+| How to Research | Advising, research taste, reading, writing, talks, and PhD practice. Adjacent to, but distinct from, Research Craft. |
 
-Categories are mutually preferring rather than mutually exclusive: a post that could sit on several shelves is filed under the category a browsing reader is most likely to try first. Two boundaries are held deliberately. Frontier tracks capability and ecosystem movement rather than release announcements, and How to Research collects research-experience writing while Research Craft covers the methods, evaluations, and engineering of research itself. Per-category scope and boundary notes are maintained on `site/categories.html`.
+Categories are mutually preferring rather than mutually exclusive: a post that could sit on several shelves is filed under the category a browsing reader is most likely to try first. Per-category scope and boundary notes are maintained on `site/categories.html`.
 
 ## Editorial Standard
 
