@@ -123,7 +123,7 @@ class CategoriesPage {
         }
         
         // Search functionality
-        const searchInput = document.getElementById('searchInput');
+        const searchInput = document.getElementById('categorySearchInput');
         if (searchInput) {
             searchInput.addEventListener('input', (e) => this.handleSearch(e.target.value));
         }
