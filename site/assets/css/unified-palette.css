@@ -316,39 +316,142 @@ body,
     color: var(--unified-on-accent);
 }
 
+/* Taxonomy page: classification notes panel above the category grid. */
+.categories-page .taxonomy-intro {
+    margin: 0 0 42px;
+    padding: 26px 28px;
+    border: 1px solid var(--unified-border);
+    border-left: 3px solid var(--unified-accent);
+    border-radius: 8px;
+    background: var(--unified-surface);
+    box-shadow: var(--unified-shadow-sm), var(--unified-shadow-inset);
+}
+
+.categories-page .taxonomy-intro-title {
+    margin: 0 0 16px;
+    color: var(--unified-text);
+    font-family: var(--page-serif);
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.categories-page .taxonomy-notes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 32px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.categories-page .taxonomy-notes li {
+    position: relative;
+    padding-left: 20px;
+    color: var(--unified-muted);
+    font-family: var(--page-serif);
+    font-size: 0.95rem;
+    line-height: 1.62;
+}
+
+.categories-page .taxonomy-notes li::before {
+    content: "\00a7";
+    position: absolute;
+    left: 0;
+    color: var(--unified-accent);
+    font-family: var(--page-serif);
+}
+
+.categories-page .taxonomy-notes li strong {
+    color: var(--unified-text);
+}
+
 /* Categories page: softer topic chips and a readable low-emphasis action. */
+.categories-page .categories-section .categories-grid {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    align-items: stretch;
+}
+
 .categories-page .categories-section .category-card {
-    min-height: 440px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    padding: 28px 28px 26px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.categories-page .categories-section .category-head {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    padding: 30px 28px 26px;
-    border-radius: 8px;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 18px;
 }
 
 .categories-page .categories-section .category-icon {
-    margin-bottom: 22px;
+    margin-bottom: 0;
+    flex: 0 0 auto;
     border-color: var(--unified-border);
     border-radius: 8px;
     background: color-mix(in srgb, var(--unified-accent-soft) 58%, transparent);
 }
 
 .categories-page .categories-section .category-title {
-    margin-bottom: 10px;
+    margin-bottom: 4px;
+}
+
+.categories-page .categories-section .category-count {
+    margin: 0;
+    color: var(--unified-muted);
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.categories-page .categories-section .category-count:empty {
+    display: none;
 }
 
 .categories-page .categories-section .category-description {
-    min-height: 3.2em;
-    max-width: 34ch;
-    margin-bottom: 20px;
+    width: 100%;
+    max-width: none;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+}
+
+.categories-page .categories-section .category-boundary {
+    width: 100%;
+    margin: 0 0 18px;
+    padding: 10px 14px;
+    border-left: 2px solid color-mix(in srgb, var(--unified-accent) 45%, transparent);
+    border-radius: 0 6px 6px 0;
+    background: color-mix(in srgb, var(--unified-accent-soft) 45%, transparent);
+    color: var(--unified-muted);
+    font-family: var(--page-serif);
+    font-size: 0.88rem;
+    line-height: 1.55;
+}
+
+.categories-page .categories-section .category-boundary-label {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--unified-accent);
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .categories-page .categories-section .category-tags {
-    min-height: 64px;
+    min-height: 0;
     display: flex;
+    flex-wrap: wrap;
     align-content: flex-start;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 7px;
     width: 100%;
     margin: 0 0 22px;
@@ -423,6 +526,20 @@ body,
     border-color: color-mix(in srgb, var(--unified-accent) 25%, transparent);
     background: color-mix(in srgb, var(--unified-accent-soft) 72%, transparent);
     color: var(--unified-accent);
+}
+
+@media (max-width: 768px) {
+    .categories-page .taxonomy-intro {
+        padding: 22px 20px;
+    }
+
+    .categories-page .taxonomy-notes {
+        grid-template-columns: 1fr;
+    }
+
+    .categories-page .categories-section .categories-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {

@@ -11,7 +11,7 @@
 <p align="center">
   <img src="https://img.shields.io/github/stars/OpenEnvision/BlogXiv?style=flat-square" alt="GitHub Stars">
   <img alt="Editorial Curation" src="https://img.shields.io/badge/curation-editorial-6f42c1">
-  <img src="https://img.shields.io/badge/Last_Update-2026_07-2563eb?style=flat-square" alt="Last Updated">
+  <img src="https://img.shields.io/badge/Last_Update-2026_08-2563eb?style=flat-square" alt="Last Updated">
   <img alt="Maintained by OpenEnvision" src="https://img.shields.io/badge/maintainer-OpenEnvision-0f4c81">
 </p>
 
@@ -79,19 +79,23 @@ BlogrXiv is not:
 
 BlogrXiv indexes technical blog posts, research notes, lab essays, conference blog-track articles, and engineering write-ups that make a substantive contribution to AI research understanding.
 
-The current corpus emphasizes:
+The corpus is organized into eleven categories:
 
 | Category | Scope |
 | --- | --- |
-| Foundation Model | Pretraining, scaling behavior, representation learning, model architecture, and emergent capability analysis. |
-| LLM & MLLM | Language models, multimodal language models, reasoning, instruction tuning, evaluation, and post-training behavior. |
-| Multimodal Model | Vision-language systems, video-language systems, perception, grounding, and embodied understanding. |
-| Visual Generation | Diffusion, image and video generation, controllability, generative evaluation, and media synthesis systems. |
-| World Model | Learned simulators, planning representations, dynamics models, spatial reasoning, and embodied AI. |
-| AI Agents | Tool use, computer use, memory, orchestration, multi-agent workflows, autonomy, and agent evaluation. |
-| Efficient AI | Optimization, systems, inference, training efficiency, compression, kernels, and hardware-aware methods. |
-| Trustworthy AI | Safety, alignment, interpretability, robustness, monitoring, auditing, governance, and risk evaluation. |
-| Research Craft | Evaluation methodology, research taste, scientific process, writing, adjudication, and field-building. |
+| Foundation Model | Pretraining, model architecture, data mixtures and curation, scaling behavior, open training artifacts, and representation learning. |
+| LLM & MLLM | Language and multimodal language models as systems: reasoning, instruction tuning and post-training, retrieval-augmented generation, tool integration, hallucination, and evaluation. |
+| Multimodal Model | Vision-language and audio-language modeling, OCR and document understanding, grounding, and unified multimodal architectures. |
+| Visual Generation | Diffusion and flow matching, image, video, and 3D synthesis, controllability, editing, and the evaluation of generative output. |
+| World Model | Learned simulators, video world models, robotics and vision-language-action systems, spatial reasoning, and model-based planning. |
+| AI Agents | Tool use, memory, agent harnesses, computer use, multi-agent coordination, and agent evaluation. |
+| Efficient AI | Inference and training systems, kernels, quantization, compression, parallelism, serving, and hardware-aware method design. |
+| Trustworthy AI | Alignment, interpretability, robustness, red teaming, monitoring, governance, and risk evaluation. |
+| Research Craft | Evaluation methodology, experiment design, LLM-as-judge practice, research taste, scientific process, and field-building. |
+| Frontier | Lab and model capability shifts, open-weight ecosystem movement, compute and energy trend reports, and the geopolitically relevant research landscape — not every model or product launch. |
+| How to Research | Research-experience writing: paper writing, advising and apprenticeship, research-taste exercises, reproducibility habits, and scientific workflow reflections. |
+
+Categories are mutually preferring rather than mutually exclusive: a post that could sit on several shelves is filed under the category a browsing reader is most likely to try first. Two boundaries are held deliberately. Frontier tracks capability and ecosystem movement rather than release announcements, and How to Research collects research-experience writing while Research Craft covers the methods, evaluations, and engineering of research itself. Per-category scope and boundary notes are maintained on `site/categories.html`.
 
 ## Editorial Standard
 
