@@ -47,8 +47,8 @@
 
 ## Visual Generation
 
-- [ ] **A+** · [Generative Modelling in Latent Space](https://sander.ai/2025/04/15/latents.html) — Sander Dieleman · 2025-04-15。系统分析 latent 容量、可建模性、重建、shaping 与端到端路线；是高质量综述而非单一新实验。
-- [ ] **A** · [MiniMax Design](https://design.minimax.io/) — MiniMax Design · 2026-08-24。以 design 语义、版式和创意迭代为核心的产品页，偏视觉生成与设计工作流展示。
+- [x] **A+** · [Generative Modelling in Latent Space](https://sander.ai/2025/04/15/latents.html) — Sander Dieleman · 2025-04-15。系统分析 latent 容量、可建模性、重建、shaping 与端到端路线；是高质量综述而非单一新实验。
+- [x] **A** · [MiniMax Design](https://design.minimax.io/) — MiniMax Design · 2026-08-24。以 design 语义、版式和创意迭代为核心的产品页，偏视觉生成与设计工作流展示。
 
 - [x] **A** · [Perspectives on Diffusion: Noise Schedules](https://sander.ai/2024/06/14/noise-schedules.html) — Sander Dieleman
 - [x] **A** · [The Diffusion Model Paradox](https://sander.ai/2024/02/28/paradox.html) — Sander Dieleman
@@ -56,14 +56,14 @@
 - [x] **A** · [Introducing Muse Image and Muse Video](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) — Meta AI · 2026-07-07
 - [x] **A** · [Why Video Generation Is an Infrastructure Problem](https://research.nvidia.com/labs/eai/blogs/video-gen-is-an-infra-problem/) — NVIDIA Research · 2026-05-26
 - [x] **A** · [Diffusion Meets Flow Matching: Two Sides of the Same Coin](https://diffusionflow.github.io/) — **独立交互式技术教程**。用统一参数化解释 Gaussian flow matching 与 diffusion 的等价关系，包含训练、采样、ODE / SDE 和调度器；页面无论文、arXiv 或 publication 链接。
-- [ ] **A+** · [Generative Modeling by Estimating Gradients of the Data Distribution](https://yang-song.net/blog/2021/score/) — **Yang Song**。从 score matching、噪声扰动和 Langevin dynamics 建立 score-based generative modeling 的完整直觉。
-- [ ] **A+** · [Bringing 3D Shoppable Products Online with Generative AI](https://research.google/blog/bringing-3d-shoppable-products-online-with-generative-ai/) — **Google Research**。按 NeRF、view-conditioned diffusion、Veo 三代系统梳理从少量商品图像生成一致 3D 视图的演进。
+- [x] **A+** · [Generative Modeling by Estimating Gradients of the Data Distribution](https://yang-song.net/blog/2021/score/) — **Yang Song**。从 score matching、噪声扰动和 Langevin dynamics 建立 score-based generative modeling 的完整直觉。
+- [x] **A+** · [Bringing 3D Shoppable Products Online with Generative AI](https://research.google/blog/bringing-3d-shoppable-products-online-with-generative-ai/) — **Google Research**。按 NeRF、view-conditioned diffusion、Veo 三代系统梳理从少量商品图像生成一致 3D 视图的演进。
 
 ## World Model
 
-- [ ] **A+** · [Open-Sourcing Touch Representations and Models for Robot Dexterity](https://ai.meta.com/blog/fair-robotics-open-source/) — Meta AI
+- [x] **A+** · [Open-Sourcing Touch Representations and Models for Robot Dexterity](https://ai.meta.com/blog/fair-robotics-open-source/) — Meta AI
 - [x] **A+** · [PARTNR and New Models for Human-Robot Collaboration](https://ai.meta.com/blog/machine-intelligence-research-new-models/) — Meta AI
-- [ ] **A+** · [MolmoMotion: Language-Guided 3D Motion Forecasting](https://allenai.org/blog/molmo-motion) — Ai2 · 2026-06-17
+- [x] **A+** · [MolmoMotion: Language-Guided 3D Motion Forecasting](https://allenai.org/blog/molmo-motion) — Ai2 · 2026-06-17
 - [x] **A** · [MolmoSpaces](https://allenai.org/blog/molmospaces) — Ai2 · 2026-02-11
 
 - [x] **A** · [Scaling Up Reinforcement Learning for Traffic Smoothing: A 100-AV Highway Deployment](https://bair.berkeley.edu/blog/2025/03/25/rl-av-smoothing/) — bair.berkeley.edu
@@ -71,8 +71,8 @@
 
 ## AI Agents
 
-- [ ] **A+** · [Quantifying Infrastructure Noise in Agentic Coding Evals](https://www.anthropic.com/engineering/infrastructure-noise) — Anthropic / Gian Segato · 2026-02-05。受控量化 CPU、内存、存储和网络配额如何改变 coding-agent 分数，证明基础设施必须成为评测变量；主要围绕 Anthropic 栈。
-- [ ] **A** · [DeepSeek Harness](https://www.deepseek.com/harness/en/) — DeepSeek · 2026-08-24。developer preview 页面把模型、工具、会话、沙箱、存储和 UI 组件都做成可插拔模块，偏 agent harness 设计。
+- [x] **A+** · [Quantifying Infrastructure Noise in Agentic Coding Evals](https://www.anthropic.com/engineering/infrastructure-noise) — Anthropic / Gian Segato · 2026-02-05。受控量化 CPU、内存、存储和网络配额如何改变 coding-agent 分数，证明基础设施必须成为评测变量；主要围绕 Anthropic 栈。
+- [x] **A** · [DeepSeek Harness](https://www.deepseek.com/harness/en/) — DeepSeek · 2026-08-24。developer preview 页面把模型、工具、会话、沙箱、存储和 UI 组件都做成可插拔模块，偏 agent harness 设计。
 
 - [x] **A** · [Agent Arena: Causal Evaluation of Agents in the Real World](https://arena.ai/blog/agent-arena-methodology) — Arena Team · 2026-06-04。基于真实交互用因果设计隔离 orchestrator 与模型影响；平台自有数据和采样尚不能完全独立复现。
 - [x] **A** · [Evaluating the GitHub Copilot Agentic Harness Across Models and Tasks](https://github.blog/ai-and-ml/github-copilot/evaluating-performance-and-efficiency-of-the-github-copilot-agentic-harness-across-models-and-tasks/) — GitHub · 2026-06-25。固定模型、任务与预算比较多种 coding harness，并同时报告成功率、token、成本和耗时；部分内部数据不公开。
@@ -96,13 +96,13 @@
 
 ## Efficient AI
 
-- [ ] **A+** · [Continuous Batching from First Principles](https://huggingface.co/blog/continuous_batching) — Hugging Face Engineering · 2025-11-25。从 attention/KV cache 推导 continuous batching、prefill/decode 混排和调度；教学实现未覆盖完整生产容错。
-- [ ] **A+** · [Run High-Performance LLM Inference Kernels from NVIDIA Using FlashInfer](https://developer.nvidia.com/blog/run-high-performance-llm-inference-kernels-from-nvidia-using-flashinfer/) — NVIDIA / University of Washington / CMU et al. · 2025-06-13。系统介绍引擎无关的 attention、GEMM、通信和采样 kernel 栈；性能结论具 NVIDIA/CUDA 硬件针对性。
-- [ ] **A+** · [Training MoEs at Scale with PyTorch](https://pytorch.org/blog/training-moes/) — PyTorch / Databricks · 2024-06-23。拆解 dropless sparse kernels、expert parallel、3D device mesh 与弹性 checkpoint；结果依赖特定集群和软件栈。
-- [ ] **A+** · [A First Comprehensive Study of TurboQuant: Accuracy and Performance](https://vllm.ai/blog/2026-05-11-turboquant) — Red Hat AI / vLLM · 2026-05-11。跨 dense/MoE 与长上下文复现 TurboQuant 的精度和吞吐，报告重要负结果；结论限所测 H100/vLLM 配置。
+- [x] **A+** · [Continuous Batching from First Principles](https://huggingface.co/blog/continuous_batching) — Hugging Face Engineering · 2025-11-25。从 attention/KV cache 推导 continuous batching、prefill/decode 混排和调度；教学实现未覆盖完整生产容错。
+- [x] **A+** · [Run High-Performance LLM Inference Kernels from NVIDIA Using FlashInfer](https://developer.nvidia.com/blog/run-high-performance-llm-inference-kernels-from-nvidia-using-flashinfer/) — NVIDIA / University of Washington / CMU et al. · 2025-06-13。系统介绍引擎无关的 attention、GEMM、通信和采样 kernel 栈；性能结论具 NVIDIA/CUDA 硬件针对性。
+- [x] **A+** · [Training MoEs at Scale with PyTorch](https://pytorch.org/blog/training-moes/) — PyTorch / Databricks · 2024-06-23。拆解 dropless sparse kernels、expert parallel、3D device mesh 与弹性 checkpoint；结果依赖特定集群和软件栈。
+- [x] **A+** · [A First Comprehensive Study of TurboQuant: Accuracy and Performance](https://vllm.ai/blog/2026-05-11-turboquant) — Red Hat AI / vLLM · 2026-05-11。跨 dense/MoE 与长上下文复现 TurboQuant 的精度和吞吐，报告重要负结果；结论限所测 H100/vLLM 配置。
 - [x] **A** · [Kernel Fusion in NVIDIA CUDA: Optimizing Memory Traffic and Launch Overhead](https://developer.nvidia.com/blog/kernel-fusion-in-nvidia-cuda-optimizing-memory-traffic-and-launch-overhead/) — NVIDIA / Daniel Rodriguez · 2026-07-10。用 Nsight 比较手写 CUDA、torch.compile 与显式融合，展示内存流量和 launch overhead 权衡；只是单 GPU 微基准。
 - [x] **A** · [System Performance Optimizations](https://leimao.github.io/article/System-Performance-Optimizations/) — Lei Mao · 2026 · `独立系统文章`
-- [ ] **A+** · [High-Performance LLM Inference](https://modal.com/docs/guide/high-performance-llm-inference) — Modal engineering · 持续维护，2026 审计 · `生产工程指南`
+- [x] **A+** · [High-Performance LLM Inference](https://modal.com/docs/guide/high-performance-llm-inference) — Modal engineering · 持续维护，2026 审计 · `生产工程指南`
 - [x] **A+** · [Achieve State-of-the-Art Inference Latencies with Speculative Decoding](https://modal.com/blog/achieve-sota-specdec) — Charles Frye & Shankha Biswas · 2026 · `生产实测`
 - [x] **A** · [Optimizing LLM Inference with TensorRT-LLM](https://developer.nvidia.com/blog/optimizing-inference-on-llms-with-tensorrt-llm-now-publicly-available/) — NVIDIA Technical Blog
 - [x] **A** · [New KV Cache Reuse Optimizations in TensorRT-LLM](https://developer.nvidia.com/blog/introducing-new-kv-cache-reuse-optimizations-in-nvidia-tensorrt-llm/) — NVIDIA Technical Blog
@@ -137,8 +137,8 @@
 - [x] **A** · [Accelerating LLM Inference with GemLite, TorchAO and SGLang](https://pytorch.org/blog/accelerating-llm-inference/) — **PyTorch / Mobius Labs / SGLang**。以可复现实验展示低比特 kernel、量化抽象、tensor parallel 与 serving engine 的端到端组合。
 - [x] **A+** · [FlashAttention: Fast Transformer Training with Long Sequences](https://hazyresearch.stanford.edu/blog/2023-01-12-flashattention-long-sequences) — Stanford Hazy Research · 2023
 - [x] **A** · [FlashFFTConv: Efficient Convolutions for Long Sequences with Tensor Cores](https://hazyresearch.stanford.edu/blog/2023-11-13-flashfftconv) — Stanford Hazy Research · 2023
-- [ ] **A+** · [ZeRO & DeepSpeed: New system optimizations enable training models with over 100 billion parameters](https://www.microsoft.com/en-us/research/blog/zero-deepspeed-new-system-optimizations-enable-training-models-with-over-100-billion-parameters/) — Microsoft Research · 2020
-- [ ] **A+** · [Introducing PyTorch Fully Sharded Data Parallel (FSDP) API](https://pytorch.org/blog/introducing-pytorch-fully-sharded-data-parallel-api/) — PyTorch · 2022
+- [x] **A+** · [ZeRO & DeepSpeed: New system optimizations enable training models with over 100 billion parameters](https://www.microsoft.com/en-us/research/blog/zero-deepspeed-new-system-optimizations-enable-training-models-with-over-100-billion-parameters/) — Microsoft Research · 2020
+- [x] **A+** · [Introducing PyTorch Fully Sharded Data Parallel (FSDP) API](https://pytorch.org/blog/introducing-pytorch-fully-sharded-data-parallel-api/) — PyTorch · 2022
 - [x] **A** · [Looking back at speculative decoding](https://research.google/blog/looking-back-at-speculative-decoding/) — Google Research · 2024
 - [x] **A+** · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](https://hazyresearch.stanford.edu/blog/2023-07-17-flash2) — Stanford Hazy Research · 2023
 - [x] **A+** · [GSPMD: General and Scalable Parallelization for ML Computation Graphs](https://research.google/blog/general-and-scalable-parallelization-for-neural-networks/) — Google Research · 2021
@@ -146,10 +146,10 @@
 
 ## Trustworthy AI
 
-- [ ] **A+** · [Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/) — Anthropic Fellows / Anthropic / MATS / UK AISI · 2026-07-13。跨实验室和模型研究四类 agentic misalignment 并开放 Petri transcripts；模拟红队频率不能解释为真实事故率。
-- [ ] **A+** · [Cheating behaviour in frontier model evaluations](https://www.aisi.gov.uk/blog/cheating-behaviour-in-frontier-model-evaluations) — UK AI Security Institute · 2026-07-21。以 LLM monitor 和人工复核分析 cyber eval 轨迹，证明 CoT/自报不足以发现越界行为；行为标签不等于欺骗意图。
+- [x] **A+** · [Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/) — Anthropic Fellows / Anthropic / MATS / UK AISI · 2026-07-13。跨实验室和模型研究四类 agentic misalignment 并开放 Petri transcripts；模拟红队频率不能解释为真实事故率。
+- [x] **A+** · [Cheating behaviour in frontier model evaluations](https://www.aisi.gov.uk/blog/cheating-behaviour-in-frontier-model-evaluations) — UK AI Security Institute · 2026-07-21。以 LLM monitor 和人工复核分析 cyber eval 轨迹，证明 CoT/自报不足以发现越界行为；行为标签不等于欺骗意图。
 - [x] **A+** · [How our new Control Red Team is stress-testing frontier monitors](https://www.aisi.gov.uk/blog/how-our-new-control-red-team-is-stress-testing-frontier-monitors) — UK AISI Control Red Team · 2026-07-23。对前沿实验室内部监控器做红队和进化搜索；属早期压力测试，优化器反馈权限高于常见真实攻击者。
-- [ ] **A+** · [Introducing LinuxArena](https://blog.redwoodresearch.org/p/introducing-linuxarena) — Redwood Research · 2026 · `开放安全环境`
+- [x] **A+** · [Introducing LinuxArena](https://blog.redwoodresearch.org/p/introducing-linuxarena) — Redwood Research · 2026 · `开放安全环境`
 - [x] **A** · [Prioritizing Threats for AI Control](https://blog.redwoodresearch.org/p/prioritizing-threats-for-ai-control) — Ryan Greenblatt · 2025 · `研究者威胁模型`
 - [x] **A** · [Strengthening Our Frontier Safety Framework](https://deepmind.google/blog/strengthening-our-frontier-safety-framework/) — Google DeepMind
 - [x] **A** · [An Early Warning System for Novel AI Risks](https://deepmind.google/blog/an-early-warning-system-for-novel-ai-risks/) — Google DeepMind
@@ -172,12 +172,12 @@
 
 ## Research Craft
 
-- [ ] **A+** · [More compute, more capability: Why AI agent evaluations need to account for test-time compute](https://www.aisi.gov.uk/blog/more-compute-more-capability-why-ai-agent-evals-need-to-account-for-test-time-compute) — UK AI Security Institute · 2026-07-02。证明 agent 能力应报告随 test-time compute 变化的曲线而非单点；部分任务出现平台期且人类时间映射方差大。
-- [ ] **A+** · [A pipeline for transcript analysis using Inspect Scout](https://www.aisi.gov.uk/blog/a-pipeline-for-transcript-analysis-using-inspect-scout) — UK AISI / Meridian Labs · 2026-02-25。给出轨迹采样、scanner、人工验证和分析的七步可复现流程；scanner 效度仍依赖标注和 ground truth。
+- [x] **A+** · [More compute, more capability: Why AI agent evaluations need to account for test-time compute](https://www.aisi.gov.uk/blog/more-compute-more-capability-why-ai-agent-evals-need-to-account-for-test-time-compute) — UK AI Security Institute · 2026-07-02。证明 agent 能力应报告随 test-time compute 变化的曲线而非单点；部分任务出现平台期且人类时间映射方差大。
+- [x] **A+** · [A pipeline for transcript analysis using Inspect Scout](https://www.aisi.gov.uk/blog/a-pipeline-for-transcript-analysis-using-inspect-scout) — UK AISI / Meridian Labs · 2026-02-25。给出轨迹采样、scanner、人工验证和分析的七步可复现流程；scanner 效度仍依赖标注和 ground truth。
 - [x] **A+** · [We are Changing our Developer Productivity Experiment Design](https://metr.org/blog/2026-02-24-uplift-update/) — METR · 2026-02-24。公开诊断混杂并重做随机实验，是发现方法问题后修正研究的优秀案例；尚非最终因果效应报告。
 - [x] **A** · [5 – Reproducibility](https://blog.ml.cmu.edu/2020/08/31/5-reproducibility/) — Zihao Ding, Aniketh Reddy, Aparna Joshi / ML@CMU · 2020-08-31。区分多类 reproducibility 并转化为数据、代码、随机种子、方差和运行次数检查表；少量工具示例已老化。
-- [ ] **A+** · [A Field Guide to Rapidly Improving AI Products](https://hamel.dev/blog/posts/field-guide/) — Hamel Husain · 2025 · `独立实践总结`
-- [ ] **A+** · [Evaluating the Effectiveness of LLM-Evaluators (aka LLM-as-Judge)](https://eugeneyan.com/writing/llm-evaluators/) — Eugene Yan · 2024 · `独立研究综述`
+- [x] **A+** · [A Field Guide to Rapidly Improving AI Products](https://hamel.dev/blog/posts/field-guide/) — Hamel Husain · 2025 · `独立实践总结`
+- [x] **A+** · [Evaluating the Effectiveness of LLM-Evaluators (aka LLM-as-Judge)](https://eugeneyan.com/writing/llm-evaluators/) — Eugene Yan · 2024 · `独立研究综述`
 - [x] **A** · [“It’s Hard to Eval” Is a Product Smell](https://hamel.dev/blog/posts/eval-smell/) — Hamel Husain · 2026-06-29 · `最新产品方法论`
 - [x] **A** · [Deep Learning Tuning Playbook](https://developers.google.com/machine-learning/guides/deep-learning-tuning-playbook) — Google
 - [x] **A** · [Good Data Analysis](https://developers.google.com/machine-learning/guides/good-data-analysis) — Google
@@ -194,14 +194,14 @@
 - [x] **A** · [A Practical Guide to Maintaining Machine Learning in Production](https://eugeneyan.com/writing/practical-guide-to-maintaining-machine-learning/) — **Eugene Yan**。从数据污染、模型再训练、反馈回路、工程复杂度和团队结构给出长期维护清单。
 - [x] **A** · [How evals drive the next chapter in AI](https://openai.com/index/evals-drive-next-chapter-of-ai/) — OpenAI · 2025
 - [x] **A** · [What Data-Centric AI Is Not](https://hazyresearch.stanford.edu/what-data-centric-ai-is-not) — Stanford Hazy Research · 2021
-- [ ] **A+** · [Introducing the Model Card Toolkit for Easier Model Transparency Reporting](https://research.google/blog/introducing-the-model-card-toolkit-for-easier-model-transparency-reporting/) — Google Research · 2020
-- [ ] **A+** · [Data-centric ML benchmarking: Announcing DataPerf’s 2023 challenges](https://research.google/blog/data-centric-ml-benchmarking-announcing-dataperfs-2023-challenges/) — Google Research · 2023
+- [x] **A+** · [Introducing the Model Card Toolkit for Easier Model Transparency Reporting](https://research.google/blog/introducing-the-model-card-toolkit-for-easier-model-transparency-reporting/) — Google Research · 2020
+- [x] **A+** · [Data-centric ML benchmarking: Announcing DataPerf’s 2023 challenges](https://research.google/blog/data-centric-ml-benchmarking-announcing-dataperfs-2023-challenges/) — Google Research · 2023
 
 ## Frontier
 
-- [ ] **A** · [IBM Research — Artificial Intelligence](https://research.ibm.com/blog?tag=artificial-intelligence) — IBM Research · 持续更新；核验至 2026-07-26。兼顾基础模型、推理、AI for Science、芯片和企业 AI 的长期索引；纳入单篇时仍需筛除营销稿。
+- [x] **A** · [IBM Research — Artificial Intelligence](https://research.ibm.com/blog?tag=artificial-intelligence) — IBM Research · 持续更新；核验至 2026-07-26。兼顾基础模型、推理、AI for Science、芯片和企业 AI 的长期索引；纳入单篇时仍需筛除营销稿。
 - [x] **A** · [When Will Language Models Be Good Enough?](https://huggingface.co/blog/craffel/when-will-language-models-be-good-enough) — Colin Raffel · 2026-07-16 · `资深研究者观点`
-- [ ] **A+** · [J-Space: Yet Another LLM Mind Reader?](https://huggingface.co/blog/dlouapre/j-space) — David Louapre · 2026-07-13 · `社区复现与解释`
+- [x] **A+** · [J-Space: Yet Another LLM Mind Reader?](https://huggingface.co/blog/dlouapre/j-space) — David Louapre · 2026-07-13 · `社区复现与解释`
 - [x] **A** · [Two Years of Local AI on a Laptop: When Open Models Outpaced Moore's Law](https://huggingface.co/blog/mishig/local-moores-law) — Mishig Davaadorj · 2026 · `社区可复核趋势分析`
 - [ ] **A** · [Microsoft Research AI Frontiers](https://www.microsoft.com/en-us/research/lab/ai-frontiers/) — United States
 - [ ] **A** · [MIT CSAIL News](https://www.csail.mit.edu/news) — United States
@@ -251,19 +251,19 @@
 - [x] **A** · [Introducing Robostral Navigate](https://mistral.ai/news/robostral-navigate/) — **Mistral AI**。8B 单 RGB 相机导航模型，披露指点式动作表示、240 万轨迹、prefix-caching 和在线 RL，技术信息足够进入 Frontier。
 - [x] **A** · [Can AI Scaling Continue Through 2030?](https://epoch.ai/publications/can-ai-scaling-continue-through-2030) — **Epoch AI**。定量分析电力、芯片制造、数据和训练延迟四类约束，是研究规模扩展可行性的高信息密度报告。
 - [x] **A** · [Mistral OCR 4: SOTA OCR for Document Intelligence](https://mistral.ai/news/ocr-4/) — Mistral AI · 2026
-- [ ] **A+** · [Introducing Gemini 3.5 Flash Cyber](https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/) — Google DeepMind · 2026
+- [x] **A+** · [Introducing Gemini 3.5 Flash Cyber](https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/) — Google DeepMind · 2026
 
 ## How to Research
 
-- [ ] **A+** · [How to Do Great Research](https://noise-lab.net/research-course/) — Nick Feamster, Alex Gray / Georgia Tech · 2006–2010。完整 CS 博士研究课程，覆盖想法生成、批判、mini-project 与可发表主项目；未涵盖现代 LLM 实验室特殊工作流。
+- [x] **A+** · [How to Do Great Research](https://noise-lab.net/research-course/) — Nick Feamster, Alex Gray / Georgia Tech · 2006–2010。完整 CS 博士研究课程，覆盖想法生成、批判、mini-project 与可发表主项目；未涵盖现代 LLM 实验室特殊工作流。
 - [x] **A+** · [How to do Research At the MIT AI Lab](https://dspace.mit.edu/bitstream/handle/1721.1/41487/AI_WP_316.pdf) — MIT AI Lab graduate researchers / David Chapman · 1988-09。第一手研究学徒手册，覆盖阅读、写作、编程、选题、导师与情绪管理；工具和文化背景显著过时。
 - [x] **A** · [Some Modest Advice for Graduate Students](https://stearnslab.yale.edu/modest-advice) — Stephen C. Stearns / Yale · 1987。提供研究生风险管理、替代路线、主动沟通与职业选择框架；是尖锐个人经验，不是普适制度建议。
 - [x] **A** · [Learn and relearn your field](https://terrytao.wordpress.com/career-advice/learn-and-relearn-your-field/) — Terence Tao · 2007。给出替代证明、假设检查、模型例子、类比、引文追踪和解释性笔记清单；高度数学导向。
 - [x] **A** · [On the importance of partial progress](https://terrytao.wordpress.com/career-advice/on-the-importance-of-partial-progress/) — Terence Tao · 2012-07-17。把失败方法和 toy cases 视为可复用部分结果，帮助定位剩余障碍；主要依据数学问题求解案例。
 - [x] **A** · [So long, and thanks for the Ph.D.!: A Graduate School Survival Guide](https://www.cs.unc.edu/~azuma/hitch4.html) — Ronald T. Azuma / UNC Computer Science · 1997; 2019 修订。长篇 CS 指南，讨论主动性、韧性、导师、资源、每日进展和职业路径；具有明显美国 CS 情境。
-- [ ] **A+** · [Research as a Stochastic Decision Process](https://cs.stanford.edu/~jsteinhardt/ResearchasaStochasticDecisionProcess.html) — Jacob Steinhardt · 2018 · `研究者第一方方法`
+- [x] **A+** · [Research as a Stochastic Decision Process](https://cs.stanford.edu/~jsteinhardt/ResearchasaStochasticDecisionProcess.html) — Jacob Steinhardt · 2018 · `研究者第一方方法`
 - [x] **A+** · [Film Study for Research](https://jsteinhardt.stat.berkeley.edu/blog/film-study) — Jacob Steinhardt · 2021 · `研究训练方法`
-- [ ] **A+** · [Replication Issues in AI Research](https://dennybritz.com/posts/ai-replication-issues/) — Denny Britz · 2020 · `独立研究反思`
+- [x] **A+** · [Replication Issues in AI Research](https://dennybritz.com/posts/ai-replication-issues/) — Denny Britz · 2020 · `独立研究反思`
 - [x] **A** · [The Illustrated Guide to a Ph.D.](https://matt.might.net/articles/phd-school-in-pictures/) — Matt Might
 - [x] **A** · [Research Taste Exercises](https://colah.github.io/notes/taste/) — Christopher Olah
 - [x] **A** · [Cultivating Your Research Taste](https://practicespace.substack.com/p/cultivating-your-research-taste-fbd) — Practice Space
@@ -299,10 +299,10 @@
 - [x] **A+** · [You and Your Research](https://www.cs.virginia.edu/~robins/YouAndYourResearch.html) — Richard Hamming · 1986
 - [x] **A+** · [Principles of Effective Research](https://michaelnielsen.org/blog/principles-of-effective-research/) — Michael Nielsen · 2004
 - [x] **A** · [How to Have a Bad Career in Research/Academia](https://people.eecs.berkeley.edu/~pattrsn/talks/research.html) — David Patterson / UC Berkeley · 1997
-- [ ] **A+** · [Becoming an AI Researcher: Practical Advice for Graduate Students](https://www.phd-in-ai.com/) — Stefano V. Albrecht · 2026
+- [x] **A+** · [Becoming an AI Researcher: Practical Advice for Graduate Students](https://www.phd-in-ai.com/) — Stefano V. Albrecht · 2026
 - [x] **A** · [A Ph.D. thesis proposal is a contract](https://matt.might.net/articles/advice-for-phd-thesis-proposals/) — Matt Might · 2010s
 - [x] **A+** · [How to Read a Paper](https://svr-sk818-web.cl.cam.ac.uk/keshav/publications/htrap.html) — S. Keshav / University of Cambridge · 2007
-- [ ] **A+** · [How to Write a Great Research Paper](https://www.microsoft.com/en-us/research/video/how-to-write-a-great-research-paper-4/) — Simon Peyton Jones / Microsoft Research · 2016
+- [x] **A+** · [How to Write a Great Research Paper](https://www.microsoft.com/en-us/research/video/how-to-write-a-great-research-paper-4/) — Simon Peyton Jones / Microsoft Research · 2016
 - [x] **A** · [Take the initiative](https://terrytao.wordpress.com/career-advice/take-the-initiative/) — Terence Tao · 2007
 
 ## 入库顺序
