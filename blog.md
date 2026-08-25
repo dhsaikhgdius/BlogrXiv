@@ -50,23 +50,23 @@
 - [ ] **A+** · [Generative Modelling in Latent Space](https://sander.ai/2025/04/15/latents.html) — Sander Dieleman · 2025-04-15。系统分析 latent 容量、可建模性、重建、shaping 与端到端路线；是高质量综述而非单一新实验。
 - [ ] **A** · [MiniMax Design](https://design.minimax.io/) — MiniMax Design · 2026-08-24。以 design 语义、版式和创意迭代为核心的产品页，偏视觉生成与设计工作流展示。
 
-- [ ] **A** · [Perspectives on Diffusion: Noise Schedules](https://sander.ai/2024/06/14/noise-schedules.html) — Sander Dieleman
-- [ ] **A** · [The Diffusion Model Paradox](https://sander.ai/2024/02/28/paradox.html) — Sander Dieleman
-- [ ] **A** · [Autoregressive Video Generation](https://research.nvidia.com/labs/eai/blogs/autoregressive-video-gen/) — NVIDIA Research · 2026-07-13
-- [ ] **A** · [Introducing Muse Image and Muse Video](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) — Meta AI · 2026-07-07
-- [ ] **A** · [Why Video Generation Is an Infrastructure Problem](https://research.nvidia.com/labs/eai/blogs/video-gen-is-an-infra-problem/) — NVIDIA Research · 2026-05-26
-- [ ] **A** · [Diffusion Meets Flow Matching: Two Sides of the Same Coin](https://diffusionflow.github.io/) — **独立交互式技术教程**。用统一参数化解释 Gaussian flow matching 与 diffusion 的等价关系，包含训练、采样、ODE / SDE 和调度器；页面无论文、arXiv 或 publication 链接。
+- [x] **A** · [Perspectives on Diffusion: Noise Schedules](https://sander.ai/2024/06/14/noise-schedules.html) — Sander Dieleman
+- [x] **A** · [The Diffusion Model Paradox](https://sander.ai/2024/02/28/paradox.html) — Sander Dieleman
+- [x] **A** · [Autoregressive Video Generation](https://research.nvidia.com/labs/eai/blogs/autoregressive-video-gen/) — NVIDIA Research · 2026-07-13
+- [x] **A** · [Introducing Muse Image and Muse Video](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) — Meta AI · 2026-07-07
+- [x] **A** · [Why Video Generation Is an Infrastructure Problem](https://research.nvidia.com/labs/eai/blogs/video-gen-is-an-infra-problem/) — NVIDIA Research · 2026-05-26
+- [x] **A** · [Diffusion Meets Flow Matching: Two Sides of the Same Coin](https://diffusionflow.github.io/) — **独立交互式技术教程**。用统一参数化解释 Gaussian flow matching 与 diffusion 的等价关系，包含训练、采样、ODE / SDE 和调度器；页面无论文、arXiv 或 publication 链接。
 - [ ] **A+** · [Generative Modeling by Estimating Gradients of the Data Distribution](https://yang-song.net/blog/2021/score/) — **Yang Song**。从 score matching、噪声扰动和 Langevin dynamics 建立 score-based generative modeling 的完整直觉。
 - [ ] **A+** · [Bringing 3D Shoppable Products Online with Generative AI](https://research.google/blog/bringing-3d-shoppable-products-online-with-generative-ai/) — **Google Research**。按 NeRF、view-conditioned diffusion、Veo 三代系统梳理从少量商品图像生成一致 3D 视图的演进。
 
 ## World Model
 
 - [ ] **A+** · [Open-Sourcing Touch Representations and Models for Robot Dexterity](https://ai.meta.com/blog/fair-robotics-open-source/) — Meta AI
-- [ ] **A+** · [PARTNR and New Models for Human-Robot Collaboration](https://ai.meta.com/blog/machine-intelligence-research-new-models/) — Meta AI
+- [x] **A+** · [PARTNR and New Models for Human-Robot Collaboration](https://ai.meta.com/blog/machine-intelligence-research-new-models/) — Meta AI
 - [ ] **A+** · [MolmoMotion: Language-Guided 3D Motion Forecasting](https://allenai.org/blog/molmo-motion) — Ai2 · 2026-06-17
-- [ ] **A** · [MolmoSpaces](https://allenai.org/blog/molmospaces) — Ai2 · 2026-02-11
+- [x] **A** · [MolmoSpaces](https://allenai.org/blog/molmospaces) — Ai2 · 2026-02-11
 
-- [ ] **A** · [Scaling Up Reinforcement Learning for Traffic Smoothing: A 100-AV Highway Deployment](https://bair.berkeley.edu/blog/2025/03/25/rl-av-smoothing/) — bair.berkeley.edu
+- [x] **A** · [Scaling Up Reinforcement Learning for Traffic Smoothing: A 100-AV Highway Deployment](https://bair.berkeley.edu/blog/2025/03/25/rl-av-smoothing/) — bair.berkeley.edu
 
 
 ## AI Agents
@@ -74,25 +74,25 @@
 - [ ] **A+** · [Quantifying Infrastructure Noise in Agentic Coding Evals](https://www.anthropic.com/engineering/infrastructure-noise) — Anthropic / Gian Segato · 2026-02-05。受控量化 CPU、内存、存储和网络配额如何改变 coding-agent 分数，证明基础设施必须成为评测变量；主要围绕 Anthropic 栈。
 - [ ] **A** · [DeepSeek Harness](https://www.deepseek.com/harness/en/) — DeepSeek · 2026-08-24。developer preview 页面把模型、工具、会话、沙箱、存储和 UI 组件都做成可插拔模块，偏 agent harness 设计。
 
-- [ ] **A** · [Agent Arena: Causal Evaluation of Agents in the Real World](https://arena.ai/blog/agent-arena-methodology) — Arena Team · 2026-06-04。基于真实交互用因果设计隔离 orchestrator 与模型影响；平台自有数据和采样尚不能完全独立复现。
-- [ ] **A** · [Evaluating the GitHub Copilot Agentic Harness Across Models and Tasks](https://github.blog/ai-and-ml/github-copilot/evaluating-performance-and-efficiency-of-the-github-copilot-agentic-harness-across-models-and-tasks/) — GitHub · 2026-06-25。固定模型、任务与预算比较多种 coding harness，并同时报告成功率、token、成本和耗时；部分内部数据不公开。
-- [ ] **A** · [Introducing Context Repositories: Git-based Memory for Coding Agents](https://www.letta.com/blog/context-repositories/) — Letta · 2026-02-12。用 Git、frontmatter、隔离 worktree 和记忆子 agent 实现可审计长期记忆；目前缺少受控基准验证收益。
-- [ ] **A** · [How to Actually Evaluate AI Agents at Scale](https://huggingface.co/blog/darubberduckiee/using-braintrust-to-eval-agentic-setups) — Jessica / community · 2026 · `真实 trace 分析`
-- [ ] **A+** · [Is It Agentic Enough? Benchmarking Open Models on Your Own Tooling](https://huggingface.co/blog/is-it-agentic-enough) — Hugging Face maintainers · 2026 · `维护者受控实验`
-- [ ] **A** · [Magentic-UI: A Human-Centered Web Agent](https://www.microsoft.com/en-us/research/blog/magentic-ui-an-experimental-human-centered-web-agent/) — Microsoft Research
-- [ ] **A** · [Magentic-One: A Generalist Multi-Agent System](https://www.microsoft.com/en-us/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks/) — Microsoft Research
-- [ ] **A** · [Portable Evaluation Tasks](https://metr.org/blog/2024-02-29-metr-task-standard/) — METR
-- [ ] **A** · [The Expenditure Horizon](https://metr.org/blog/2026-07-21-expenditure-horizon/) — METR
-- [ ] **A** · [Dynabench: Rethinking AI Benchmarking](https://ai.meta.com/blog/dynabench-rethinking-ai-benchmarking/) — Meta AI
-- [ ] **A** · [MiniMax Agent Team: Built for Long-Running Tasks and Continuous Evolution](https://www.minimax.io/blog/minimax-agent-team-long-running-1779893953) — MiniMax · 2026-05-27
-- [ ] **A** · [Evaluating AI Agents for Scientific Discovery](https://allenai.org/blog/evaluating-scientific-discovery-agents) — Ai2 · 2026-04-13
-- [ ] **A** · [Forge: Scalable Agent RL Framework and Algorithm](https://www.minimax.io/blog/forge-scalable-agent-rl-en-1779896141) — MiniMax · 2026-02-14
-- [ ] **A** · [Red-Teaming a Network of Agents](https://www.microsoft.com/en-us/research/blog/red-teaming-a-network-of-agents-understanding-what-breaks-when-ai-agents-interact-at-scale/) — Microsoft Research · 2026
-- [ ] **A** · [Intelligence Is Free, Now What? Data Systems for, of, and by Agents](https://bair.berkeley.edu/blog/2026/07/07/intelligence-is-free-now-what/) — bair.berkeley.edu
-- [ ] **A** · [Compound AI Systems: The Shift from Models to Systems](https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/) — bair.berkeley.edu
-- [ ] **A** · [From Minions to OpenJarvis: Lessons from Building Personal AI Agents](https://hazyresearch.stanford.edu/blog/2026-05-15-minions-to-openjarvis-retrospective) — hazyresearch.stanford.edu
-- [ ] **A** · [Few-shot Tool-use Doesn’t Really Work (Yet)](https://research.google/blog/few-shot-tool-use-doesnt-really-work-yet/) — **Google Research**。大规模比较多种 tool-assisted generation 策略，展示少样本工具调用并不天然优于无工具基线。
-- [ ] **A** · [PlugMem: Transforming Raw Agent Interactions into Reusable Knowledge](https://www.microsoft.com/en-us/research/blog/from-raw-interaction-to-reusable-knowledge-rethinking-memory-for-ai-agents/) — **Microsoft Research**。把原始轨迹转换为事实与技能组成的知识图，在三类任务上验证跨任务记忆复用。
+- [x] **A** · [Agent Arena: Causal Evaluation of Agents in the Real World](https://arena.ai/blog/agent-arena-methodology) — Arena Team · 2026-06-04。基于真实交互用因果设计隔离 orchestrator 与模型影响；平台自有数据和采样尚不能完全独立复现。
+- [x] **A** · [Evaluating the GitHub Copilot Agentic Harness Across Models and Tasks](https://github.blog/ai-and-ml/github-copilot/evaluating-performance-and-efficiency-of-the-github-copilot-agentic-harness-across-models-and-tasks/) — GitHub · 2026-06-25。固定模型、任务与预算比较多种 coding harness，并同时报告成功率、token、成本和耗时；部分内部数据不公开。
+- [x] **A** · [Introducing Context Repositories: Git-based Memory for Coding Agents](https://www.letta.com/blog/context-repositories/) — Letta · 2026-02-12。用 Git、frontmatter、隔离 worktree 和记忆子 agent 实现可审计长期记忆；目前缺少受控基准验证收益。
+- [x] **A** · [How to Actually Evaluate AI Agents at Scale](https://huggingface.co/blog/darubberduckiee/using-braintrust-to-eval-agentic-setups) — Jessica / community · 2026 · `真实 trace 分析`
+- [x] **A+** · [Is It Agentic Enough? Benchmarking Open Models on Your Own Tooling](https://huggingface.co/blog/is-it-agentic-enough) — Hugging Face maintainers · 2026 · `维护者受控实验`
+- [x] **A** · [Magentic-UI: A Human-Centered Web Agent](https://www.microsoft.com/en-us/research/blog/magentic-ui-an-experimental-human-centered-web-agent/) — Microsoft Research
+- [x] **A** · [Magentic-One: A Generalist Multi-Agent System](https://www.microsoft.com/en-us/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks/) — Microsoft Research
+- [x] **A** · [Portable Evaluation Tasks](https://metr.org/blog/2024-02-29-metr-task-standard/) — METR
+- [x] **A** · [The Expenditure Horizon](https://metr.org/blog/2026-07-21-expenditure-horizon/) — METR
+- [x] **A** · [Dynabench: Rethinking AI Benchmarking](https://ai.meta.com/blog/dynabench-rethinking-ai-benchmarking/) — Meta AI
+- [x] **A** · [MiniMax Agent Team: Built for Long-Running Tasks and Continuous Evolution](https://www.minimax.io/blog/minimax-agent-team-long-running-1779893953) — MiniMax · 2026-05-27
+- [x] **A** · [Evaluating AI Agents for Scientific Discovery](https://allenai.org/blog/evaluating-scientific-discovery-agents) — Ai2 · 2026-04-13
+- [x] **A** · [Forge: Scalable Agent RL Framework and Algorithm](https://www.minimax.io/blog/forge-scalable-agent-rl-en-1779896141) — MiniMax · 2026-02-14
+- [x] **A** · [Red-Teaming a Network of Agents](https://www.microsoft.com/en-us/research/blog/red-teaming-a-network-of-agents-understanding-what-breaks-when-ai-agents-interact-at-scale/) — Microsoft Research · 2026
+- [x] **A** · [Intelligence Is Free, Now What? Data Systems for, of, and by Agents](https://bair.berkeley.edu/blog/2026/07/07/intelligence-is-free-now-what/) — bair.berkeley.edu
+- [x] **A** · [Compound AI Systems: The Shift from Models to Systems](https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/) — bair.berkeley.edu
+- [x] **A** · [From Minions to OpenJarvis: Lessons from Building Personal AI Agents](https://hazyresearch.stanford.edu/blog/2026-05-15-minions-to-openjarvis-retrospective) — hazyresearch.stanford.edu
+- [x] **A** · [Few-shot Tool-use Doesn’t Really Work (Yet)](https://research.google/blog/few-shot-tool-use-doesnt-really-work-yet/) — **Google Research**。大规模比较多种 tool-assisted generation 策略，展示少样本工具调用并不天然优于无工具基线。
+- [x] **A** · [PlugMem: Transforming Raw Agent Interactions into Reusable Knowledge](https://www.microsoft.com/en-us/research/blog/from-raw-interaction-to-reusable-knowledge-rethinking-memory-for-ai-agents/) — **Microsoft Research**。把原始轨迹转换为事实与技能组成的知识图，在三类任务上验证跨任务记忆复用。
 
 ## Efficient AI
 
