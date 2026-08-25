@@ -10205,6 +10205,75 @@ class BlogXiv {
         ];
     }
 
+    getQualityEfficientTrustworthyBlogs() {
+        return [
+            {
+                id: 'google-gemma-4-quantization-aware-training',
+                title: 'Gemma 4 QAT Models: Optimizing Model Compression for Mobile and Laptop Efficiency',
+                excerpt: 'Google details quantization-aware training for Gemma 4, releasing int4 checkpoints that cut memory severalfold while staying close to bf16 quality on Google-run evaluations. The post is oriented to the Gemma toolchain (llama.cpp, MLX, Ollama exports), and the quality deltas are the vendor’s own measurements.',
+                author: 'Google Gemma Team',
+                authorAvatar: 'https://www.google.com/s2/favicons?domain=blog.google&sz=128',
+                category: 'Efficient AI',
+                tags: ['Quantization-Aware Training', 'Gemma', 'int4', 'Edge Deployment'],
+                readTime: '8 min read',
+                publishDate: '2026-06-05',
+                sourceName: 'Google Blog',
+                url: 'https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/',
+                coverImage: 'assets/img/covers/real/google-gemma-4-quantization-aware-training.png',
+                coverAlt: 'Real cover from og:image',
+                coverFit: 'cover'
+            },
+            {
+                id: 'pytorch-gpt-fast-native-acceleration',
+                title: 'Accelerating Generative AI with PyTorch II: GPT, Fast',
+                excerpt: 'The PyTorch team shows that pure-PyTorch decoding with torch.compile, static KV caches, int8/int4 weight quantization, speculative decoding, and tensor parallelism reaches roughly 10x baseline eager throughput in under 1,000 lines of code. It is a pedagogical artifact: production servers still need the batching, paging, and scheduling that gpt-fast deliberately omits.',
+                author: 'Team PyTorch',
+                authorAvatar: 'https://www.google.com/s2/favicons?domain=pytorch.org&sz=128',
+                category: 'Efficient AI',
+                tags: ['torch.compile', 'GPT-Fast', 'Quantization', 'Speculative Decoding'],
+                readTime: '15 min read',
+                publishDate: '2023-11-30',
+                sourceName: 'PyTorch Blog',
+                url: 'https://pytorch.org/blog/accelerating-generative-ai-2/',
+                coverImage: 'assets/img/covers/real/pytorch-gpt-fast-native-acceleration.png',
+                coverAlt: 'Real cover from first-image',
+                coverFit: 'cover'
+            },
+            {
+                id: 'distill-feature-visualization',
+                title: 'Feature Visualization',
+                excerpt: 'Chris Olah, Alexander Mordvintsev, and Ludwig Schubert establish optimization-based feature visualization, showing how regularization, preconditioning, and diversity objectives turn neurons into interpretable images instead of adversarial noise. It is the canonical reference for vision CNNs, and its direct transfer to language-model interpretability is limited.',
+                author: 'Chris Olah, Alexander Mordvintsev, Ludwig Schubert',
+                authorAvatar: 'https://www.google.com/s2/favicons?domain=distill.pub&sz=128',
+                category: 'Trustworthy AI',
+                tags: ['Feature Visualization', 'Interpretability', 'Optimization', 'Vision Models'],
+                readTime: '25 min read',
+                publishDate: '2017-11-07',
+                sourceName: 'Distill',
+                url: 'https://distill.pub/2017/feature-visualization/',
+                coverImage: 'assets/img/covers/real/distill-feature-visualization.jpg',
+                coverAlt: 'Real cover from og:image',
+                coverFit: 'cover'
+            },
+            {
+                id: 'deepmind-specification-gaming-flip-side',
+                title: 'Specification Gaming: The Flip Side of AI Ingenuity',
+                excerpt: 'Victoria Krakovna and colleagues catalog roughly 60 examples of specification gaming — agents satisfying the literal reward while violating its intent, from boat-racing loops to simulated-physics exploits — and explain why RL makes such behavior systematic rather than anecdotal. The examples are pre-LLM-era RL, but the taxonomy remains the canonical frame newer safety work builds on.',
+                author: 'Victoria Krakovna et al.',
+                authorAvatar: 'https://www.google.com/s2/favicons?domain=deepmind.google&sz=128',
+                category: 'Trustworthy AI',
+                tags: ['Specification Gaming', 'Reward Hacking', 'RL Safety', 'Alignment'],
+                readTime: '10 min read',
+                publishDate: '2020-04-21',
+                sourceName: 'Google DeepMind Blog',
+                url: 'https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/',
+                coverImage: 'assets/img/covers/real/deepmind-specification-gaming-flip-side.webp',
+                coverAlt: 'Real cover from og:image',
+                coverFit: 'cover'
+            }
+        ];
+    }
+
     getCuratedCommunityBlogs() {
         const blogs = [
             ...this.getICLR2026Blogposts(),
@@ -10215,6 +10284,7 @@ class BlogXiv {
             ...this.getQualityFoundationLlmMultimodalBlogs(),
             ...this.getQualityVisualWorldAgentsBlogs(),
             ...this.getQualityHowToResearchBlogs(),
+            ...this.getQualityEfficientTrustworthyBlogs(),
             {
                 id: 'dair-context-engineering-guide',
                 title: 'Context Engineering Guide',
