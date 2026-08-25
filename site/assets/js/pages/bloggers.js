@@ -320,6 +320,66 @@ class BloggersPage {
                 specialty: 'How to Research',
                 focus: ['paper writing', 'research talks', 'academic communication'],
                 qualityRank: 9
+            },
+            {
+                name: 'Terence Tao',
+                institution: 'UCLA / What\'s new',
+                homepage: 'https://terrytao.wordpress.com/',
+                avatar: 'https://www.google.com/s2/favicons?domain=terrytao.wordpress.com&sz=128',
+                matches: ['Terence Tao'],
+                specialty: 'How to Research',
+                focus: ['research taste', 'problem solving', 'mathematical research practice'],
+                qualityRank: 9
+            },
+            {
+                name: 'Michael Nielsen',
+                institution: 'Independent / quantum computing historian',
+                homepage: 'https://michaelnielsen.org/',
+                avatar: 'https://www.google.com/s2/favicons?domain=michaelnielsen.org&sz=128',
+                matches: ['Michael Nielsen'],
+                specialty: 'How to Research',
+                focus: ['effective research', 'open science', 'scientific communication'],
+                qualityRank: 8
+            },
+            {
+                name: 'John Schulman',
+                institution: 'Thinking Machines Lab / former OpenAI',
+                homepage: 'http://joschu.net/blog/',
+                avatar: 'https://www.google.com/s2/favicons?domain=joschu.net&sz=128',
+                matches: ['John Schulman', 'joschu.net'],
+                specialty: 'How to Research',
+                focus: ['ML research methodology', 'reproducibility', 'research taste'],
+                qualityRank: 8
+            },
+            {
+                name: 'Gian Segato',
+                institution: 'Anthropic Engineering',
+                homepage: 'https://www.anthropic.com/engineering',
+                avatar: 'https://www.google.com/s2/favicons?domain=anthropic.com&sz=128',
+                matches: ['Gian Segato'],
+                specialty: 'AI Agents',
+                focus: ['agent evaluations', 'infrastructure noise', 'coding agents'],
+                qualityRank: 8
+            },
+            {
+                name: 'Colin Raffel',
+                institution: 'Hugging Face / UNC Chapel Hill',
+                homepage: 'https://colinraffel.com/',
+                avatar: 'https://github.com/colinraffel.png',
+                matches: ['Colin Raffel'],
+                specialty: 'Frontier',
+                focus: ['scaling outlook', 'open models', 'research commentary'],
+                qualityRank: 7
+            },
+            {
+                name: 'Matt Might',
+                institution: 'University of Alabama at Birmingham',
+                homepage: 'https://matt.might.net/',
+                avatar: 'https://www.google.com/s2/favicons?domain=matt.might.net&sz=128',
+                matches: ['Matt Might'],
+                specialty: 'How to Research',
+                focus: ['PhD guidance', 'research visualization', 'academic careers'],
+                qualityRank: 8
             }
         ];
 

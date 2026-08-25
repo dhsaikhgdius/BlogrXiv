@@ -184,7 +184,7 @@
 - [x] **A** · [Data Traps](https://developers.google.com/machine-learning/guides/data-traps) — Google
 - [x] **A** · [Experiment Management](https://fullstackdeeplearning.com/course/2022/lab-4-experiment-management/) — Full Stack Deep Learning
 - [x] **A** · [Development Infrastructure and Tooling](https://fullstackdeeplearning.com/course/2022/lecture-2-development-infrastructure-and-tooling/) — Full Stack Deep Learning
-- [ ] **A** · [ML Retrospectives](https://ml-retrospectives.github.io/) — ML Retrospectives
+- [skip] **A** · [ML Retrospectives](https://ml-retrospectives.github.io/) — ML Retrospectives
 - [x] **A** · [AstaBench Update: Spring 2026](https://allenai.org/blog/astabench-update-spring-2026) — Ai2 · 2026-04-30
 - [x] **A** · [Four Ways Google Researchers Have Been Using Empirical Research Assistance](https://research.google/blog/four-ways-google-research-scientists-have-been-using-empirical-research-assistance/) — Google Research · 2026-04-29
 - [x] **A** · [Exploring Bayesian Optimization](https://distill.pub/2020/bayesian-optimization/) — distill.pub
@@ -203,51 +203,51 @@
 - [x] **A** · [When Will Language Models Be Good Enough?](https://huggingface.co/blog/craffel/when-will-language-models-be-good-enough) — Colin Raffel · 2026-07-16 · `资深研究者观点`
 - [x] **A+** · [J-Space: Yet Another LLM Mind Reader?](https://huggingface.co/blog/dlouapre/j-space) — David Louapre · 2026-07-13 · `社区复现与解释`
 - [x] **A** · [Two Years of Local AI on a Laptop: When Open Models Outpaced Moore's Law](https://huggingface.co/blog/mishig/local-moores-law) — Mishig Davaadorj · 2026 · `社区可复核趋势分析`
-- [ ] **A** · [Microsoft Research AI Frontiers](https://www.microsoft.com/en-us/research/lab/ai-frontiers/) — United States
-- [ ] **A** · [MIT CSAIL News](https://www.csail.mit.edu/news) — United States
-- [ ] **A** · [Berkeley Sky Computing Lab](https://sky.cs.berkeley.edu/) — United States
-- [ ] **A** · [Ai2 Blog](https://allenai.org/blog) — United States
-- [ ] **A** · [METR Blog](https://metr.org/blog) — United States
-- [ ] **A** · [Mila News](https://mila.quebec/en/news) — Canada
-- [ ] **A** · [Xiaomi MiMo](https://mimo.xiaomi.com/) — China
-- [ ] **A** · [InternLM](https://github.com/InternLM) — China
-- [ ] **A** · [Shanghai AI Laboratory](https://www.shlab.org.cn/) — China
-- [ ] **A** · [ModelScope](https://modelscope.cn/) — China
-- [ ] **A** · [Tencent Hunyuan](https://github.com/Tencent-Hunyuan) — China
-- [ ] **A** · [BAAI Hub](https://hub.baai.ac.cn/) — China
-- [ ] **A** · [OpenBMB](https://github.com/OpenBMB) — China
-- [ ] **A** · [InclusionAI](https://github.com/inclusionAI) — China
-- [ ] **A** · [ELLIS](https://ellis.eu/) — Europe
-- [ ] **A** · [Tübingen AI Center News](https://tuebingen.ai/news) — Germany
-- [ ] **A** · [Kyutai](https://kyutai.org/) — France
-- [ ] **A** · [EPFL AI Center](https://ai.epfl.ch/) — Switzerland
-- [ ] **A** · [SEA-LION Blog](https://sea-lion.ai/blog/) — Singapore / Southeast Asia
-- [ ] **A** · [RIKEN Center for Advanced Intelligence Project](https://www.riken.jp/en/research/labs/aip/) — Japan
-- [ ] **A** · [Inria Artificial Intelligence](https://www.inria.fr/en/artificial-intelligence) — France
+- [skip] **A** · [Microsoft Research AI Frontiers](https://www.microsoft.com/en-us/research/lab/ai-frontiers/) — United States
+- [skip] **A** · [MIT CSAIL News](https://www.csail.mit.edu/news) — United States
+- [skip] **A** · [Berkeley Sky Computing Lab](https://sky.cs.berkeley.edu/) — United States
+- [skip] **A** · [Ai2 Blog](https://allenai.org/blog) — United States
+- [skip] **A** · [METR Blog](https://metr.org/blog) — United States
+- [skip] **A** · [Mila News](https://mila.quebec/en/news) — Canada
+- [skip] **A** · [Xiaomi MiMo](https://mimo.xiaomi.com/) — China
+- [skip] **A** · [InternLM](https://github.com/InternLM) — China
+- [skip] **A** · [Shanghai AI Laboratory](https://www.shlab.org.cn/) — China
+- [skip] **A** · [ModelScope](https://modelscope.cn/) — China
+- [skip] **A** · [Tencent Hunyuan](https://github.com/Tencent-Hunyuan) — China
+- [skip] **A** · [BAAI Hub](https://hub.baai.ac.cn/) — China
+- [skip] **A** · [OpenBMB](https://github.com/OpenBMB) — China
+- [skip] **A** · [InclusionAI](https://github.com/inclusionAI) — China
+- [skip] **A** · [ELLIS](https://ellis.eu/) — Europe
+- [skip] **A** · [Tübingen AI Center News](https://tuebingen.ai/news) — Germany
+- [skip] **A** · [Kyutai](https://kyutai.org/) — France
+- [skip] **A** · [EPFL AI Center](https://ai.epfl.ch/) — Switzerland
+- [skip] **A** · [SEA-LION Blog](https://sea-lion.ai/blog/) — Singapore / Southeast Asia
+- [skip] **A** · [RIKEN Center for Advanced Intelligence Project](https://www.riken.jp/en/research/labs/aip/) — Japan
+- [skip] **A** · [Inria Artificial Intelligence](https://www.inria.fr/en/artificial-intelligence) — France
 - [x] **A** · [Frontier AI Expert Findings: EU Competitiveness, Sovereignty and Security](https://digital-strategy.ec.europa.eu/en/library/ai-office-publishes-frontier-ai-expert-findings-eu-competitiveness-sovereignty-and-security) — European Commission AI Office · 2026-07-15
 - [x] **A** · [Preliminary Report of the UN Independent International Scientific Panel on AI](https://www.un.org/independent-international-scientific-panel-ai/en/preliminary-report) — United Nations · 2026-06
 - [x] **A** · [International AI Safety Report 2026](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026) — International AI Safety Report · 2026
 - [x] **A** · [AI Index Report 2026](https://hai.stanford.edu/ai-index) — Stanford HAI · 2026
 - [x] **A** · [Frontier AI Trends Report](https://www.aisi.gov.uk/frontier-ai-trends-report) — UK AI Security Institute · 2026
 - [x] **A** · [State of AI 2026: Model Provider Survey](https://2026.stateofai.dev/en-US/models/) — State of AI · 2026
-- [ ] **A** · [NVIDIA Seattle Robotics Lab](https://research.nvidia.com/labs/srl/) — United States
-- [ ] **A** · [Qwen Code Research & Engineering Updates](https://qwenlm.github.io/qwen-code-docs/en/blog/) — China
-- [ ] **A** · [MiniMax Research](https://www.minimax.io/blog) — China
-- [ ] **A** · [European Commission AI Office](https://digital-strategy.ec.europa.eu/en/policies/european-ai-office) — European Union
-- [ ] **A** · [UK AI Security Institute Research](https://www.aisi.gov.uk/research) — United Kingdom
-- [ ] **A** · [International AI Safety Report](https://internationalaisafetyreport.org/) — Global
-- [ ] **A** · [UN Independent International Scientific Panel on AI](https://www.un.org/independent-international-scientific-panel-ai/en) — Global
+- [skip] **A** · [NVIDIA Seattle Robotics Lab](https://research.nvidia.com/labs/srl/) — United States
+- [skip] **A** · [Qwen Code Research & Engineering Updates](https://qwenlm.github.io/qwen-code-docs/en/blog/) — China
+- [skip] **A** · [MiniMax Research](https://www.minimax.io/blog) — China
+- [skip] **A** · [European Commission AI Office](https://digital-strategy.ec.europa.eu/en/policies/european-ai-office) — European Union
+- [skip] **A** · [UK AI Security Institute Research](https://www.aisi.gov.uk/research) — United Kingdom
+- [skip] **A** · [International AI Safety Report](https://internationalaisafetyreport.org/) — Global
+- [skip] **A** · [UN Independent International Scientific Panel on AI](https://www.un.org/independent-international-scientific-panel-ai/en) — Global
 - [x] **A** · [Have AI Capabilities Accelerated?](https://epoch.ai/publications/have-ai-capabilities-accelerated) — epoch.ai
 - [x] **A** · [Where Autonomy Works: Evaluating Robot Capabilities in 2026](https://epoch.ai/publications/where-autonomy-works-evaluating-robot-capabilities-in-2026) — epoch.ai
 - [x] **A** · [What Will AI Look Like in 2030?](https://epoch.ai/publications/what-will-ai-look-like-in-2030) — epoch.ai
 - [x] **A** · [Power Demands of Frontier AI Training](https://epoch.ai/publications/power-demands-of-frontier-ai-training) — epoch.ai
 - [x] **A** · [What You Need to Know About AI Data Centers](https://epoch.ai/publications/what-you-need-to-know-about-ai-data-centers) — epoch.ai
 - [x] **A** · [Training Compute of Frontier AI Models Grows by 4–5× per Year](https://epoch.ai/publications/training-compute-of-frontier-ai-models-grows-by-4-5x-per-year) — epoch.ai
-- [ ] **A** · [Epoch AI — Trends](https://epoch.ai/trends) — epoch.ai
-- [ ] **A** · [Epoch AI — Latest](https://epoch.ai/latest) — epoch.ai
-- [ ] **A** · [BAIR Blog — Archive](https://bair.berkeley.edu/blog/archive/) — bair.berkeley.edu
-- [ ] **A** · [Stanford Hazy Research — Blog](https://hazyresearch.stanford.edu/blog) — hazyresearch.stanford.edu
-- [ ] **A** · [Sakana AI — Research Blog](https://sakana.ai/blog/?label=research) — sakana.ai
+- [skip] **A** · [Epoch AI — Trends](https://epoch.ai/trends) — epoch.ai
+- [skip] **A** · [Epoch AI — Latest](https://epoch.ai/latest) — epoch.ai
+- [skip] **A** · [BAIR Blog — Archive](https://bair.berkeley.edu/blog/archive/) — bair.berkeley.edu
+- [skip] **A** · [Stanford Hazy Research — Blog](https://hazyresearch.stanford.edu/blog) — hazyresearch.stanford.edu
+- [skip] **A** · [Sakana AI — Research Blog](https://sakana.ai/blog/?label=research) — sakana.ai
 - [x] **A** · [Introducing Robostral Navigate](https://mistral.ai/news/robostral-navigate/) — **Mistral AI**。8B 单 RGB 相机导航模型，披露指点式动作表示、240 万轨迹、prefix-caching 和在线 RL，技术信息足够进入 Frontier。
 - [x] **A** · [Can AI Scaling Continue Through 2030?](https://epoch.ai/publications/can-ai-scaling-continue-through-2030) — **Epoch AI**。定量分析电力、芯片制造、数据和训练延迟四类约束，是研究规模扩展可行性的高信息密度报告。
 - [x] **A** · [Mistral OCR 4: SOTA OCR for Document Intelligence](https://mistral.ai/news/ocr-4/) — Mistral AI · 2026
@@ -269,7 +269,7 @@
 - [x] **A** · [Cultivating Your Research Taste](https://practicespace.substack.com/p/cultivating-your-research-taste-fbd) — Practice Space
 - [x] **A** · [Picking a Research Topic](https://blog.regehr.org/archives/46) — John Regehr
 - [x] **A** · [How to Find Research Problems](https://www.cs.jhu.edu/~jason/advice/how-to-find-research-problems.html) — Jason Eisner
-- [ ] **A** · [Advice on Research and Writing](https://www.cs.cmu.edu/~eginting/how-to.html) — CMU
+- [skip] **A** · [Advice on Research and Writing](https://www.cs.cmu.edu/~eginting/how-to.html) — CMU
 - [x] **A** · [Advice for Graduate Students](https://www.cs.cmu.edu/~nasmith/advice.html) — Noah A. Smith
 - [x] **A** · [How to Write a Great Research Proposal](https://simon.peytonjones.org/assets/pdfs/great-research-proposal.pdf) — Simon Peyton Jones
 - [x] **A** · [How to Give a Great Research Talk](https://simon.peytonjones.org/assets/pdfs/giving-a-talk.pdf) — Simon Peyton Jones
@@ -278,19 +278,19 @@
 - [x] **A** · [How to Write Papers](https://visionbook.mit.edu/how_to_write_papers.html) — MIT VisionBook
 - [x] **A** · [How to Give Talks](https://visionbook.mit.edu/how_to_give_talks.html) — MIT VisionBook
 - [x] **A** · [PhD Advising Guide](https://www.cs.stanford.edu/phd-milestones-progress-guidelines/phd-advising-guide) — Stanford Computer Science
-- [ ] **A** · [Doctoral Advising Resources](https://www.cs.cmu.edu/education/phd/doctoral-advising/resources) — Carnegie Mellon University
-- [ ] **A** · [Advice on Grad School and Research](https://www.cs.cmu.edu/~jasonh/advice.html) — Jason Hong / Carnegie Mellon University
-- [ ] **A** · [Collected Advice on Research, Writing, and Speaking](https://www.cs.cmu.edu/~dpwu/knowhow.html) — Carnegie Mellon University
+- [skip] **A** · [Doctoral Advising Resources](https://www.cs.cmu.edu/education/phd/doctoral-advising/resources) — Carnegie Mellon University
+- [skip] **A** · [Advice on Grad School and Research](https://www.cs.cmu.edu/~jasonh/advice.html) — Jason Hong / Carnegie Mellon University
+- [skip] **A** · [Collected Advice on Research, Writing, and Speaking](https://www.cs.cmu.edu/~dpwu/knowhow.html) — Carnegie Mellon University
 - [x] **A** · [Applying to Ph.D. Programs in Computer Science](https://www.cs.cmu.edu/~harchol/gradschooltalk.pdf) — Mor Harchol-Balter / Carnegie Mellon University
 - [x] **A** · [Choosing Your Research Advisor](https://www.cs.umd.edu/grad/choosing-your-advisor) — University of Maryland Computer Science
 - [x] **A** · [Practicing AI Research](https://www.jasonwei.net/blog/practicing-ai-research) — jasonwei.net
-- [ ] **A** · [Writing a Good Scientific Paper](https://is.mpg.de/ps/news/writing-a-good-scientific-paper) — is.mpg.de
+- [skip] **A** · [Writing a Good Scientific Paper](https://is.mpg.de/ps/news/writing-a-good-scientific-paper) — is.mpg.de
 - [x] **A** · [Templates for Machine Learning Research Papers](https://neelguha.github.io/blog/2026/templates/) — neelguha.github.io
 - [x] **A** · [The Google Brain Team’s Approach to Research](https://research.google/blog/the-google-brain-teams-approach-to-research/) — research.google
 - [x] **A** · [How to Make Your First Accomplishment in the NLP Field](https://www.microsoft.com/en-us/research/articles/make-first-accomplishment-nlp-field/) — microsoft.com
 - [x] **A** · [Research Debt](https://distill.pub/2017/research-debt/) — distill.pub
 - [x] **A** · [Communicating with Interactive Articles](https://distill.pub/2020/communicating-with-interactive-articles/) — distill.pub
-- [ ] **A** · [How to Create a Distill Article](https://distill.pub/guide/) — distill.pub
+- [skip] **A** · [How to Create a Distill Article](https://distill.pub/guide/) — distill.pub
 - [x] **A** · [A Survival Guide to a PhD](https://karpathy.github.io/2016/09/07/phd/) — **Andrej Karpathy**。覆盖是否读博、导师、选题、研究外循环、写论文、演讲与心理管理，且针对 CS / ML / CV 研究。
 - [x] **A** · [An Opinionated Guide to ML Research](http://joschu.net/blog/opinionated-guide-ml-research.html) — **John Schulman**。系统讨论研究品味、目标驱动与想法驱动、增量进展、研究笔记、时间分配和复现练习。原站 HTTP 可访问，HTTPS 探测不稳定，入库时建议保留链接健康监控。
 - [x] **A** · [Advice for Machine Learning PhD Students](https://markusheinonen.github.io/advice.html) — **Markus Heinonen / Aalto University**。从理解、表达、实现三项基本功出发，强调简化问题、迭代和博士阶段的研究节奏。
@@ -304,6 +304,11 @@
 - [x] **A+** · [How to Read a Paper](https://svr-sk818-web.cl.cam.ac.uk/keshav/publications/htrap.html) — S. Keshav / University of Cambridge · 2007
 - [x] **A+** · [How to Write a Great Research Paper](https://www.microsoft.com/en-us/research/video/how-to-write-a-great-research-paper-4/) — Simon Peyton Jones / Microsoft Research · 2016
 - [x] **A** · [Take the initiative](https://terrytao.wordpress.com/career-advice/take-the-initiative/) — Terence Tao · 2007
+
+
+> **跳过说明**： 表示实验室首页、GitHub 组织、新闻索引或 advising 资源页，按 BlogrXiv 规则不入静态语料；单篇 A+ 已优先入库。
+
+> **跳过说明**：`- [skip]` 表示实验室首页、GitHub 组织、新闻索引或 advising 资源页，按 BlogrXiv 规则不入静态语料；单篇 A+ 已优先入库。
 
 ## 入库顺序
 
