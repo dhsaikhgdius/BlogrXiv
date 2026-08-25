@@ -92,8 +92,8 @@ The current corpus emphasizes:
 | Efficient AI | Kernels, parallelism, quantization, speculative decoding, and training or inference systems. |
 | Trustworthy AI | Safety, alignment, interpretability, control evaluations, security, monitoring, and risk evaluation. |
 | Research Craft | Evaluation methodology, experiment design, data analysis, LLM-as-judge, and reproducibility as scientific practice. |
-| Frontier | Individual frontier reports and technically substantive capability, compute, or power essays. Not lab homepages or news indexes. |
-| How to Research | Advising, research taste, reading, writing, talks, and PhD practice. Adjacent to, but distinct from, Research Craft. |
+| Frontier | Critical analysis of frontier model releases, open-weight ecosystem shifts, lab technical roadmaps, and deployment-facing capability assessment. Not lab homepages or news indexes. |
+| How to Research | First-person research practice: paper writing, experiment habits, research code, reproduction studies, and reflections on advising and scientific careers. Adjacent to, but distinct from, Research Craft. |
 
 ## Editorial Standard
 
@@ -105,7 +105,7 @@ BlogrXiv prioritizes posts that satisfy at least one of the following criteria:
 - They synthesize a research area with clear references, diagrams, examples, or careful argumentation.
 - They surface important perspectives from academic groups, independent researchers, research labs, engineering teams, and technical communities.
 
-The index deliberately excludes low-information summaries, shallow announcements, purely promotional writing, and paper-only listings that do not add independent technical insight.
+The index deliberately excludes lab homepages, GitHub organization indexes, product landing pages, shallow announcements, purely promotional writing, and paper-only pages that do not add independent technical narrative.
 
 ## Selection Protocol
 
