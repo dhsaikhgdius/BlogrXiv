@@ -14905,6 +14905,56 @@ class BlogXiv {
                 specialty: 'Trustworthy AI',
                 focus: ['mechanistic interpretability', 'visual explanations', 'transformer circuits'],
                 qualityRank: 10
+            },
+            {
+                name: 'Qwen Team',
+                institution: 'Alibaba Qwen',
+                homepage: 'https://qwenlm.github.io/blog/',
+                avatar: 'https://github.com/QwenLM.png',
+                matches: ['Qwen Team', 'qwenlm.github.io'],
+                specialty: 'Multimodal Model',
+                focus: ['vision-language models', 'omni-modal models', 'image generation'],
+                qualityRank: 10
+            },
+            {
+                name: 'Stanford Hazy Research',
+                institution: 'Stanford University / Chris Ré lab',
+                homepage: 'https://hazyresearch.stanford.edu/blog',
+                avatar: 'https://github.com/HazyResearch.png',
+                matches: ['Hazy Research', 'hazyresearch.stanford.edu'],
+                specialty: 'Efficient AI',
+                focus: ['linear attention', 'GPU kernels', 'data-centric AI'],
+                qualityRank: 10
+            },
+            {
+                name: 'Sander Dieleman',
+                institution: 'Google DeepMind',
+                homepage: 'https://sander.ai/',
+                avatar: 'https://sander.ai/images/avatar.jpg',
+                matches: ['Sander Dieleman', 'Sander AI'],
+                specialty: 'Visual Generation',
+                focus: ['diffusion', 'flow maps', 'generative modeling'],
+                qualityRank: 10
+            },
+            {
+                name: 'Physical Intelligence',
+                institution: 'Physical Intelligence (π)',
+                homepage: 'https://www.pi.website/blog',
+                avatar: 'https://www.google.com/s2/favicons?domain=pi.website&sz=128',
+                matches: ['Physical Intelligence', 'pi.website'],
+                specialty: 'World Model',
+                focus: ['vision-language-action models', 'generalist robot policies', 'open-world generalization'],
+                qualityRank: 10
+            },
+            {
+                name: 'Epoch AI',
+                institution: 'Epoch AI Research',
+                homepage: 'https://epoch.ai/blog',
+                avatar: 'https://www.google.com/s2/favicons?domain=epoch.ai&sz=128',
+                matches: ['Epoch AI', 'epoch.ai'],
+                specialty: 'Frontier',
+                focus: ['compute trends', 'AI forecasting', 'data center economics'],
+                qualityRank: 10
             }
         ];
     }
