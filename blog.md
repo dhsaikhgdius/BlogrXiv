@@ -47,7 +47,7 @@
 
 ## Visual Generation
 
-- [ ] **A+** · [Generative Modelling in Latent Space](https://sander.ai/2025/04/15/latents.html) — Sander Dieleman · 2025-04-15。系统分析 latent 容量、可建模性、重建、shaping 与端到端路线；是高质量综述而非单一新实验。
+- [x] **A+** · [Generative Modelling in Latent Space](https://sander.ai/2025/04/15/latents.html) — Sander Dieleman · 2025-04-15。系统分析 latent 容量、可建模性、重建、shaping 与端到端路线；是高质量综述而非单一新实验。
 - [ ] **A** · [MiniMax Design](https://design.minimax.io/) — MiniMax Design · 2026-08-24。以 design 语义、版式和创意迭代为核心的产品页，偏视觉生成与设计工作流展示。
 
 - [x] **A** · [Perspectives on Diffusion: Noise Schedules](https://sander.ai/2024/06/14/noise-schedules.html) — Sander Dieleman
@@ -56,22 +56,31 @@
 - [x] **A** · [Introducing Muse Image and Muse Video](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) — Meta AI · 2026-07-07
 - [x] **A** · [Why Video Generation Is an Infrastructure Problem](https://research.nvidia.com/labs/eai/blogs/video-gen-is-an-infra-problem/) — NVIDIA Research · 2026-05-26
 - [x] **A** · [Diffusion Meets Flow Matching: Two Sides of the Same Coin](https://diffusionflow.github.io/) — **独立交互式技术教程**。用统一参数化解释 Gaussian flow matching 与 diffusion 的等价关系，包含训练、采样、ODE / SDE 和调度器；页面无论文、arXiv 或 publication 链接。
-- [ ] **A+** · [Generative Modeling by Estimating Gradients of the Data Distribution](https://yang-song.net/blog/2021/score/) — **Yang Song**。从 score matching、噪声扰动和 Langevin dynamics 建立 score-based generative modeling 的完整直觉。
-- [ ] **A+** · [Bringing 3D Shoppable Products Online with Generative AI](https://research.google/blog/bringing-3d-shoppable-products-online-with-generative-ai/) — **Google Research**。按 NeRF、view-conditioned diffusion、Veo 三代系统梳理从少量商品图像生成一致 3D 视图的演进。
+- [x] **A+** · [Generative Modeling by Estimating Gradients of the Data Distribution](https://yang-song.net/blog/2021/score/) — **Yang Song**。从 score matching、噪声扰动和 Langevin dynamics 建立 score-based generative modeling 的完整直觉。
+- [x] **A+** · [Bringing 3D Shoppable Products Online with Generative AI](https://research.google/blog/bringing-3d-shoppable-products-online-with-generative-ai/) — **Google Research**。按 NeRF、view-conditioned diffusion、Veo 三代系统梳理从少量商品图像生成一致 3D 视图的演进。
+- [x] **A** · [Guidance: A Cheat Code for Diffusion Models](https://sander.ai/2022/05/26/guidance.html) — Sander Dieleman · 2022-05-26。解释 classifier 与 classifier-free guidance 如何以近零成本锐化条件分布并支撑 DALL-E 2 / Imagen 的保真度；代价是牺牲多样性。
+- [x] **A** · [Improving Diffusion Models as an Alternative To GANs, Part 1](https://developer.nvidia.com/blog/improving-diffusion-models-as-an-alternative-to-gans-part-1/) — NVIDIA / Arash Vahdat, Karsten Kreis · 2022-04-26。用生成学习三难困境框架比较 diffusion 与 GAN；加速采样的具体技术在 Part 2。
+- [x] **A** · [High Fidelity Image Generation Using Diffusion Models](https://research.google/blog/high-fidelity-image-generation-using-diffusion-models/) — Google Research / Jonathan Ho, Chitwan Saharia · 2021-07-16。SR3 迭代精化超分与 CDM 级联生成在 ImageNet 上超越 BigGAN-deep 与 VQ-VAE-2。
 
 ## World Model
 
-- [ ] **A+** · [Open-Sourcing Touch Representations and Models for Robot Dexterity](https://ai.meta.com/blog/fair-robotics-open-source/) — Meta AI
+- [x] **A+** · [Open-Sourcing Touch Representations and Models for Robot Dexterity](https://ai.meta.com/blog/fair-robotics-open-source/) — Meta AI
 - [x] **A+** · [PARTNR and New Models for Human-Robot Collaboration](https://ai.meta.com/blog/machine-intelligence-research-new-models/) — Meta AI
-- [ ] **A+** · [MolmoMotion: Language-Guided 3D Motion Forecasting](https://allenai.org/blog/molmo-motion) — Ai2 · 2026-06-17
+- [x] **A+** · [MolmoMotion: Language-Guided 3D Motion Forecasting](https://allenai.org/blog/molmo-motion) — Ai2 · 2026-06-17
 - [x] **A** · [MolmoSpaces](https://allenai.org/blog/molmospaces) — Ai2 · 2026-02-11
 
 - [x] **A** · [Scaling Up Reinforcement Learning for Traffic Smoothing: A 100-AV Highway Deployment](https://bair.berkeley.edu/blog/2025/03/25/rl-av-smoothing/) — bair.berkeley.edu
+- [x] **A** · [Model-Based Reinforcement Learning: Theory and Practice](https://bair.berkeley.edu/blog/2019/12/12/mbpo/) — BAIR / Michael Janner · 2019-12-12。从单调改进界推导到 MBPO 短 rollout 配方；证据限于 MuJoCo 连续控制基准。
+- [x] **A** · [Introducing General World Models](https://runwayml.com/research/introducing-general-world-models) — Runway / Anastasis Germanidis · 2023-12-11。把视频生成系统定位为早期受限世界模型并给出研究议程；属立场声明而非技术报告。
+- [x] **A** · [1X World Model](https://www.1x.tech/discover/1x-world-model) — 1X / Jack Monas, Eric Jang · 2024-09-17。用 EVE 人形机器人数据训练动作可控视频世界模型作学习型模拟器，并开放数据、基线与挑战赛。
 
 
 ## AI Agents
 
-- [ ] **A+** · [Quantifying Infrastructure Noise in Agentic Coding Evals](https://www.anthropic.com/engineering/infrastructure-noise) — Anthropic / Gian Segato · 2026-02-05。受控量化 CPU、内存、存储和网络配额如何改变 coding-agent 分数，证明基础设施必须成为评测变量；主要围绕 Anthropic 栈。
+- [x] **A+** · [Quantifying Infrastructure Noise in Agentic Coding Evals](https://www.anthropic.com/engineering/infrastructure-noise) — Anthropic / Gian Segato · 2026-02-05。受控量化 CPU、内存、存储和网络配额如何改变 coding-agent 分数，证明基础设施必须成为评测变量；主要围绕 Anthropic 栈。
+- [x] **A** · [Computer-Using Agent](https://openai.com/index/computer-using-agent/) — OpenAI · 2025-01-23。GPT-4o 视觉加 RL 训练的 GUI 操作模型，OSWorld 38.1% / WebArena 58.1% / WebVoyager 87%；仍显著低于人类 72.4%。
+- [x] **A** · [Chain of Agents: Large Language Models Collaborating on Long-Context Tasks](https://research.google/blog/chain-of-agents-large-language-models-collaborating-on-long-context-tasks/) — Google Research · 2025-01-23。免训练的 worker-manager 链式长上下文框架，较 RAG 与 full-context 基线最多提升 10%；顺序调用增加时延。
+- [x] **A** · [CICERO: An AI Agent That Negotiates, Persuades, and Cooperates with People](https://ai.meta.com/blog/cicero-ai-negotiates-persuades-and-cooperates-with-people/) — Meta AI · 2022-11-22。可控对话模型与 piKL 规划结合，在 Diplomacy 达到人类水平；偶发自相矛盾消息。
 - [ ] **A** · [DeepSeek Harness](https://www.deepseek.com/harness/en/) — DeepSeek · 2026-08-24。developer preview 页面把模型、工具、会话、沙箱、存储和 UI 组件都做成可插拔模块，偏 agent harness 设计。
 
 - [x] **A** · [Agent Arena: Causal Evaluation of Agents in the Real World](https://arena.ai/blog/agent-arena-methodology) — Arena Team · 2026-06-04。基于真实交互用因果设计隔离 orchestrator 与模型影响；平台自有数据和采样尚不能完全独立复现。
