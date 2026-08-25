@@ -12,13 +12,13 @@
 - [ ] **A** · [GEN-1.5](https://generalistai.com/blog/gen-1.5) — Generalist AI · 2026-08-24。Embodied foundation model 页面，强调 one-shot learning 与更强的通用化；更像项目发布页而非论文式长文。
 - [ ] **A+** · [Scaling Pedagogical Pre-training: From Optimal Mixing to 10 Billion Tokens](https://huggingface.co/blog/codelion/scaling-pedagogical-pretraining-10-billion-tokens) — Asankhaya Sharma / CodeLion · 2026-03-06。公开 10.2B-token 教育语料生成、质量筛选和 30.6B-token 训练；核心验证仍为 69M 模型。
 - [ ] **A+** · [Introducing LLM360: Fully Transparent Open-Source LLMs](https://www.llm360.ai/news/introducing-llm360-fully-transparent-open-source-llms.html) — LLM360 Team · 2023 · `开放研究团队`
-- [ ] **A** · [The Joy and Pain of Training an LLM from Scratch](https://huggingface.co/blog/giux78/slm-zagreus-nesso) — Alessandro Ercolani / MII-LLM community · 2026 · `社区训练复盘`
+- [x] **A** · [The Joy and Pain of Training an LLM from Scratch](https://huggingface.co/blog/giux78/slm-zagreus-nesso) — Alessandro Ercolani / MII-LLM community · 2026 · `社区训练复盘`
 - [ ] **A** · [GLM-5.3](https://z.ai/blog/glm-5.3) — Z.ai · 2026-08-19。Frontier coding 页面，主打 emergent cyber capabilities 与 agentic tooling，更接近模型发布与能力展示。
-- [ ] **A** · [Techniques for Training Large Neural Networks](https://openai.com/index/techniques-for-training-large-neural-networks/) — OpenAI
-- [ ] **A** · [Dolma: 3 Trillion Tokens for Open LLM Research](https://allenai.org/blog/dolma-3-trillion-tokens-open-llm-corpus-9a0ff4b8da64) — Ai2
-- [ ] **A** · [Introducing the Third Generation of Apple’s Foundation Models](https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models) — Apple Machine Learning Research · 2026-06-08
-- [ ] **A** · [Multi-Token Prediction in Gemma 4](https://blog.google/innovation-and-ai/technology/developers-tools/multi-token-prediction-gemma-4/) — Google · 2026-05
-- [ ] **A** · [Structured State Spaces: Combining Continuous-Time, Recurrent, and Convolutional Models](https://hazyresearch.stanford.edu/blog/2022-01-14-s4-3) — hazyresearch.stanford.edu
+- [x] **A** · [Techniques for Training Large Neural Networks](https://openai.com/index/techniques-for-training-large-neural-networks/) — OpenAI
+- [x] **A** · [Dolma: 3 Trillion Tokens for Open LLM Research](https://allenai.org/blog/dolma-3-trillion-tokens-open-llm-corpus-9a0ff4b8da64) — Ai2
+- [x] **A** · [Introducing the Third Generation of Apple’s Foundation Models](https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models) — Apple Machine Learning Research · 2026-06-08
+- [x] **A** · [Multi-Token Prediction in Gemma 4](https://blog.google/innovation-and-ai/technology/developers-tools/multi-token-prediction-gemma-4/) — Google · 2026-05
+- [x] **A** · [Structured State Spaces: Combining Continuous-Time, Recurrent, and Convolutional Models](https://hazyresearch.stanford.edu/blog/2022-01-14-s4-3) — hazyresearch.stanford.edu
 - [ ] **A+** · [Investigating pretraining dynamics and stability with OLMo checkpoints](https://allenai.org/blog/investigating-pretraining-dynamics-and-stability-with-olmo-checkpoints-ece6f0c4947a) — Ai2 · 2024
 
 ## LLM & MLLM
@@ -28,11 +28,11 @@
 - [ ] **A** · [Mixture of Experts Explained](https://huggingface.co/blog/moe) — Hugging Face
 - [ ] **A** · [Mixture of Experts in Transformers](https://huggingface.co/blog/moe-transformers) — Hugging Face
 
-- [ ] **A** · [Learning to Reason with LLMs](https://openai.com/index/learning-to-reason-with-llms/) — OpenAI
-- [ ] **A** · [MaxProof: Scaling Mathematical Proof with Generative-Verifier RL and Evolutionary Search](https://www.minimax.io/blog/minimax-maxproof-math-proof-evolution) — MiniMax · 2026-06-09
+- [x] **A** · [Learning to Reason with LLMs](https://openai.com/index/learning-to-reason-with-llms/) — OpenAI
+- [x] **A** · [MaxProof: Scaling Mathematical Proof with Generative-Verifier RL and Evolutionary Search](https://www.minimax.io/blog/minimax-maxproof-math-proof-evolution) — MiniMax · 2026-06-09
 - [ ] **A+** · [Internal Investigation of Sparse Token Forgetting](https://www.minimax.io/blog/sparse-token-forgetting) — MiniMax · 2026-05-26
 - [ ] **A+** · [Efficient Language Models as Arithmetic Circuits](https://hazyresearch.stanford.edu/blog/2024-06-22-ac) — hazyresearch.stanford.edu
-- [ ] **A+** · [The Illustrated Retrieval Transformer](https://jalammar.github.io/illustrated-retrieval-transformer/) — jalammar.github.io
+- [x] **A+** · [The Illustrated Retrieval Transformer](https://jalammar.github.io/illustrated-retrieval-transformer/) — jalammar.github.io
 
 ## Multimodal Model
 
@@ -40,10 +40,10 @@
 - [ ] **A** · [Visual Language Models on NVIDIA Hardware with VILA](https://developer.nvidia.com/blog/visual-language-models-on-nvidia-hardware-with-vila/) — NVIDIA & MIT · 2024-05-03。拆解 VILA 的训练配方、多图/视频 QA 与 AWQ 边缘部署；比较重点偏 NVIDIA 硬件。
 - [ ] **A** · [Mureka V9.5](https://www.mureka.ai/mureka-9-5) — Mureka · 2026-08-24。音乐生成页面，突出 prompt 控制与创作流程，适合放在多模态而非纯视觉或纯语言类别。
 - [ ] **A+** · [Vision Language Models (Better, Faster, Stronger)](https://huggingface.co/blog/vlms-2025) — Hugging Face community team · 2025 · `开放生态年度综述`
-- [ ] **A** · [Demystifying Multimodal Learning: Enabling Vision in Language Models](https://huggingface.co/blog/MatteoNulli/de-mystifying-multimodal-learning-enabiling-vision) — Matteo Nulli · 2026 · `独立技术教程`
+- [x] **A** · [Demystifying Multimodal Learning: Enabling Vision in Language Models](https://huggingface.co/blog/MatteoNulli/de-mystifying-multimodal-learning-enabiling-vision) — Matteo Nulli · 2026 · `独立技术教程`
 - [ ] **A+** · [One Adapter, Both Modalities: Field Notes from Building and Serving a Multimodal Reranker](https://huggingface.co/blog/lightonai/lighton-rerank) — LightOn AI · 2026 · `模型作者实录`
 
-- [ ] **A** · [Generalized Visual Language Models](https://lilianweng.github.io/posts/2022-06-09-vlm/) — lilianweng.github.io
+- [x] **A** · [Generalized Visual Language Models](https://lilianweng.github.io/posts/2022-06-09-vlm/) — lilianweng.github.io
 
 ## Visual Generation
 
