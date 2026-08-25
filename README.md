@@ -83,15 +83,17 @@ The current corpus emphasizes:
 
 | Category | Scope |
 | --- | --- |
-| Foundation Model | Pretraining, scaling behavior, representation learning, model architecture, and emergent capability analysis. |
-| LLM & MLLM | Language models, multimodal language models, reasoning, instruction tuning, evaluation, and post-training behavior. |
-| Multimodal Model | Vision-language systems, video-language systems, perception, grounding, and embodied understanding. |
-| Visual Generation | Diffusion, image and video generation, controllability, generative evaluation, and media synthesis systems. |
-| World Model | Learned simulators, planning representations, dynamics models, spatial reasoning, and embodied AI. |
-| AI Agents | Tool use, computer use, memory, orchestration, multi-agent workflows, autonomy, and agent evaluation. |
-| Efficient AI | Optimization, systems, inference, training efficiency, compression, kernels, and hardware-aware methods. |
-| Trustworthy AI | Safety, alignment, interpretability, robustness, monitoring, auditing, governance, and risk evaluation. |
-| Research Craft | Evaluation methodology, research taste, scientific process, writing, adjudication, and field-building. |
+| Foundation Model | Pretraining, datasets, architecture, scaling, training dynamics, and open-weight recipes. Not model-launch marketing pages. |
+| LLM & MLLM | Language and multimodal language-model behavior: reasoning, mixture-of-experts, retrieval, instruction tuning, and post-training. |
+| Multimodal Model | Vision-language, audio-language, grounding, and fused perception. Not pure image or video generators. |
+| Visual Generation | Diffusion, flow matching, latent modeling, controllability, and image or video synthesis systems. |
+| World Model | Learned simulators, robotics/VLA, dynamics, spatial representations, and model-based planning. |
+| AI Agents | Tool use, harnesses, memory, multi-agent workflows, computer use, and agent evaluation. |
+| Efficient AI | Kernels, parallelism, quantization, speculative decoding, and training or inference systems. |
+| Trustworthy AI | Safety, alignment, interpretability, control evaluations, security, monitoring, and risk evaluation. |
+| Research Craft | Evaluation methodology, experiment design, data analysis, LLM-as-judge, and reproducibility as scientific practice. |
+| Frontier | Individual frontier reports and technically substantive capability, compute, or power essays. Not lab homepages or news indexes. |
+| How to Research | Advising, research taste, reading, writing, talks, and PhD practice. Adjacent to, but distinct from, Research Craft. |
 
 ## Editorial Standard
 

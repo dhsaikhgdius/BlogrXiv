@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categories - BlogrXiv</title>
-    <meta name="description" content="Browse AI research blogs by category on BlogrXiv - models, agents, safety, efficiency, world models, frontier AI, and how to research">
+    <meta name="description" content="BlogrXiv taxonomy: eleven research shelves for foundation models, language and multimodal systems, generation, world models, agents, efficiency, trust, craft, frontier reports, and how to research.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -26,9 +26,9 @@
     <link rel="stylesheet" href="assets/css/enhancements.css?v=popular-real-blogs-expanded-15">
     <link rel="icon" type="image/svg+xml" href="assets/img/brand/icon.svg">
     <link rel="mask-icon" href="assets/img/brand/icon.svg" color="#7cacdc">
-    <link rel="stylesheet" href="assets/css/academic-pages.css?v=1">
+    <link rel="stylesheet" href="assets/css/academic-pages.css?v=taxonomy-2">
     <link rel="stylesheet" href="assets/css/blog-cards.css?v=1">
-    <link rel="stylesheet" href="assets/css/unified-palette.css?v=3">
+    <link rel="stylesheet" href="assets/css/unified-palette.css?v=taxonomy-2">
 </head>
 <body>
     <!-- Navigation -->
@@ -78,8 +78,27 @@
             <!-- Page Header -->
             <header class="page-header">
                 <h1 class="page-title">Browse by Category</h1>
-                <p class="page-description">Explore AI research blogs organized by specialized domains and research areas</p>
+                <p class="page-description">Eleven editorial shelves for technical AI writing. Classification follows the post’s primary mechanism, not the author’s institution or the news cycle.</p>
             </header>
+
+            <aside class="taxonomy-panel" aria-labelledby="classifyTitle">
+                <p class="taxonomy-panel-kicker">How we classify</p>
+                <h2 id="classifyTitle">A taxonomy of mechanisms, not a news desk</h2>
+                <p>Each indexed post is assigned one primary category. Neighbor shelves exist so that a VLM analysis does not sit next to a video diffusion recipe, and so that a PhD advising essay is not mixed with an LLM-as-judge methodology note. Lab homepages, product landings, and paper-only listings stay out of the index even when they are famous.</p>
+                <dl class="taxonomy-rule-grid">
+                    <div class="taxonomy-rule"><dt>Foundation Model</dt><dd>Pretraining, datasets, architecture, and scaling. Not a launch page.</dd></div>
+                    <div class="taxonomy-rule"><dt>LLM &amp; MLLM</dt><dd>Language and multimodal language-model behavior, reasoning, and post-training.</dd></div>
+                    <div class="taxonomy-rule"><dt>Multimodal Model</dt><dd>VLMs, grounding, and fused perception — not pure image generators.</dd></div>
+                    <div class="taxonomy-rule"><dt>Visual Generation</dt><dd>Diffusion, flow matching, and controllable image or video synthesis.</dd></div>
+                    <div class="taxonomy-rule"><dt>World Model</dt><dd>Simulators, robotics/VLA, dynamics, and model-based planning.</dd></div>
+                    <div class="taxonomy-rule"><dt>AI Agents</dt><dd>Tools, harnesses, memory, multi-agent systems, and agent evaluation.</dd></div>
+                    <div class="taxonomy-rule"><dt>Efficient AI</dt><dd>Kernels, parallelism, quantization, and training or inference systems.</dd></div>
+                    <div class="taxonomy-rule"><dt>Trustworthy AI</dt><dd>Safety, alignment, interpretability, security evals, and control.</dd></div>
+                    <div class="taxonomy-rule"><dt>Research Craft</dt><dd>How ML science is done: evals, experiment design, data analysis.</dd></div>
+                    <div class="taxonomy-rule"><dt>Frontier</dt><dd>Individual reports and technically substantive frontier essays — not lab indexes.</dd></div>
+                    <div class="taxonomy-rule"><dt>How to Research</dt><dd>Becoming a researcher: advising, taste, reading, writing, talks, PhD practice.</dd></div>
+                </dl>
+            </aside>
 
             <!-- Categories Grid -->
             <section class="categories-section">
@@ -91,12 +110,14 @@
                             </svg>
                         </div>
                         <h3 class="category-title">Multimodal Model</h3>
-                        <p class="category-description">Vision-language, audio-language, and unified multimodal model research</p>
+                        <p class="category-description">Vision-language, audio-language, document, and unified models that fuse perception with language. Posts should explain training recipes, grounding, evaluation, or failure modes — not a model card.</p>
+                        <p class="category-boundary">Boundary: image/video generators belong in Visual Generation; tool-using multimodal agents belong in AI Agents.</p>
                         <div class="category-tags">
-                            <span class="tag">Multimodal</span>
                             <span class="tag">Vision-Language</span>
+                            <span class="tag">Grounding</span>
                             <span class="tag">Audio-Language</span>
-                            <span class="tag">Reasoning</span>
+                            <span class="tag">Document AI</span>
+                            <span class="tag">OCR</span>
                         </div>
                         <a href="explore.html?category=Multimodal%20Model" class="category-link">Explore Multimodal Model Blogs</a>
                     </div>
@@ -108,12 +129,14 @@
                             </svg>
                         </div>
                         <h3 class="category-title">Visual Generation</h3>
-                        <p class="category-description">Image, video, editing, and controllable visual synthesis research</p>
+                        <p class="category-description">Diffusion, flow matching, latent modeling, and controllable image or video synthesis. Useful posts discuss sampling, evaluation, infrastructure, or the geometry of the generative process.</p>
+                        <p class="category-boundary">Boundary: VLM question answering is Multimodal Model; learned video worlds used for planning are World Model.</p>
                         <div class="category-tags">
-                            <span class="tag">Image Generation</span>
-                            <span class="tag">Video Generation</span>
                             <span class="tag">Diffusion</span>
-                            <span class="tag">Editing</span>
+                            <span class="tag">Flow Matching</span>
+                            <span class="tag">Video Generation</span>
+                            <span class="tag">Controllability</span>
+                            <span class="tag">Latent Models</span>
                         </div>
                         <a href="explore.html?category=Visual%20Generation" class="category-link">Explore Visual Generation Blogs</a>
                     </div>
@@ -121,16 +144,21 @@
                     <div class="category-card" data-category="World Model">
                         <div class="category-icon">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                <circle cx="12" cy="12" r="9"></circle>
+                                <path d="M3 12h18"></path>
+                                <path d="M12 3a14 14 0 0 1 0 18"></path>
+                                <path d="M12 3a14 14 0 0 0 0 18"></path>
                             </svg>
                         </div>
                         <h3 class="category-title">World Model</h3>
-                        <p class="category-description">Physical simulation, video worlds, robotics/VLA, and model-based planning research</p>
+                        <p class="category-description">Learned simulators, tactile and spatial representations, robotics/VLA, and model-based planning. The post should treat dynamics or embodiment as the object of study.</p>
+                        <p class="category-boundary">Boundary: perception-only VLMs stay in Multimodal Model; language agents that call tools stay in AI Agents.</p>
                         <div class="category-tags">
                             <span class="tag">Simulation</span>
                             <span class="tag">Robotics</span>
+                            <span class="tag">VLA</span>
                             <span class="tag">Planning</span>
-                            <span class="tag">Physical Dynamics</span>
+                            <span class="tag">Dynamics</span>
                         </div>
                         <a href="explore.html?category=World%20Model" class="category-link">Explore World Model Blogs</a>
                     </div>
@@ -144,12 +172,14 @@
                             </svg>
                         </div>
                         <h3 class="category-title">AI Agents</h3>
-                        <p class="category-description">Tool-using agents, coding agents, browser agents, and long-horizon agent systems</p>
+                        <p class="category-description">Tool use, coding and browser harnesses, memory, multi-agent workflows, and agent evaluation. Infrastructure noise, causal evals, and long-horizon design notes belong here when the agent loop is the subject.</p>
+                        <p class="category-boundary">Boundary: model-only reasoning analyses are LLM &amp; MLLM; embodied policy learning is World Model.</p>
                         <div class="category-tags">
                             <span class="tag">Tool Use</span>
-                            <span class="tag">Coding Agents</span>
-                            <span class="tag">Browser Agents</span>
-                            <span class="tag">Agent Infrastructure</span>
+                            <span class="tag">Harnesses</span>
+                            <span class="tag">Memory</span>
+                            <span class="tag">Agent Evals</span>
+                            <span class="tag">Multi-Agent</span>
                         </div>
                         <a href="explore.html?category=AI%20Agents" class="category-link">Explore AI Agents Blogs</a>
                     </div>
@@ -161,13 +191,15 @@
                                 <path d="M17 10l3 2-3 2"></path>
                             </svg>
                         </div>
-                        <h3 class="category-title">LLM & MLLM</h3>
-                        <p class="category-description">Language, reasoning, tool-use, and multimodal model analysis</p>
+                        <h3 class="category-title">LLM &amp; MLLM</h3>
+                        <p class="category-description">Language and multimodal language models as objects of analysis: reasoning, mixture-of-experts, retrieval, instruction tuning, and post-training behavior. Prefer mechanistic or empirical essays over release notes.</p>
+                        <p class="category-boundary">Boundary: pretraining corpora and scaling laws are Foundation Model; fused perception systems are Multimodal Model.</p>
                         <div class="category-tags">
-                            <span class="tag">LLM</span>
-                            <span class="tag">MLLM</span>
                             <span class="tag">Reasoning</span>
-                            <span class="tag">Tool Use</span>
+                            <span class="tag">Mixture of Experts</span>
+                            <span class="tag">Post-training</span>
+                            <span class="tag">Retrieval</span>
+                            <span class="tag">Evaluation</span>
                         </div>
                         <a href="explore.html?category=LLM%20%26%20MLLM" class="category-link">Explore LLM & MLLM Blogs</a>
                     </div>
@@ -182,12 +214,14 @@
                             </svg>
                         </div>
                         <h3 class="category-title">Foundation Model</h3>
-                        <p class="category-description">Open and frontier models, training recipes, datasets, and releases</p>
+                        <p class="category-description">Pretraining mixes, datasets, architectures, training dynamics, and open-weight recipes. A post belongs here when the foundation stack itself — data, scale, or stability — is the contribution.</p>
+                        <p class="category-boundary">Boundary: capability scorecards and compute/power reports are Frontier; inference kernels are Efficient AI.</p>
                         <div class="category-tags">
-                            <span class="tag">Open Weights</span>
-                            <span class="tag">Frontier Models</span>
+                            <span class="tag">Pretraining</span>
                             <span class="tag">Datasets</span>
+                            <span class="tag">Architecture</span>
                             <span class="tag">Scaling</span>
+                            <span class="tag">Open Weights</span>
                         </div>
                         <a href="explore.html?category=Foundation%20Model" class="category-link">Explore Foundation Model Blogs</a>
                     </div>
@@ -201,12 +235,14 @@
                             </svg>
                         </div>
                         <h3 class="category-title">Efficient AI</h3>
-                        <p class="category-description">Inference, training, serving, quantization, and small-model systems</p>
+                        <p class="category-description">Attention kernels, parallelism, quantization, speculative decoding, and serving. The post should make a systems claim a practitioner can check against rooflines, traces, or ablations.</p>
+                        <p class="category-boundary">Boundary: algorithm-only architecture essays without a systems thesis stay in Foundation Model or LLM &amp; MLLM.</p>
                         <div class="category-tags">
+                            <span class="tag">Kernels</span>
                             <span class="tag">Inference</span>
-                            <span class="tag">Training</span>
+                            <span class="tag">Quantization</span>
+                            <span class="tag">Parallelism</span>
                             <span class="tag">Serving</span>
-                            <span class="tag">Small Models</span>
                         </div>
                         <a href="explore.html?category=Efficient%20AI" class="category-link">Explore Efficient AI Blogs</a>
                     </div>
@@ -219,12 +255,14 @@
                             </svg>
                         </div>
                         <h3 class="category-title">Trustworthy AI</h3>
-                        <p class="category-description">Alignment, interpretability, hallucination, red teaming, auditing, and secure AI systems</p>
+                        <p class="category-description">Alignment, interpretability, control evaluations, security, and monitoring. Include red-team methods and negative results when they change how a technical reader judges a claim.</p>
+                        <p class="category-boundary">Boundary: eval methodology without a safety thesis is Research Craft; agent harness design without a risk claim is AI Agents.</p>
                         <div class="category-tags">
                             <span class="tag">Alignment</span>
                             <span class="tag">Interpretability</span>
-                            <span class="tag">Red Teaming</span>
+                            <span class="tag">Control</span>
                             <span class="tag">AI Security</span>
+                            <span class="tag">Monitoring</span>
                         </div>
                         <a href="explore.html?category=Trustworthy%20AI" class="category-link">Explore Trustworthy AI Blogs</a>
                     </div>
@@ -237,12 +275,14 @@
                             </svg>
                         </div>
                         <h3 class="category-title">Research Craft</h3>
-                        <p class="category-description">Evals, research taste, systems thinking, and becoming a stronger researcher</p>
+                        <p class="category-description">How ML science is practiced: evaluation design, experiment hygiene, data traps, LLM-as-judge, and reproducibility as a method. These posts teach the craft of getting a trustworthy result.</p>
+                        <p class="category-boundary">Boundary: PhD advising, taste, and career essays belong in How to Research.</p>
                         <div class="category-tags">
-                            <span class="tag">Evals</span>
-                            <span class="tag">Research Taste</span>
-                            <span class="tag">AI Engineering</span>
-                            <span class="tag">Methods</span>
+                            <span class="tag">Evaluation</span>
+                            <span class="tag">Experiment Design</span>
+                            <span class="tag">Reproducibility</span>
+                            <span class="tag">LLM-as-Judge</span>
+                            <span class="tag">Data Analysis</span>
                         </div>
                         <a href="explore.html?category=Research%20Craft" class="category-link">Explore Research Craft Blogs</a>
                     </div>
@@ -255,11 +295,13 @@
                             </svg>
                         </div>
                         <h3 class="category-title">Frontier</h3>
-                        <p class="category-description">Frontier AI model releases, open-model shifts, lab roadmaps, ecosystem movement, and deployment-facing capability updates</p>
+                        <p class="category-description">Individual frontier reports and technically substantive essays on capability, compute, power, and deployment. Lab homepages, news indexes, and GitHub org pages are not Frontier posts.</p>
+                        <p class="category-boundary">Boundary: a training-recipe essay is Foundation Model; a safety eval is Trustworthy AI even if the model is frontier-scale.</p>
                         <div class="category-tags">
-                            <span class="tag">Frontier Models</span>
-                            <span class="tag">Global AI</span>
-                            <span class="tag">Research Trends</span>
+                            <span class="tag">Capability</span>
+                            <span class="tag">Compute</span>
+                            <span class="tag">Scaling</span>
+                            <span class="tag">Reports</span>
                             <span class="tag">Deployment</span>
                         </div>
                         <a href="explore.html?category=Frontier" class="category-link">Explore Frontier Blogs</a>
@@ -274,12 +316,14 @@
                             </svg>
                         </div>
                         <h3 class="category-title">How to Research</h3>
-                        <p class="category-description">Strictly research-experience writing: paper writing, research taste, experiment habits, reproducibility, research code, and scientific workflow reflections</p>
+                        <p class="category-description">Advising, research taste, reading and writing, talks, and PhD practice. These essays are about becoming and remaining a researcher, not about a particular model.</p>
+                        <p class="category-boundary">Boundary: evaluation methodology and experiment checklists are Research Craft even when they are written as advice.</p>
                         <div class="category-tags">
-                            <span class="tag">Paper Writing</span>
+                            <span class="tag">Advising</span>
                             <span class="tag">Research Taste</span>
-                            <span class="tag">Reproduction</span>
-                            <span class="tag">Research Code</span>
+                            <span class="tag">Writing</span>
+                            <span class="tag">Talks</span>
+                            <span class="tag">PhD Practice</span>
                         </div>
                         <a href="explore.html?category=How%20to%20Research" class="category-link">Explore How to Research Blogs</a>
                     </div>
@@ -303,8 +347,7 @@
                         </a>
                     </div>
                     <p class="footer-description">
-                        Discover, share, and explore amazing AI research blogs across different domains. 
-                        Join our community of knowledge seekers and content creators.
+                        An editorially curated, source-linked index of technical AI research writing.
                     </p>
                 </div>
                 
@@ -373,7 +416,7 @@
     </footer>
 
     <script src="assets/js/blog-data.js?v=2"></script>
-    <script src="assets/js/app.js?v=supabase-data-1"></script>
+    <script src="assets/js/app.js?v=quality-20260825"></script>
     <!-- Loading animation overlay -->
     <div class="loading-overlay" id="loadingOverlay">
         <div class="loading-container">
@@ -385,7 +428,7 @@
         </div>
     </div>
 
-    <script src="assets/js/pages/categories.js?v=theme-fix-1"></script>
+    <script src="assets/js/pages/categories.js?v=taxonomy-2"></script>
     <div class="visitor-map" aria-label="Visitor map and count"></div>
 </body>
 </html>

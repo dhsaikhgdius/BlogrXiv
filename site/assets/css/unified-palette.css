@@ -318,7 +318,7 @@ body,
 
 /* Categories page: softer topic chips and a readable low-emphasis action. */
 .categories-page .categories-section .category-card {
-    min-height: 440px;
+    min-height: 520px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -338,9 +338,9 @@ body,
 }
 
 .categories-page .categories-section .category-description {
-    min-height: 3.2em;
-    max-width: 34ch;
-    margin-bottom: 20px;
+    min-height: 4.8em;
+    max-width: 46ch;
+    margin-bottom: 12px;
 }
 
 .categories-page .categories-section .category-tags {

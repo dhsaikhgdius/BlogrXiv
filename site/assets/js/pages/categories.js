@@ -126,10 +126,12 @@ class CategoriesPage {
         categoryCards.forEach(card => {
             const title = card.querySelector('.category-title').textContent.toLowerCase();
             const description = card.querySelector('.category-description').textContent.toLowerCase();
+            const boundary = card.querySelector('.category-boundary')?.textContent.toLowerCase() || '';
             const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
 
             const matches = title.includes(searchTerm) ||
                           description.includes(searchTerm) ||
+                          boundary.includes(searchTerm) ||
                           tags.some(tag => tag.includes(searchTerm));
 
             card.style.display = matches ? 'block' : 'none';

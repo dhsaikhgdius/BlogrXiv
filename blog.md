@@ -100,109 +100,109 @@
 - [ ] **A+** · [Run High-Performance LLM Inference Kernels from NVIDIA Using FlashInfer](https://developer.nvidia.com/blog/run-high-performance-llm-inference-kernels-from-nvidia-using-flashinfer/) — NVIDIA / University of Washington / CMU et al. · 2025-06-13。系统介绍引擎无关的 attention、GEMM、通信和采样 kernel 栈；性能结论具 NVIDIA/CUDA 硬件针对性。
 - [ ] **A+** · [Training MoEs at Scale with PyTorch](https://pytorch.org/blog/training-moes/) — PyTorch / Databricks · 2024-06-23。拆解 dropless sparse kernels、expert parallel、3D device mesh 与弹性 checkpoint；结果依赖特定集群和软件栈。
 - [ ] **A+** · [A First Comprehensive Study of TurboQuant: Accuracy and Performance](https://vllm.ai/blog/2026-05-11-turboquant) — Red Hat AI / vLLM · 2026-05-11。跨 dense/MoE 与长上下文复现 TurboQuant 的精度和吞吐，报告重要负结果；结论限所测 H100/vLLM 配置。
-- [ ] **A** · [Kernel Fusion in NVIDIA CUDA: Optimizing Memory Traffic and Launch Overhead](https://developer.nvidia.com/blog/kernel-fusion-in-nvidia-cuda-optimizing-memory-traffic-and-launch-overhead/) — NVIDIA / Daniel Rodriguez · 2026-07-10。用 Nsight 比较手写 CUDA、torch.compile 与显式融合，展示内存流量和 launch overhead 权衡；只是单 GPU 微基准。
-- [ ] **A** · [System Performance Optimizations](https://leimao.github.io/article/System-Performance-Optimizations/) — Lei Mao · 2026 · `独立系统文章`
+- [x] **A** · [Kernel Fusion in NVIDIA CUDA: Optimizing Memory Traffic and Launch Overhead](https://developer.nvidia.com/blog/kernel-fusion-in-nvidia-cuda-optimizing-memory-traffic-and-launch-overhead/) — NVIDIA / Daniel Rodriguez · 2026-07-10。用 Nsight 比较手写 CUDA、torch.compile 与显式融合，展示内存流量和 launch overhead 权衡；只是单 GPU 微基准。
+- [x] **A** · [System Performance Optimizations](https://leimao.github.io/article/System-Performance-Optimizations/) — Lei Mao · 2026 · `独立系统文章`
 - [ ] **A+** · [High-Performance LLM Inference](https://modal.com/docs/guide/high-performance-llm-inference) — Modal engineering · 持续维护，2026 审计 · `生产工程指南`
-- [ ] **A+** · [Achieve State-of-the-Art Inference Latencies with Speculative Decoding](https://modal.com/blog/achieve-sota-specdec) — Charles Frye & Shankha Biswas · 2026 · `生产实测`
-- [ ] **A** · [Optimizing LLM Inference with TensorRT-LLM](https://developer.nvidia.com/blog/optimizing-inference-on-llms-with-tensorrt-llm-now-publicly-available/) — NVIDIA Technical Blog
-- [ ] **A** · [New KV Cache Reuse Optimizations in TensorRT-LLM](https://developer.nvidia.com/blog/introducing-new-kv-cache-reuse-optimizations-in-nvidia-tensorrt-llm/) — NVIDIA Technical Blog
-- [ ] **A** · [NVFP4 KV Cache for Long Context and Large Batches](https://developer.nvidia.com/blog/optimizing-inference-for-long-context-and-large-batch-sizes-with-nvfp4-kv-cache/) — NVIDIA Technical Blog
-- [ ] **A** · [TensorRT-LLM Speculative Decoding](https://developer.nvidia.com/blog/boost-llama-3-3-70b-inference-throughput-3x-with-nvidia-tensorrt-llm-speculative-decoding/) — NVIDIA Technical Blog
-- [ ] **A** · [DeepSpeed Ulysses-Offload](https://www.deepspeed.ai/tutorials/ulysses-offload/) — Microsoft DeepSpeed
-- [ ] **A** · [Parameter-Efficient Fine-Tuning with PEFT](https://huggingface.co/blog/peft) — Hugging Face
-- [ ] **A** · [LoRA and DoRA From Scratch](https://magazine.sebastianraschka.com/p/lora-and-dora-from-scratch) — Sebastian Raschka
-- [ ] **A** · [Assisted Generation: A New Direction Toward Low-Latency Text Generation](https://huggingface.co/blog/assisted-generation) — Hugging Face
-- [ ] **A** · [Making LLMs Even More Accessible with 4-Bit Quantization](https://huggingface.co/blog/4bit-transformers-bitsandbytes) — Hugging Face
-- [ ] **A** · [Profiling PyTorch: Attention Kernels](https://huggingface.co/blog/torch-attention-profile) — Hugging Face · 2026-07-10
-- [ ] **A** · [Native-Speed vLLM with the Transformers Backend](https://huggingface.co/blog/native-speed-vllm-transformers-backend) — Hugging Face · 2026-07-08
-- [ ] **A** · [Pushing Intelligence to 4-Bit](https://research.nvidia.com/labs/eai/blogs/pushing-intelligence-to-4-bit/) — NVIDIA Research · 2026-06-16
-- [ ] **A** · [Accelerating Gemini Nano with Frozen Multi-Token Prediction](https://research.google/blog/accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction/) — Google Research · 2026-06-26
-- [ ] **A** · [KV-Cache Compression and Its Infrastructure Problems](https://research.nvidia.com/labs/eai/post/kv-cache-compression-and-its-infra-problems/) — NVIDIA Research · 2026-06-12
-- [ ] **A** · [Optimum Intel 2.0](https://huggingface.co/blog/jeffboudier/optimum-intel-v2) — Hugging Face · 2026-06-11
-- [ ] **A** · [Profiling in PyTorch, Part 2: From nn.Linear to a Fused MLP](https://huggingface.co/blog/torch-mlp-fusion) — Hugging Face · 2026-06-11
+- [x] **A+** · [Achieve State-of-the-Art Inference Latencies with Speculative Decoding](https://modal.com/blog/achieve-sota-specdec) — Charles Frye & Shankha Biswas · 2026 · `生产实测`
+- [x] **A** · [Optimizing LLM Inference with TensorRT-LLM](https://developer.nvidia.com/blog/optimizing-inference-on-llms-with-tensorrt-llm-now-publicly-available/) — NVIDIA Technical Blog
+- [x] **A** · [New KV Cache Reuse Optimizations in TensorRT-LLM](https://developer.nvidia.com/blog/introducing-new-kv-cache-reuse-optimizations-in-nvidia-tensorrt-llm/) — NVIDIA Technical Blog
+- [x] **A** · [NVFP4 KV Cache for Long Context and Large Batches](https://developer.nvidia.com/blog/optimizing-inference-for-long-context-and-large-batch-sizes-with-nvfp4-kv-cache/) — NVIDIA Technical Blog
+- [x] **A** · [TensorRT-LLM Speculative Decoding](https://developer.nvidia.com/blog/boost-llama-3-3-70b-inference-throughput-3x-with-nvidia-tensorrt-llm-speculative-decoding/) — NVIDIA Technical Blog
+- [x] **A** · [DeepSpeed Ulysses-Offload](https://www.deepspeed.ai/tutorials/ulysses-offload/) — Microsoft DeepSpeed
+- [x] **A** · [Parameter-Efficient Fine-Tuning with PEFT](https://huggingface.co/blog/peft) — Hugging Face
+- [x] **A** · [LoRA and DoRA From Scratch](https://magazine.sebastianraschka.com/p/lora-and-dora-from-scratch) — Sebastian Raschka
+- [x] **A** · [Assisted Generation: A New Direction Toward Low-Latency Text Generation](https://huggingface.co/blog/assisted-generation) — Hugging Face
+- [x] **A** · [Making LLMs Even More Accessible with 4-Bit Quantization](https://huggingface.co/blog/4bit-transformers-bitsandbytes) — Hugging Face
+- [x] **A** · [Profiling PyTorch: Attention Kernels](https://huggingface.co/blog/torch-attention-profile) — Hugging Face · 2026-07-10
+- [x] **A** · [Native-Speed vLLM with the Transformers Backend](https://huggingface.co/blog/native-speed-vllm-transformers-backend) — Hugging Face · 2026-07-08
+- [x] **A** · [Pushing Intelligence to 4-Bit](https://research.nvidia.com/labs/eai/blogs/pushing-intelligence-to-4-bit/) — NVIDIA Research · 2026-06-16
+- [x] **A** · [Accelerating Gemini Nano with Frozen Multi-Token Prediction](https://research.google/blog/accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction/) — Google Research · 2026-06-26
+- [x] **A** · [KV-Cache Compression and Its Infrastructure Problems](https://research.nvidia.com/labs/eai/post/kv-cache-compression-and-its-infra-problems/) — NVIDIA Research · 2026-06-12
+- [x] **A** · [Optimum Intel 2.0](https://huggingface.co/blog/jeffboudier/optimum-intel-v2) — Hugging Face · 2026-06-11
+- [x] **A** · [Profiling in PyTorch, Part 2: From nn.Linear to a Fused MLP](https://huggingface.co/blog/torch-mlp-fusion) — Hugging Face · 2026-06-11
 - [ ] **A** · [Quantization-Aware Training for Gemma 4](https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/) — Google · 2026-06
-- [ ] **A** · [ThunderKittens 2.0: Making Kernels Faster and Easier to Write](https://hazyresearch.stanford.edu/blog/2026-02-19-tk-2) — hazyresearch.stanford.edu
-- [ ] **A** · [ThunderKittens: A Simple Embedded DSL for AI Kernels](https://hazyresearch.stanford.edu/blog/2024-05-12-quick-tk) — hazyresearch.stanford.edu
-- [ ] **A** · [Minions: Cost-Efficient Collaboration Between On-Device and Cloud Language Models](https://hazyresearch.stanford.edu/blog/2025-02-24-minions) — hazyresearch.stanford.edu
-- [ ] **A** · [LoLCATs Part 2: Low-Rank Linearizing of LLMs](https://hazyresearch.stanford.edu/blog/2024-10-14-lolcats-p2) — hazyresearch.stanford.edu
-- [ ] **A** · [Just Read Twice: Closing the Recall Gap for Recurrent Language Models](https://hazyresearch.stanford.edu/blog/2024-07-01-jrt) — hazyresearch.stanford.edu
-- [ ] **A** · [BASED One Year Later: Exploring the State of Linear Attention](https://hazyresearch.stanford.edu/blog/2025-03-24-based-retro) — hazyresearch.stanford.edu
-- [ ] **A** · [Inference Economics of Language Models](https://epoch.ai/publications/inference-economics-of-language-models) — epoch.ai
-- [ ] **A** · [Is a Compute Crunch Coming?](https://epoch.ai/gradient-updates/is-a-compute-crunch-coming) — epoch.ai
-- [ ] **A** · [TinyAgent: Function Calling at the Edge](https://bair.berkeley.edu/blog/2024/05/29/tiny-agent/) — bair.berkeley.edu
-- [ ] **A** · [How to Scale Your Model](https://jax-ml.github.io/scaling-book/) — **Google DeepMind / JAX 团队**。从集群、网络、矩阵乘、roofline、并行策略到训练服务化形成完整系统教材；建议只收录总入口，避免章节重复。
-- [ ] **A** · [Transformer Inference Arithmetic](https://kipp.ly/p/transformer-inference-arithmetic) — **Kipply**。用 KV cache、权重与激活内存、tensor parallel 通信、batch size 和 FLOPs 建立可手算的推理性能模型。
-- [ ] **A** · [Making Deep Learning Go Brrrr From First Principles](https://horace.io/brrr_intro.html) — **Horace He**。用 compute-bound、memory-bandwidth-bound 和 overhead-bound 三分法解释为什么模型会慢，以及编译器如何介入。
-- [ ] **A** · [Mastering LLM Techniques: Inference Optimization](https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/) — **NVIDIA Technical Blog**。覆盖 prefill / decode、KV cache、MQA / GQA、FlashAttention、PagedAttention 与并行化。
-- [ ] **A** · [Accelerating LLM Inference with GemLite, TorchAO and SGLang](https://pytorch.org/blog/accelerating-llm-inference/) — **PyTorch / Mobius Labs / SGLang**。以可复现实验展示低比特 kernel、量化抽象、tensor parallel 与 serving engine 的端到端组合。
-- [ ] **A+** · [FlashAttention: Fast Transformer Training with Long Sequences](https://hazyresearch.stanford.edu/blog/2023-01-12-flashattention-long-sequences) — Stanford Hazy Research · 2023
-- [ ] **A** · [FlashFFTConv: Efficient Convolutions for Long Sequences with Tensor Cores](https://hazyresearch.stanford.edu/blog/2023-11-13-flashfftconv) — Stanford Hazy Research · 2023
+- [x] **A** · [ThunderKittens 2.0: Making Kernels Faster and Easier to Write](https://hazyresearch.stanford.edu/blog/2026-02-19-tk-2) — hazyresearch.stanford.edu
+- [x] **A** · [ThunderKittens: A Simple Embedded DSL for AI Kernels](https://hazyresearch.stanford.edu/blog/2024-05-12-quick-tk) — hazyresearch.stanford.edu
+- [x] **A** · [Minions: Cost-Efficient Collaboration Between On-Device and Cloud Language Models](https://hazyresearch.stanford.edu/blog/2025-02-24-minions) — hazyresearch.stanford.edu
+- [x] **A** · [LoLCATs Part 2: Low-Rank Linearizing of LLMs](https://hazyresearch.stanford.edu/blog/2024-10-14-lolcats-p2) — hazyresearch.stanford.edu
+- [x] **A** · [Just Read Twice: Closing the Recall Gap for Recurrent Language Models](https://hazyresearch.stanford.edu/blog/2024-07-01-jrt) — hazyresearch.stanford.edu
+- [x] **A** · [BASED One Year Later: Exploring the State of Linear Attention](https://hazyresearch.stanford.edu/blog/2025-03-24-based-retro) — hazyresearch.stanford.edu
+- [x] **A** · [Inference Economics of Language Models](https://epoch.ai/publications/inference-economics-of-language-models) — epoch.ai
+- [x] **A** · [Is a Compute Crunch Coming?](https://epoch.ai/gradient-updates/is-a-compute-crunch-coming) — epoch.ai
+- [x] **A** · [TinyAgent: Function Calling at the Edge](https://bair.berkeley.edu/blog/2024/05/29/tiny-agent/) — bair.berkeley.edu
+- [x] **A** · [How to Scale Your Model](https://jax-ml.github.io/scaling-book/) — **Google DeepMind / JAX 团队**。从集群、网络、矩阵乘、roofline、并行策略到训练服务化形成完整系统教材；建议只收录总入口，避免章节重复。
+- [x] **A** · [Transformer Inference Arithmetic](https://kipp.ly/p/transformer-inference-arithmetic) — **Kipply**。用 KV cache、权重与激活内存、tensor parallel 通信、batch size 和 FLOPs 建立可手算的推理性能模型。
+- [x] **A** · [Making Deep Learning Go Brrrr From First Principles](https://horace.io/brrr_intro.html) — **Horace He**。用 compute-bound、memory-bandwidth-bound 和 overhead-bound 三分法解释为什么模型会慢，以及编译器如何介入。
+- [x] **A** · [Mastering LLM Techniques: Inference Optimization](https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/) — **NVIDIA Technical Blog**。覆盖 prefill / decode、KV cache、MQA / GQA、FlashAttention、PagedAttention 与并行化。
+- [x] **A** · [Accelerating LLM Inference with GemLite, TorchAO and SGLang](https://pytorch.org/blog/accelerating-llm-inference/) — **PyTorch / Mobius Labs / SGLang**。以可复现实验展示低比特 kernel、量化抽象、tensor parallel 与 serving engine 的端到端组合。
+- [x] **A+** · [FlashAttention: Fast Transformer Training with Long Sequences](https://hazyresearch.stanford.edu/blog/2023-01-12-flashattention-long-sequences) — Stanford Hazy Research · 2023
+- [x] **A** · [FlashFFTConv: Efficient Convolutions for Long Sequences with Tensor Cores](https://hazyresearch.stanford.edu/blog/2023-11-13-flashfftconv) — Stanford Hazy Research · 2023
 - [ ] **A+** · [ZeRO & DeepSpeed: New system optimizations enable training models with over 100 billion parameters](https://www.microsoft.com/en-us/research/blog/zero-deepspeed-new-system-optimizations-enable-training-models-with-over-100-billion-parameters/) — Microsoft Research · 2020
 - [ ] **A+** · [Introducing PyTorch Fully Sharded Data Parallel (FSDP) API](https://pytorch.org/blog/introducing-pytorch-fully-sharded-data-parallel-api/) — PyTorch · 2022
-- [ ] **A** · [Looking back at speculative decoding](https://research.google/blog/looking-back-at-speculative-decoding/) — Google Research · 2024
-- [ ] **A+** · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](https://hazyresearch.stanford.edu/blog/2023-07-17-flash2) — Stanford Hazy Research · 2023
-- [ ] **A+** · [GSPMD: General and Scalable Parallelization for ML Computation Graphs](https://research.google/blog/general-and-scalable-parallelization-for-neural-networks/) — Google Research · 2021
-- [ ] **A+** · [Scaling Language Model Training to a Trillion Parameters Using Megatron](https://developer.nvidia.com/blog/scaling-language-model-training-to-a-trillion-parameters-using-megatron/) — NVIDIA Technical Blog · 2021
+- [x] **A** · [Looking back at speculative decoding](https://research.google/blog/looking-back-at-speculative-decoding/) — Google Research · 2024
+- [x] **A+** · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](https://hazyresearch.stanford.edu/blog/2023-07-17-flash2) — Stanford Hazy Research · 2023
+- [x] **A+** · [GSPMD: General and Scalable Parallelization for ML Computation Graphs](https://research.google/blog/general-and-scalable-parallelization-for-neural-networks/) — Google Research · 2021
+- [x] **A+** · [Scaling Language Model Training to a Trillion Parameters Using Megatron](https://developer.nvidia.com/blog/scaling-language-model-training-to-a-trillion-parameters-using-megatron/) — NVIDIA Technical Blog · 2021
 
 ## Trustworthy AI
 
 - [ ] **A+** · [Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/) — Anthropic Fellows / Anthropic / MATS / UK AISI · 2026-07-13。跨实验室和模型研究四类 agentic misalignment 并开放 Petri transcripts；模拟红队频率不能解释为真实事故率。
 - [ ] **A+** · [Cheating behaviour in frontier model evaluations](https://www.aisi.gov.uk/blog/cheating-behaviour-in-frontier-model-evaluations) — UK AI Security Institute · 2026-07-21。以 LLM monitor 和人工复核分析 cyber eval 轨迹，证明 CoT/自报不足以发现越界行为；行为标签不等于欺骗意图。
-- [ ] **A+** · [How our new Control Red Team is stress-testing frontier monitors](https://www.aisi.gov.uk/blog/how-our-new-control-red-team-is-stress-testing-frontier-monitors) — UK AISI Control Red Team · 2026-07-23。对前沿实验室内部监控器做红队和进化搜索；属早期压力测试，优化器反馈权限高于常见真实攻击者。
+- [x] **A+** · [How our new Control Red Team is stress-testing frontier monitors](https://www.aisi.gov.uk/blog/how-our-new-control-red-team-is-stress-testing-frontier-monitors) — UK AISI Control Red Team · 2026-07-23。对前沿实验室内部监控器做红队和进化搜索；属早期压力测试，优化器反馈权限高于常见真实攻击者。
 - [ ] **A+** · [Introducing LinuxArena](https://blog.redwoodresearch.org/p/introducing-linuxarena) — Redwood Research · 2026 · `开放安全环境`
-- [ ] **A** · [Prioritizing Threats for AI Control](https://blog.redwoodresearch.org/p/prioritizing-threats-for-ai-control) — Ryan Greenblatt · 2025 · `研究者威胁模型`
-- [ ] **A** · [Strengthening Our Frontier Safety Framework](https://deepmind.google/blog/strengthening-our-frontier-safety-framework/) — Google DeepMind
-- [ ] **A** · [An Early Warning System for Novel AI Risks](https://deepmind.google/blog/an-early-warning-system-for-novel-ai-risks/) — Google DeepMind
-- [ ] **A** · [Trustworthy Third-Party Evaluations](https://openai.com/index/trustworthy-third-party-evaluations-foundations/) — OpenAI
-- [ ] **A** · [Hugging Face Model Evaluation Security Incident](https://openai.com/index/hugging-face-model-evaluation-security-incident/) — OpenAI · 2026-07-21
-- [ ] **A** · [Safety and Alignment in an Era of Long-Horizon Models](https://openai.com/index/safety-alignment-long-horizon-models/) — OpenAI · 2026-07-20
-- [ ] **A** · [An Off Switch for Dual-Use Knowledge in AI Models](https://www.anthropic.com/research/off-switch-dual-use) — Anthropic · 2026-07-08
-- [ ] **A** · [Securing Internal Systems against Increasingly Capable and Imperfectly Aligned AI](https://deepmind.google/blog/securing-the-future-of-ai-agents/) — Google DeepMind · 2026-06-18
-- [ ] **A** · [Measuring LLMs’ Impact on N-Day Exploits](https://www.anthropic.com/research/n-days) — Anthropic · 2026-06-08
-- [ ] **A** · [Mapping AI-Enabled Cyber Threats](https://www.anthropic.com/research/attack-navigator) — Anthropic · 2026-06-03
-- [ ] **A** · [Trustworthy Agents in Practice](https://www.anthropic.com/research/trustworthy-agents) — Anthropic · 2026-04-09
-- [ ] **A** · [Protecting People from Harmful Manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/) — Google DeepMind · 2026-03-26
-- [ ] **A** · [A “Diff” Tool for AI: Finding Behavioral Differences in New Models](https://www.anthropic.com/research/diff-tool) — Anthropic · 2026-03-13
-- [ ] **A** · [Adversarial Examples Are Not Bugs, They Are Features — Discussion](https://distill.pub/2019/advex-bugs-discussion/) — distill.pub
-- [ ] **A** · [The Building Blocks of Interpretability](https://distill.pub/2018/building-blocks/) — distill.pub
-- [ ] **A** · [Circuits: A Thread on Neural Network Interpretability](https://distill.pub/2020/circuits/) — distill.pub
-- [ ] **A** · [How Undesired Goals Can Arise with Correct Rewards](https://deepmind.google/blog/how-undesired-goals-can-arise-with-correct-rewards/) — **Google DeepMind**。清楚区分 specification gaming 与 goal misgeneralisation，并给出 RL 和 LLM 的具体例子。
-- [ ] **A** · [Deliberative Alignment: Reasoning Enables Safer Language Models](https://openai.com/index/deliberative-alignment/) — **OpenAI**。直接教授安全规范，并通过 SFT 与 RL 训练模型在推理时按规范审议，包含方法和安全评测。
-- [ ] **A** · [Simple probes can catch sleeper agents](https://www.anthropic.com/research/probes-catch-sleeper-agents) — Anthropic · 2024
+- [x] **A** · [Prioritizing Threats for AI Control](https://blog.redwoodresearch.org/p/prioritizing-threats-for-ai-control) — Ryan Greenblatt · 2025 · `研究者威胁模型`
+- [x] **A** · [Strengthening Our Frontier Safety Framework](https://deepmind.google/blog/strengthening-our-frontier-safety-framework/) — Google DeepMind
+- [x] **A** · [An Early Warning System for Novel AI Risks](https://deepmind.google/blog/an-early-warning-system-for-novel-ai-risks/) — Google DeepMind
+- [x] **A** · [Trustworthy Third-Party Evaluations](https://openai.com/index/trustworthy-third-party-evaluations-foundations/) — OpenAI
+- [x] **A** · [Hugging Face Model Evaluation Security Incident](https://openai.com/index/hugging-face-model-evaluation-security-incident/) — OpenAI · 2026-07-21
+- [x] **A** · [Safety and Alignment in an Era of Long-Horizon Models](https://openai.com/index/safety-alignment-long-horizon-models/) — OpenAI · 2026-07-20
+- [x] **A** · [An Off Switch for Dual-Use Knowledge in AI Models](https://www.anthropic.com/research/off-switch-dual-use) — Anthropic · 2026-07-08
+- [x] **A** · [Securing Internal Systems against Increasingly Capable and Imperfectly Aligned AI](https://deepmind.google/blog/securing-the-future-of-ai-agents/) — Google DeepMind · 2026-06-18
+- [x] **A** · [Measuring LLMs’ Impact on N-Day Exploits](https://www.anthropic.com/research/n-days) — Anthropic · 2026-06-08
+- [x] **A** · [Mapping AI-Enabled Cyber Threats](https://www.anthropic.com/research/attack-navigator) — Anthropic · 2026-06-03
+- [x] **A** · [Trustworthy Agents in Practice](https://www.anthropic.com/research/trustworthy-agents) — Anthropic · 2026-04-09
+- [x] **A** · [Protecting People from Harmful Manipulation](https://deepmind.google/blog/protecting-people-from-harmful-manipulation/) — Google DeepMind · 2026-03-26
+- [x] **A** · [A “Diff” Tool for AI: Finding Behavioral Differences in New Models](https://www.anthropic.com/research/diff-tool) — Anthropic · 2026-03-13
+- [x] **A** · [Adversarial Examples Are Not Bugs, They Are Features — Discussion](https://distill.pub/2019/advex-bugs-discussion/) — distill.pub
+- [x] **A** · [The Building Blocks of Interpretability](https://distill.pub/2018/building-blocks/) — distill.pub
+- [x] **A** · [Circuits: A Thread on Neural Network Interpretability](https://distill.pub/2020/circuits/) — distill.pub
+- [x] **A** · [How Undesired Goals Can Arise with Correct Rewards](https://deepmind.google/blog/how-undesired-goals-can-arise-with-correct-rewards/) — **Google DeepMind**。清楚区分 specification gaming 与 goal misgeneralisation，并给出 RL 和 LLM 的具体例子。
+- [x] **A** · [Deliberative Alignment: Reasoning Enables Safer Language Models](https://openai.com/index/deliberative-alignment/) — **OpenAI**。直接教授安全规范，并通过 SFT 与 RL 训练模型在推理时按规范审议，包含方法和安全评测。
+- [x] **A** · [Simple probes can catch sleeper agents](https://www.anthropic.com/research/probes-catch-sleeper-agents) — Anthropic · 2024
 
 ## Research Craft
 
 - [ ] **A+** · [More compute, more capability: Why AI agent evaluations need to account for test-time compute](https://www.aisi.gov.uk/blog/more-compute-more-capability-why-ai-agent-evals-need-to-account-for-test-time-compute) — UK AI Security Institute · 2026-07-02。证明 agent 能力应报告随 test-time compute 变化的曲线而非单点；部分任务出现平台期且人类时间映射方差大。
 - [ ] **A+** · [A pipeline for transcript analysis using Inspect Scout](https://www.aisi.gov.uk/blog/a-pipeline-for-transcript-analysis-using-inspect-scout) — UK AISI / Meridian Labs · 2026-02-25。给出轨迹采样、scanner、人工验证和分析的七步可复现流程；scanner 效度仍依赖标注和 ground truth。
-- [ ] **A+** · [We are Changing our Developer Productivity Experiment Design](https://metr.org/blog/2026-02-24-uplift-update/) — METR · 2026-02-24。公开诊断混杂并重做随机实验，是发现方法问题后修正研究的优秀案例；尚非最终因果效应报告。
-- [ ] **A** · [5 – Reproducibility](https://blog.ml.cmu.edu/2020/08/31/5-reproducibility/) — Zihao Ding, Aniketh Reddy, Aparna Joshi / ML@CMU · 2020-08-31。区分多类 reproducibility 并转化为数据、代码、随机种子、方差和运行次数检查表；少量工具示例已老化。
+- [x] **A+** · [We are Changing our Developer Productivity Experiment Design](https://metr.org/blog/2026-02-24-uplift-update/) — METR · 2026-02-24。公开诊断混杂并重做随机实验，是发现方法问题后修正研究的优秀案例；尚非最终因果效应报告。
+- [x] **A** · [5 – Reproducibility](https://blog.ml.cmu.edu/2020/08/31/5-reproducibility/) — Zihao Ding, Aniketh Reddy, Aparna Joshi / ML@CMU · 2020-08-31。区分多类 reproducibility 并转化为数据、代码、随机种子、方差和运行次数检查表；少量工具示例已老化。
 - [ ] **A+** · [A Field Guide to Rapidly Improving AI Products](https://hamel.dev/blog/posts/field-guide/) — Hamel Husain · 2025 · `独立实践总结`
 - [ ] **A+** · [Evaluating the Effectiveness of LLM-Evaluators (aka LLM-as-Judge)](https://eugeneyan.com/writing/llm-evaluators/) — Eugene Yan · 2024 · `独立研究综述`
-- [ ] **A** · [“It’s Hard to Eval” Is a Product Smell](https://hamel.dev/blog/posts/eval-smell/) — Hamel Husain · 2026-06-29 · `最新产品方法论`
-- [ ] **A** · [Deep Learning Tuning Playbook](https://developers.google.com/machine-learning/guides/deep-learning-tuning-playbook) — Google
-- [ ] **A** · [Good Data Analysis](https://developers.google.com/machine-learning/guides/good-data-analysis) — Google
-- [ ] **A** · [Data Traps](https://developers.google.com/machine-learning/guides/data-traps) — Google
-- [ ] **A** · [Experiment Management](https://fullstackdeeplearning.com/course/2022/lab-4-experiment-management/) — Full Stack Deep Learning
-- [ ] **A** · [Development Infrastructure and Tooling](https://fullstackdeeplearning.com/course/2022/lecture-2-development-infrastructure-and-tooling/) — Full Stack Deep Learning
+- [x] **A** · [“It’s Hard to Eval” Is a Product Smell](https://hamel.dev/blog/posts/eval-smell/) — Hamel Husain · 2026-06-29 · `最新产品方法论`
+- [x] **A** · [Deep Learning Tuning Playbook](https://developers.google.com/machine-learning/guides/deep-learning-tuning-playbook) — Google
+- [x] **A** · [Good Data Analysis](https://developers.google.com/machine-learning/guides/good-data-analysis) — Google
+- [x] **A** · [Data Traps](https://developers.google.com/machine-learning/guides/data-traps) — Google
+- [x] **A** · [Experiment Management](https://fullstackdeeplearning.com/course/2022/lab-4-experiment-management/) — Full Stack Deep Learning
+- [x] **A** · [Development Infrastructure and Tooling](https://fullstackdeeplearning.com/course/2022/lecture-2-development-infrastructure-and-tooling/) — Full Stack Deep Learning
 - [ ] **A** · [ML Retrospectives](https://ml-retrospectives.github.io/) — ML Retrospectives
-- [ ] **A** · [AstaBench Update: Spring 2026](https://allenai.org/blog/astabench-update-spring-2026) — Ai2 · 2026-04-30
-- [ ] **A** · [Four Ways Google Researchers Have Been Using Empirical Research Assistance](https://research.google/blog/four-ways-google-research-scientists-have-been-using-empirical-research-assistance/) — Google Research · 2026-04-29
-- [ ] **A** · [Exploring Bayesian Optimization](https://distill.pub/2020/bayesian-optimization/) — distill.pub
-- [ ] **A** · [How to Use t-SNE Effectively](https://distill.pub/2016/misread-tsne/) — distill.pub
-- [ ] **A** · [Rules of Machine Learning: Best Practices for ML Engineering](https://developers.google.com/machine-learning/guides/rules-of-ml/) — **Google**。覆盖从无模型基线、特征、指标、训练服务偏差到成熟流水线的阶段性方法论。
-- [ ] **A** · [How to Test Machine Learning Code and Systems](https://eugeneyan.com/writing/testing-ml/) — **Eugene Yan**。区分软件逻辑测试、学习行为测试和模型评估，并提供 pre-train / post-train 测试代码。
-- [ ] **A** · [A Practical Guide to Maintaining Machine Learning in Production](https://eugeneyan.com/writing/practical-guide-to-maintaining-machine-learning/) — **Eugene Yan**。从数据污染、模型再训练、反馈回路、工程复杂度和团队结构给出长期维护清单。
-- [ ] **A** · [How evals drive the next chapter in AI](https://openai.com/index/evals-drive-next-chapter-of-ai/) — OpenAI · 2025
-- [ ] **A** · [What Data-Centric AI Is Not](https://hazyresearch.stanford.edu/what-data-centric-ai-is-not) — Stanford Hazy Research · 2021
+- [x] **A** · [AstaBench Update: Spring 2026](https://allenai.org/blog/astabench-update-spring-2026) — Ai2 · 2026-04-30
+- [x] **A** · [Four Ways Google Researchers Have Been Using Empirical Research Assistance](https://research.google/blog/four-ways-google-research-scientists-have-been-using-empirical-research-assistance/) — Google Research · 2026-04-29
+- [x] **A** · [Exploring Bayesian Optimization](https://distill.pub/2020/bayesian-optimization/) — distill.pub
+- [x] **A** · [How to Use t-SNE Effectively](https://distill.pub/2016/misread-tsne/) — distill.pub
+- [x] **A** · [Rules of Machine Learning: Best Practices for ML Engineering](https://developers.google.com/machine-learning/guides/rules-of-ml/) — **Google**。覆盖从无模型基线、特征、指标、训练服务偏差到成熟流水线的阶段性方法论。
+- [x] **A** · [How to Test Machine Learning Code and Systems](https://eugeneyan.com/writing/testing-ml/) — **Eugene Yan**。区分软件逻辑测试、学习行为测试和模型评估，并提供 pre-train / post-train 测试代码。
+- [x] **A** · [A Practical Guide to Maintaining Machine Learning in Production](https://eugeneyan.com/writing/practical-guide-to-maintaining-machine-learning/) — **Eugene Yan**。从数据污染、模型再训练、反馈回路、工程复杂度和团队结构给出长期维护清单。
+- [x] **A** · [How evals drive the next chapter in AI](https://openai.com/index/evals-drive-next-chapter-of-ai/) — OpenAI · 2025
+- [x] **A** · [What Data-Centric AI Is Not](https://hazyresearch.stanford.edu/what-data-centric-ai-is-not) — Stanford Hazy Research · 2021
 - [ ] **A+** · [Introducing the Model Card Toolkit for Easier Model Transparency Reporting](https://research.google/blog/introducing-the-model-card-toolkit-for-easier-model-transparency-reporting/) — Google Research · 2020
 - [ ] **A+** · [Data-centric ML benchmarking: Announcing DataPerf’s 2023 challenges](https://research.google/blog/data-centric-ml-benchmarking-announcing-dataperfs-2023-challenges/) — Google Research · 2023
 
 ## Frontier
 
 - [ ] **A** · [IBM Research — Artificial Intelligence](https://research.ibm.com/blog?tag=artificial-intelligence) — IBM Research · 持续更新；核验至 2026-07-26。兼顾基础模型、推理、AI for Science、芯片和企业 AI 的长期索引；纳入单篇时仍需筛除营销稿。
-- [ ] **A** · [When Will Language Models Be Good Enough?](https://huggingface.co/blog/craffel/when-will-language-models-be-good-enough) — Colin Raffel · 2026-07-16 · `资深研究者观点`
+- [x] **A** · [When Will Language Models Be Good Enough?](https://huggingface.co/blog/craffel/when-will-language-models-be-good-enough) — Colin Raffel · 2026-07-16 · `资深研究者观点`
 - [ ] **A+** · [J-Space: Yet Another LLM Mind Reader?](https://huggingface.co/blog/dlouapre/j-space) — David Louapre · 2026-07-13 · `社区复现与解释`
-- [ ] **A** · [Two Years of Local AI on a Laptop: When Open Models Outpaced Moore's Law](https://huggingface.co/blog/mishig/local-moores-law) — Mishig Davaadorj · 2026 · `社区可复核趋势分析`
+- [x] **A** · [Two Years of Local AI on a Laptop: When Open Models Outpaced Moore's Law](https://huggingface.co/blog/mishig/local-moores-law) — Mishig Davaadorj · 2026 · `社区可复核趋势分析`
 - [ ] **A** · [Microsoft Research AI Frontiers](https://www.microsoft.com/en-us/research/lab/ai-frontiers/) — United States
 - [ ] **A** · [MIT CSAIL News](https://www.csail.mit.edu/news) — United States
 - [ ] **A** · [Berkeley Sky Computing Lab](https://sky.cs.berkeley.edu/) — United States
@@ -224,12 +224,12 @@
 - [ ] **A** · [SEA-LION Blog](https://sea-lion.ai/blog/) — Singapore / Southeast Asia
 - [ ] **A** · [RIKEN Center for Advanced Intelligence Project](https://www.riken.jp/en/research/labs/aip/) — Japan
 - [ ] **A** · [Inria Artificial Intelligence](https://www.inria.fr/en/artificial-intelligence) — France
-- [ ] **A** · [Frontier AI Expert Findings: EU Competitiveness, Sovereignty and Security](https://digital-strategy.ec.europa.eu/en/library/ai-office-publishes-frontier-ai-expert-findings-eu-competitiveness-sovereignty-and-security) — European Commission AI Office · 2026-07-15
-- [ ] **A** · [Preliminary Report of the UN Independent International Scientific Panel on AI](https://www.un.org/independent-international-scientific-panel-ai/en/preliminary-report) — United Nations · 2026-06
-- [ ] **A** · [International AI Safety Report 2026](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026) — International AI Safety Report · 2026
-- [ ] **A** · [AI Index Report 2026](https://hai.stanford.edu/ai-index) — Stanford HAI · 2026
-- [ ] **A** · [Frontier AI Trends Report](https://www.aisi.gov.uk/frontier-ai-trends-report) — UK AI Security Institute · 2026
-- [ ] **A** · [State of AI 2026: Model Provider Survey](https://2026.stateofai.dev/en-US/models/) — State of AI · 2026
+- [x] **A** · [Frontier AI Expert Findings: EU Competitiveness, Sovereignty and Security](https://digital-strategy.ec.europa.eu/en/library/ai-office-publishes-frontier-ai-expert-findings-eu-competitiveness-sovereignty-and-security) — European Commission AI Office · 2026-07-15
+- [x] **A** · [Preliminary Report of the UN Independent International Scientific Panel on AI](https://www.un.org/independent-international-scientific-panel-ai/en/preliminary-report) — United Nations · 2026-06
+- [x] **A** · [International AI Safety Report 2026](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026) — International AI Safety Report · 2026
+- [x] **A** · [AI Index Report 2026](https://hai.stanford.edu/ai-index) — Stanford HAI · 2026
+- [x] **A** · [Frontier AI Trends Report](https://www.aisi.gov.uk/frontier-ai-trends-report) — UK AI Security Institute · 2026
+- [x] **A** · [State of AI 2026: Model Provider Survey](https://2026.stateofai.dev/en-US/models/) — State of AI · 2026
 - [ ] **A** · [NVIDIA Seattle Robotics Lab](https://research.nvidia.com/labs/srl/) — United States
 - [ ] **A** · [Qwen Code Research & Engineering Updates](https://qwenlm.github.io/qwen-code-docs/en/blog/) — China
 - [ ] **A** · [MiniMax Research](https://www.minimax.io/blog) — China
@@ -237,20 +237,20 @@
 - [ ] **A** · [UK AI Security Institute Research](https://www.aisi.gov.uk/research) — United Kingdom
 - [ ] **A** · [International AI Safety Report](https://internationalaisafetyreport.org/) — Global
 - [ ] **A** · [UN Independent International Scientific Panel on AI](https://www.un.org/independent-international-scientific-panel-ai/en) — Global
-- [ ] **A** · [Have AI Capabilities Accelerated?](https://epoch.ai/publications/have-ai-capabilities-accelerated) — epoch.ai
-- [ ] **A** · [Where Autonomy Works: Evaluating Robot Capabilities in 2026](https://epoch.ai/publications/where-autonomy-works-evaluating-robot-capabilities-in-2026) — epoch.ai
-- [ ] **A** · [What Will AI Look Like in 2030?](https://epoch.ai/publications/what-will-ai-look-like-in-2030) — epoch.ai
-- [ ] **A** · [Power Demands of Frontier AI Training](https://epoch.ai/publications/power-demands-of-frontier-ai-training) — epoch.ai
-- [ ] **A** · [What You Need to Know About AI Data Centers](https://epoch.ai/publications/what-you-need-to-know-about-ai-data-centers) — epoch.ai
-- [ ] **A** · [Training Compute of Frontier AI Models Grows by 4–5× per Year](https://epoch.ai/publications/training-compute-of-frontier-ai-models-grows-by-4-5x-per-year) — epoch.ai
+- [x] **A** · [Have AI Capabilities Accelerated?](https://epoch.ai/publications/have-ai-capabilities-accelerated) — epoch.ai
+- [x] **A** · [Where Autonomy Works: Evaluating Robot Capabilities in 2026](https://epoch.ai/publications/where-autonomy-works-evaluating-robot-capabilities-in-2026) — epoch.ai
+- [x] **A** · [What Will AI Look Like in 2030?](https://epoch.ai/publications/what-will-ai-look-like-in-2030) — epoch.ai
+- [x] **A** · [Power Demands of Frontier AI Training](https://epoch.ai/publications/power-demands-of-frontier-ai-training) — epoch.ai
+- [x] **A** · [What You Need to Know About AI Data Centers](https://epoch.ai/publications/what-you-need-to-know-about-ai-data-centers) — epoch.ai
+- [x] **A** · [Training Compute of Frontier AI Models Grows by 4–5× per Year](https://epoch.ai/publications/training-compute-of-frontier-ai-models-grows-by-4-5x-per-year) — epoch.ai
 - [ ] **A** · [Epoch AI — Trends](https://epoch.ai/trends) — epoch.ai
 - [ ] **A** · [Epoch AI — Latest](https://epoch.ai/latest) — epoch.ai
 - [ ] **A** · [BAIR Blog — Archive](https://bair.berkeley.edu/blog/archive/) — bair.berkeley.edu
 - [ ] **A** · [Stanford Hazy Research — Blog](https://hazyresearch.stanford.edu/blog) — hazyresearch.stanford.edu
 - [ ] **A** · [Sakana AI — Research Blog](https://sakana.ai/blog/?label=research) — sakana.ai
-- [ ] **A** · [Introducing Robostral Navigate](https://mistral.ai/news/robostral-navigate/) — **Mistral AI**。8B 单 RGB 相机导航模型，披露指点式动作表示、240 万轨迹、prefix-caching 和在线 RL，技术信息足够进入 Frontier。
-- [ ] **A** · [Can AI Scaling Continue Through 2030?](https://epoch.ai/publications/can-ai-scaling-continue-through-2030) — **Epoch AI**。定量分析电力、芯片制造、数据和训练延迟四类约束，是研究规模扩展可行性的高信息密度报告。
-- [ ] **A** · [Mistral OCR 4: SOTA OCR for Document Intelligence](https://mistral.ai/news/ocr-4/) — Mistral AI · 2026
+- [x] **A** · [Introducing Robostral Navigate](https://mistral.ai/news/robostral-navigate/) — **Mistral AI**。8B 单 RGB 相机导航模型，披露指点式动作表示、240 万轨迹、prefix-caching 和在线 RL，技术信息足够进入 Frontier。
+- [x] **A** · [Can AI Scaling Continue Through 2030?](https://epoch.ai/publications/can-ai-scaling-continue-through-2030) — **Epoch AI**。定量分析电力、芯片制造、数据和训练延迟四类约束，是研究规模扩展可行性的高信息密度报告。
+- [x] **A** · [Mistral OCR 4: SOTA OCR for Document Intelligence](https://mistral.ai/news/ocr-4/) — Mistral AI · 2026
 - [ ] **A+** · [Introducing Gemini 3.5 Flash Cyber](https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/) — Google DeepMind · 2026
 
 ## How to Research
