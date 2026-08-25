@@ -8064,6 +8064,131 @@ class BlogXiv {
         ];
     }
 
+    getQualityEfficientTrustworthyBlogs() {
+        return [
+            {
+                id: 'google-gemma-4-quantization-aware-training',
+                title: 'Gemma 4 QAT Models: Optimizing Model Compression for Mobile and Laptop Efficiency',
+                excerpt: 'Google details quantization-aware training for Gemma 4, releasing int4 checkpoints that cut memory severalfold while staying close to bf16 quality on Google-run evaluations. The post is oriented to the Gemma toolchain (llama.cpp, MLX, Ollama exports), and the quality deltas are the vendor’s own measurements.',
+                author: 'Google Gemma Team',
+                authorAvatar: 'https://www.google.com/s2/favicons?domain=blog.google&sz=128',
+                category: 'Efficient AI',
+                tags: ['Quantization-Aware Training', 'Gemma', 'int4', 'Edge Deployment'],
+                readTime: '8 min read',
+                publishDate: '2026-06-05',
+                sourceName: 'Google Blog',
+                url: 'https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/',
+                coverImage: 'assets/img/covers/real/google-gemma-4-quantization-aware-training.png',
+                coverAlt: 'Real cover from og:image',
+                coverFit: 'cover'
+            },
+            {
+                id: 'pytorch-gpt-fast-native-acceleration',
+                title: 'Accelerating Generative AI with PyTorch II: GPT, Fast',
+                excerpt: 'The PyTorch team shows that pure-PyTorch decoding with torch.compile, static KV caches, int8/int4 weight quantization, speculative decoding, and tensor parallelism reaches roughly 10x baseline eager throughput in under 1,000 lines of code. It is a pedagogical artifact: production servers still need the batching, paging, and scheduling that gpt-fast deliberately omits.',
+                author: 'Team PyTorch',
+                authorAvatar: 'https://www.google.com/s2/favicons?domain=pytorch.org&sz=128',
+                category: 'Efficient AI',
+                tags: ['torch.compile', 'GPT-Fast', 'Quantization', 'Speculative Decoding'],
+                readTime: '15 min read',
+                publishDate: '2023-11-30',
+                sourceName: 'PyTorch Blog',
+                url: 'https://pytorch.org/blog/accelerating-generative-ai-2/',
+                coverImage: 'assets/img/covers/real/pytorch-gpt-fast-native-acceleration.png',
+                coverAlt: 'Real cover from first-image',
+                coverFit: 'cover'
+            },
+            {
+                id: 'distill-feature-visualization',
+                title: 'Feature Visualization',
+                excerpt: 'Chris Olah, Alexander Mordvintsev, and Ludwig Schubert establish optimization-based feature visualization, showing how regularization, preconditioning, and diversity objectives turn neurons into interpretable images instead of adversarial noise. It is the canonical reference for vision CNNs, and its direct transfer to language-model interpretability is limited.',
+                author: 'Chris Olah, Alexander Mordvintsev, Ludwig Schubert',
+                authorAvatar: 'https://www.google.com/s2/favicons?domain=distill.pub&sz=128',
+                category: 'Trustworthy AI',
+                tags: ['Feature Visualization', 'Interpretability', 'Optimization', 'Vision Models'],
+                readTime: '25 min read',
+                publishDate: '2017-11-07',
+                sourceName: 'Distill',
+                url: 'https://distill.pub/2017/feature-visualization/',
+                coverImage: 'assets/img/covers/real/distill-feature-visualization.jpg',
+                coverAlt: 'Real cover from og:image',
+                coverFit: 'cover'
+            },
+            {
+                id: 'deepmind-specification-gaming-flip-side',
+                title: 'Specification Gaming: The Flip Side of AI Ingenuity',
+                excerpt: 'Victoria Krakovna and colleagues catalog roughly 60 examples of specification gaming — agents satisfying the literal reward while violating its intent, from boat-racing loops to simulated-physics exploits — and explain why RL makes such behavior systematic rather than anecdotal. The examples are pre-LLM-era RL, but the taxonomy remains the canonical frame newer safety work builds on.',
+                author: 'Victoria Krakovna et al.',
+                authorAvatar: 'https://www.google.com/s2/favicons?domain=deepmind.google&sz=128',
+                category: 'Trustworthy AI',
+                tags: ['Specification Gaming', 'Reward Hacking', 'RL Safety', 'Alignment'],
+                readTime: '10 min read',
+                publishDate: '2020-04-21',
+                sourceName: 'Google DeepMind Blog',
+                url: 'https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/',
+                coverImage: 'assets/img/covers/real/deepmind-specification-gaming-flip-side.webp',
+                coverAlt: 'Real cover from og:image',
+                coverFit: 'cover'
+            }
+        ];
+    }
+
+    getQualityEditorialFillBlogs() {
+        return [
+
+            {
+                id: 'jalammar-illustrated-gpt2',
+                title: 'The Illustrated GPT-2',
+                excerpt: 'Jay Alammar unpacks GPT-2’s decoder-only stack, byte-pair encoding, and how autoregressive sampling actually walks the network. It is still the clearest public explanation of that generation of LMs, with the caveat that tokenizer and attention variants have changed substantially since 2019.',
+                author: 'Jay Alammar',
+                authorAvatar: 'https://www.google.com/s2/favicons?domain=jalammar.github.io&sz=128',
+                category: 'LLM & MLLM',
+                tags: ['GPT-2', 'Language Models', 'Illustrated Guide', 'Decoding'],
+                readTime: '28 min read',
+                publishDate: '2019-08-12',
+                sourceName: 'Jay Alammar',
+                url: 'https://jalammar.github.io/illustrated-gpt2/',
+                coverImage: 'https://www.google.com/s2/favicons?domain=jalammar.github.io&sz=128',
+                coverAlt: 'The Illustrated GPT-2 source mark',
+                coverFit: 'cover'
+            },
+
+            {
+                id: 'lilian-weng-controllable-text-generation',
+                title: 'Controllable Neural Text Generation',
+                excerpt: 'Lilian Weng surveys control knobs for neural text generation, from decoding constraints and weighted decoding to plug-and-play and prefix-style control. It is a 2021 map of the design space; instruction-tuned chat models later absorbed some of these controls into prompting and post-training.',
+                author: 'Lilian Weng',
+                authorAvatar: 'https://www.google.com/s2/favicons?domain=lilianweng.github.io&sz=128',
+                category: 'LLM & MLLM',
+                tags: ['Controllable Generation', 'Decoding', 'Language Models', 'Survey'],
+                readTime: '30 min read',
+                publishDate: '2021-01-02',
+                sourceName: 'Lilian Weng',
+                url: 'https://lilianweng.github.io/posts/2021-01-02-controllable-text-generation/',
+                coverImage: 'https://www.google.com/s2/favicons?domain=lilianweng.github.io&sz=128',
+                coverAlt: 'Controllable Neural Text Generation source mark',
+                coverFit: 'cover'
+            },
+
+            {
+                id: 'lilian-weng-llm-powered-autonomous-agents',
+                title: 'LLM Powered Autonomous Agents',
+                excerpt: 'Lilian Weng’s 2023 survey of LLM agents—planning, memory, tool use, and the ReAct-style loop—became the field’s default map. It predates modern computer-use and long-horizon RL agents; read it as architecture vocabulary, not a 2026 capability report.',
+                author: 'Lilian Weng',
+                authorAvatar: 'https://www.google.com/s2/favicons?domain=lilianweng.github.io&sz=128',
+                category: 'AI Agents',
+                tags: ['LLM Agents', 'Planning', 'Memory', 'Tool Use'],
+                readTime: '35 min read',
+                publishDate: '2023-06-23',
+                sourceName: 'Lilian Weng',
+                url: 'https://lilianweng.github.io/posts/2023-06-23-agent/',
+                coverImage: 'https://www.google.com/s2/favicons?domain=lilianweng.github.io&sz=128',
+                coverAlt: 'LLM Powered Autonomous Agents source mark',
+                coverFit: 'cover'
+            },
+        ];
+    }
+
     getCuratedCommunityBlogs() {
         const blogs = [
             ...this.getICLR2026Blogposts(),
@@ -8074,6 +8199,8 @@ class BlogXiv {
             ...this.getQualityFoundationLlmMultimodalBlogs(),
             ...this.getQualityVisualWorldAgentsBlogs(),
             ...this.getQualityHowToResearchBlogs(),
+            ...this.getQualityEfficientTrustworthyBlogs(),
+            ...this.getQualityEditorialFillBlogs(),
             {
                 id: 'dair-context-engineering-guide',
                 title: 'Context Engineering Guide',

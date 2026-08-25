@@ -120,7 +120,7 @@
 - [x] **A** · [KV-Cache Compression and Its Infrastructure Problems](https://research.nvidia.com/labs/eai/post/kv-cache-compression-and-its-infra-problems/) — NVIDIA Research · 2026-06-12
 - [x] **A** · [Optimum Intel 2.0](https://huggingface.co/blog/jeffboudier/optimum-intel-v2) — Hugging Face · 2026-06-11
 - [x] **A** · [Profiling in PyTorch, Part 2: From nn.Linear to a Fused MLP](https://huggingface.co/blog/torch-mlp-fusion) — Hugging Face · 2026-06-11
-- [ ] **A** · [Quantization-Aware Training for Gemma 4](https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/) — Google · 2026-06
+- [x] **A** · [Quantization-Aware Training for Gemma 4](https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/) — Google · 2026-06
 - [x] **A** · [ThunderKittens 2.0: Making Kernels Faster and Easier to Write](https://hazyresearch.stanford.edu/blog/2026-02-19-tk-2) — hazyresearch.stanford.edu
 - [x] **A** · [ThunderKittens: A Simple Embedded DSL for AI Kernels](https://hazyresearch.stanford.edu/blog/2024-05-12-quick-tk) — hazyresearch.stanford.edu
 - [x] **A** · [Minions: Cost-Efficient Collaboration Between On-Device and Cloud Language Models](https://hazyresearch.stanford.edu/blog/2025-02-24-minions) — hazyresearch.stanford.edu
