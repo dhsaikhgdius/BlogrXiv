@@ -210,6 +210,146 @@ class BloggersPage {
                 specialty: 'Efficient AI',
                 focus: ['optimization', 'Muon', 'training dynamics'],
                 qualityRank: 7
+            },
+            {
+                name: 'OpenAI',
+                institution: 'OpenAI Research & Safety Blog',
+                homepage: 'https://openai.com/news/',
+                avatar: 'https://github.com/openai.png',
+                matches: ['OpenAI'],
+                specialty: 'Foundation Model',
+                focus: ['frontier model releases', 'safety systems', 'deployment lessons'],
+                qualityRank: 10
+            },
+            {
+                name: 'Anthropic',
+                institution: 'Anthropic Research, Engineering & Alignment',
+                homepage: 'https://www.anthropic.com/research',
+                avatar: 'https://github.com/anthropics.png',
+                matches: ['Anthropic'],
+                specialty: 'Trustworthy AI',
+                focus: ['alignment science', 'interpretability', 'agentic engineering'],
+                qualityRank: 10
+            },
+            {
+                name: 'Google DeepMind',
+                institution: 'Google DeepMind Blog',
+                homepage: 'https://deepmind.google/discover/blog/',
+                avatar: 'https://github.com/google-deepmind.png',
+                matches: ['Google DeepMind', 'DeepMind'],
+                specialty: 'Frontier',
+                focus: ['frontier safety', 'science of AI', 'multimodal agents'],
+                qualityRank: 10
+            },
+            {
+                name: 'Meta AI (FAIR)',
+                institution: 'Meta AI / Fundamental AI Research',
+                homepage: 'https://ai.meta.com/blog/',
+                avatar: 'https://github.com/facebookresearch.png',
+                matches: ['Meta AI', 'Meta FAIR', 'Meta Superintelligence Labs'],
+                specialty: 'World Model',
+                focus: ['world models', 'open-weight releases', 'perception research'],
+                qualityRank: 9
+            },
+            {
+                name: 'NVIDIA',
+                institution: 'NVIDIA Technical Blog & Research',
+                homepage: 'https://developer.nvidia.com/blog/',
+                avatar: 'https://github.com/NVIDIA.png',
+                matches: ['NVIDIA'],
+                specialty: 'Efficient AI',
+                focus: ['inference optimization', 'physical AI', 'GPU systems'],
+                qualityRank: 9
+            },
+            {
+                name: 'Google Research',
+                institution: 'Google Research Blog',
+                homepage: 'https://research.google/blog/',
+                avatar: 'https://github.com/google-research.png',
+                matches: ['Google Research'],
+                specialty: 'Research Craft',
+                focus: ['research methodology', 'scaling studies', 'applied ML'],
+                qualityRank: 8
+            },
+            {
+                name: 'Microsoft Research',
+                institution: 'Microsoft Research Blog',
+                homepage: 'https://www.microsoft.com/en-us/research/blog/',
+                avatar: 'https://github.com/microsoft.png',
+                matches: ['Microsoft Research'],
+                specialty: 'AI Agents',
+                focus: ['agent frameworks', 'small language models', 'systems research'],
+                qualityRank: 8
+            },
+            {
+                name: 'Stanford HAI',
+                institution: 'Stanford Institute for Human-Centered AI',
+                homepage: 'https://hai.stanford.edu/news',
+                avatar: 'https://www.google.com/s2/favicons?domain=hai.stanford.edu&sz=128',
+                matches: ['Stanford HAI'],
+                specialty: 'Frontier',
+                focus: ['AI Index', 'policy analysis', 'human-centered AI'],
+                qualityRank: 8
+            },
+            {
+                name: 'MiniMax',
+                institution: 'MiniMax Research Blog',
+                homepage: 'https://www.minimax.io/news',
+                avatar: 'https://www.google.com/s2/favicons?domain=minimax.io&sz=128',
+                matches: ['MiniMax'],
+                specialty: 'LLM & MLLM',
+                focus: ['lightning attention', 'agentic models', 'multimodal generation'],
+                qualityRank: 7
+            },
+            {
+                name: 'ByteDance Seed',
+                institution: 'ByteDance Seed Research',
+                homepage: 'https://seed.bytedance.com/',
+                avatar: 'https://www.google.com/s2/favicons?domain=seed.bytedance.com&sz=128',
+                matches: ['ByteDance Seed'],
+                specialty: 'Multimodal Model',
+                focus: ['unified multimodal models', 'vision-language', 'video generation'],
+                qualityRank: 7
+            },
+            {
+                name: 'Apple Machine Learning Research',
+                institution: 'Apple ML Research Blog',
+                homepage: 'https://machinelearning.apple.com/',
+                avatar: 'https://github.com/apple.png',
+                matches: ['Apple Machine Learning Research', 'Apple ML Research'],
+                specialty: 'Multimodal Model',
+                focus: ['on-device models', 'MLLM training recipes', 'efficiency'],
+                qualityRank: 7
+            },
+            {
+                name: 'Tencent Hunyuan',
+                institution: 'Tencent Hunyuan Lab',
+                homepage: 'https://hunyuan.tencent.com/',
+                avatar: 'https://www.google.com/s2/favicons?domain=hunyuan.tencent.com&sz=128',
+                matches: ['Tencent Hunyuan', 'Hunyuan'],
+                specialty: 'Visual Generation',
+                focus: ['video generation', '3D asset generation', 'open-source releases'],
+                qualityRank: 7
+            },
+            {
+                name: 'Black Forest Labs',
+                institution: 'Black Forest Labs / FLUX',
+                homepage: 'https://bfl.ai/',
+                avatar: 'https://github.com/black-forest-labs.png',
+                matches: ['Black Forest Labs'],
+                specialty: 'Visual Generation',
+                focus: ['FLUX models', 'image editing', 'latent flow matching'],
+                qualityRank: 7
+            },
+            {
+                name: 'Runway',
+                institution: 'Runway Research',
+                homepage: 'https://runwayml.com/research',
+                avatar: 'https://github.com/runwayml.png',
+                matches: ['Runway'],
+                specialty: 'Visual Generation',
+                focus: ['video generation', 'general world models', 'creative tooling'],
+                qualityRank: 7
             }
         ];
 
