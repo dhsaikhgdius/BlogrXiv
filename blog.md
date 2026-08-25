@@ -12,13 +12,13 @@
 - [ ] **A** · [GEN-1.5](https://generalistai.com/blog/gen-1.5) — Generalist AI · 2026-08-24。Embodied foundation model 页面，强调 one-shot learning 与更强的通用化；更像项目发布页而非论文式长文。
 - [ ] **A+** · [Scaling Pedagogical Pre-training: From Optimal Mixing to 10 Billion Tokens](https://huggingface.co/blog/codelion/scaling-pedagogical-pretraining-10-billion-tokens) — Asankhaya Sharma / CodeLion · 2026-03-06。公开 10.2B-token 教育语料生成、质量筛选和 30.6B-token 训练；核心验证仍为 69M 模型。
 - [ ] **A+** · [Introducing LLM360: Fully Transparent Open-Source LLMs](https://www.llm360.ai/news/introducing-llm360-fully-transparent-open-source-llms.html) — LLM360 Team · 2023 · `开放研究团队`
-- [ ] **A** · [The Joy and Pain of Training an LLM from Scratch](https://huggingface.co/blog/giux78/slm-zagreus-nesso) — Alessandro Ercolani / MII-LLM community · 2026 · `社区训练复盘`
+- [x] **A** · [The Joy and Pain of Training an LLM from Scratch](https://huggingface.co/blog/giux78/slm-zagreus-nesso) — Alessandro Ercolani / MII-LLM community · 2026 · `社区训练复盘`
 - [ ] **A** · [GLM-5.3](https://z.ai/blog/glm-5.3) — Z.ai · 2026-08-19。Frontier coding 页面，主打 emergent cyber capabilities 与 agentic tooling，更接近模型发布与能力展示。
 - [ ] **A** · [Techniques for Training Large Neural Networks](https://openai.com/index/techniques-for-training-large-neural-networks/) — OpenAI
-- [ ] **A** · [Dolma: 3 Trillion Tokens for Open LLM Research](https://allenai.org/blog/dolma-3-trillion-tokens-open-llm-corpus-9a0ff4b8da64) — Ai2
-- [ ] **A** · [Introducing the Third Generation of Apple’s Foundation Models](https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models) — Apple Machine Learning Research · 2026-06-08
-- [ ] **A** · [Multi-Token Prediction in Gemma 4](https://blog.google/innovation-and-ai/technology/developers-tools/multi-token-prediction-gemma-4/) — Google · 2026-05
-- [ ] **A** · [Structured State Spaces: Combining Continuous-Time, Recurrent, and Convolutional Models](https://hazyresearch.stanford.edu/blog/2022-01-14-s4-3) — hazyresearch.stanford.edu
+- [x] **A** · [Dolma: 3 Trillion Tokens for Open LLM Research](https://allenai.org/blog/dolma-3-trillion-tokens-open-llm-corpus-9a0ff4b8da64) — Ai2
+- [x] **A** · [Introducing the Third Generation of Apple’s Foundation Models](https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models) — Apple Machine Learning Research · 2026-06-08
+- [x] **A** · [Multi-Token Prediction in Gemma 4](https://blog.google/innovation-and-ai/technology/developers-tools/multi-token-prediction-gemma-4/) — Google · 2026-05
+- [x] **A** · [Structured State Spaces: Combining Continuous-Time, Recurrent, and Convolutional Models](https://hazyresearch.stanford.edu/blog/2022-01-14-s4-3) — hazyresearch.stanford.edu
 - [ ] **A+** · [Investigating pretraining dynamics and stability with OLMo checkpoints](https://allenai.org/blog/investigating-pretraining-dynamics-and-stability-with-olmo-checkpoints-ece6f0c4947a) — Ai2 · 2024
 
 ## LLM & MLLM
@@ -26,13 +26,13 @@
 
 
 - [ ] **A** · [Mixture of Experts Explained](https://huggingface.co/blog/moe) — Hugging Face
-- [ ] **A** · [Mixture of Experts in Transformers](https://huggingface.co/blog/moe-transformers) — Hugging Face
+- [x] **A** · [Mixture of Experts in Transformers](https://huggingface.co/blog/moe-transformers) — Hugging Face
 
 - [ ] **A** · [Learning to Reason with LLMs](https://openai.com/index/learning-to-reason-with-llms/) — OpenAI
-- [ ] **A** · [MaxProof: Scaling Mathematical Proof with Generative-Verifier RL and Evolutionary Search](https://www.minimax.io/blog/minimax-maxproof-math-proof-evolution) — MiniMax · 2026-06-09
+- [x] **A** · [MaxProof: Scaling Mathematical Proof with Generative-Verifier RL and Evolutionary Search](https://www.minimax.io/blog/minimax-maxproof-math-proof-evolution) — MiniMax · 2026-06-09
 - [ ] **A+** · [Internal Investigation of Sparse Token Forgetting](https://www.minimax.io/blog/sparse-token-forgetting) — MiniMax · 2026-05-26
 - [ ] **A+** · [Efficient Language Models as Arithmetic Circuits](https://hazyresearch.stanford.edu/blog/2024-06-22-ac) — hazyresearch.stanford.edu
-- [ ] **A+** · [The Illustrated Retrieval Transformer](https://jalammar.github.io/illustrated-retrieval-transformer/) — jalammar.github.io
+- [x] **A+** · [The Illustrated Retrieval Transformer](https://jalammar.github.io/illustrated-retrieval-transformer/) — jalammar.github.io
 
 ## Multimodal Model
 
@@ -40,33 +40,33 @@
 - [ ] **A** · [Visual Language Models on NVIDIA Hardware with VILA](https://developer.nvidia.com/blog/visual-language-models-on-nvidia-hardware-with-vila/) — NVIDIA & MIT · 2024-05-03。拆解 VILA 的训练配方、多图/视频 QA 与 AWQ 边缘部署；比较重点偏 NVIDIA 硬件。
 - [ ] **A** · [Mureka V9.5](https://www.mureka.ai/mureka-9-5) — Mureka · 2026-08-24。音乐生成页面，突出 prompt 控制与创作流程，适合放在多模态而非纯视觉或纯语言类别。
 - [ ] **A+** · [Vision Language Models (Better, Faster, Stronger)](https://huggingface.co/blog/vlms-2025) — Hugging Face community team · 2025 · `开放生态年度综述`
-- [ ] **A** · [Demystifying Multimodal Learning: Enabling Vision in Language Models](https://huggingface.co/blog/MatteoNulli/de-mystifying-multimodal-learning-enabiling-vision) — Matteo Nulli · 2026 · `独立技术教程`
+- [x] **A** · [Demystifying Multimodal Learning: Enabling Vision in Language Models](https://huggingface.co/blog/MatteoNulli/de-mystifying-multimodal-learning-enabiling-vision) — Matteo Nulli · 2026 · `独立技术教程`
 - [ ] **A+** · [One Adapter, Both Modalities: Field Notes from Building and Serving a Multimodal Reranker](https://huggingface.co/blog/lightonai/lighton-rerank) — LightOn AI · 2026 · `模型作者实录`
 
-- [ ] **A** · [Generalized Visual Language Models](https://lilianweng.github.io/posts/2022-06-09-vlm/) — lilianweng.github.io
+- [x] **A** · [Generalized Visual Language Models](https://lilianweng.github.io/posts/2022-06-09-vlm/) — lilianweng.github.io
 
 ## Visual Generation
 
 - [ ] **A+** · [Generative Modelling in Latent Space](https://sander.ai/2025/04/15/latents.html) — Sander Dieleman · 2025-04-15。系统分析 latent 容量、可建模性、重建、shaping 与端到端路线；是高质量综述而非单一新实验。
 - [ ] **A** · [MiniMax Design](https://design.minimax.io/) — MiniMax Design · 2026-08-24。以 design 语义、版式和创意迭代为核心的产品页，偏视觉生成与设计工作流展示。
 
-- [ ] **A** · [Perspectives on Diffusion: Noise Schedules](https://sander.ai/2024/06/14/noise-schedules.html) — Sander Dieleman
-- [ ] **A** · [The Diffusion Model Paradox](https://sander.ai/2024/02/28/paradox.html) — Sander Dieleman
-- [ ] **A** · [Autoregressive Video Generation](https://research.nvidia.com/labs/eai/blogs/autoregressive-video-gen/) — NVIDIA Research · 2026-07-13
-- [ ] **A** · [Introducing Muse Image and Muse Video](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) — Meta AI · 2026-07-07
-- [ ] **A** · [Why Video Generation Is an Infrastructure Problem](https://research.nvidia.com/labs/eai/blogs/video-gen-is-an-infra-problem/) — NVIDIA Research · 2026-05-26
-- [ ] **A** · [Diffusion Meets Flow Matching: Two Sides of the Same Coin](https://diffusionflow.github.io/) — **独立交互式技术教程**。用统一参数化解释 Gaussian flow matching 与 diffusion 的等价关系，包含训练、采样、ODE / SDE 和调度器；页面无论文、arXiv 或 publication 链接。
+- [x] **A** · [Perspectives on Diffusion: Noise Schedules](https://sander.ai/2024/06/14/noise-schedules.html) — Sander Dieleman
+- [x] **A** · [The Diffusion Model Paradox](https://sander.ai/2024/02/28/paradox.html) — Sander Dieleman
+- [x] **A** · [Autoregressive Video Generation](https://research.nvidia.com/labs/eai/blogs/autoregressive-video-gen/) — NVIDIA Research · 2026-07-13
+- [x] **A** · [Introducing Muse Image and Muse Video](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) — Meta AI · 2026-07-07
+- [x] **A** · [Why Video Generation Is an Infrastructure Problem](https://research.nvidia.com/labs/eai/blogs/video-gen-is-an-infra-problem/) — NVIDIA Research · 2026-05-26
+- [x] **A** · [Diffusion Meets Flow Matching: Two Sides of the Same Coin](https://diffusionflow.github.io/) — **独立交互式技术教程**。用统一参数化解释 Gaussian flow matching 与 diffusion 的等价关系，包含训练、采样、ODE / SDE 和调度器；页面无论文、arXiv 或 publication 链接。
 - [ ] **A+** · [Generative Modeling by Estimating Gradients of the Data Distribution](https://yang-song.net/blog/2021/score/) — **Yang Song**。从 score matching、噪声扰动和 Langevin dynamics 建立 score-based generative modeling 的完整直觉。
 - [ ] **A+** · [Bringing 3D Shoppable Products Online with Generative AI](https://research.google/blog/bringing-3d-shoppable-products-online-with-generative-ai/) — **Google Research**。按 NeRF、view-conditioned diffusion、Veo 三代系统梳理从少量商品图像生成一致 3D 视图的演进。
 
 ## World Model
 
 - [ ] **A+** · [Open-Sourcing Touch Representations and Models for Robot Dexterity](https://ai.meta.com/blog/fair-robotics-open-source/) — Meta AI
-- [ ] **A+** · [PARTNR and New Models for Human-Robot Collaboration](https://ai.meta.com/blog/machine-intelligence-research-new-models/) — Meta AI
+- [x] **A+** · [PARTNR and New Models for Human-Robot Collaboration](https://ai.meta.com/blog/machine-intelligence-research-new-models/) — Meta AI
 - [ ] **A+** · [MolmoMotion: Language-Guided 3D Motion Forecasting](https://allenai.org/blog/molmo-motion) — Ai2 · 2026-06-17
-- [ ] **A** · [MolmoSpaces](https://allenai.org/blog/molmospaces) — Ai2 · 2026-02-11
+- [x] **A** · [MolmoSpaces](https://allenai.org/blog/molmospaces) — Ai2 · 2026-02-11
 
-- [ ] **A** · [Scaling Up Reinforcement Learning for Traffic Smoothing: A 100-AV Highway Deployment](https://bair.berkeley.edu/blog/2025/03/25/rl-av-smoothing/) — bair.berkeley.edu
+- [x] **A** · [Scaling Up Reinforcement Learning for Traffic Smoothing: A 100-AV Highway Deployment](https://bair.berkeley.edu/blog/2025/03/25/rl-av-smoothing/) — bair.berkeley.edu
 
 
 ## AI Agents
@@ -74,25 +74,25 @@
 - [ ] **A+** · [Quantifying Infrastructure Noise in Agentic Coding Evals](https://www.anthropic.com/engineering/infrastructure-noise) — Anthropic / Gian Segato · 2026-02-05。受控量化 CPU、内存、存储和网络配额如何改变 coding-agent 分数，证明基础设施必须成为评测变量；主要围绕 Anthropic 栈。
 - [ ] **A** · [DeepSeek Harness](https://www.deepseek.com/harness/en/) — DeepSeek · 2026-08-24。developer preview 页面把模型、工具、会话、沙箱、存储和 UI 组件都做成可插拔模块，偏 agent harness 设计。
 
-- [ ] **A** · [Agent Arena: Causal Evaluation of Agents in the Real World](https://arena.ai/blog/agent-arena-methodology) — Arena Team · 2026-06-04。基于真实交互用因果设计隔离 orchestrator 与模型影响；平台自有数据和采样尚不能完全独立复现。
-- [ ] **A** · [Evaluating the GitHub Copilot Agentic Harness Across Models and Tasks](https://github.blog/ai-and-ml/github-copilot/evaluating-performance-and-efficiency-of-the-github-copilot-agentic-harness-across-models-and-tasks/) — GitHub · 2026-06-25。固定模型、任务与预算比较多种 coding harness，并同时报告成功率、token、成本和耗时；部分内部数据不公开。
-- [ ] **A** · [Introducing Context Repositories: Git-based Memory for Coding Agents](https://www.letta.com/blog/context-repositories/) — Letta · 2026-02-12。用 Git、frontmatter、隔离 worktree 和记忆子 agent 实现可审计长期记忆；目前缺少受控基准验证收益。
-- [ ] **A** · [How to Actually Evaluate AI Agents at Scale](https://huggingface.co/blog/darubberduckiee/using-braintrust-to-eval-agentic-setups) — Jessica / community · 2026 · `真实 trace 分析`
-- [ ] **A+** · [Is It Agentic Enough? Benchmarking Open Models on Your Own Tooling](https://huggingface.co/blog/is-it-agentic-enough) — Hugging Face maintainers · 2026 · `维护者受控实验`
-- [ ] **A** · [Magentic-UI: A Human-Centered Web Agent](https://www.microsoft.com/en-us/research/blog/magentic-ui-an-experimental-human-centered-web-agent/) — Microsoft Research
-- [ ] **A** · [Magentic-One: A Generalist Multi-Agent System](https://www.microsoft.com/en-us/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks/) — Microsoft Research
-- [ ] **A** · [Portable Evaluation Tasks](https://metr.org/blog/2024-02-29-metr-task-standard/) — METR
-- [ ] **A** · [The Expenditure Horizon](https://metr.org/blog/2026-07-21-expenditure-horizon/) — METR
-- [ ] **A** · [Dynabench: Rethinking AI Benchmarking](https://ai.meta.com/blog/dynabench-rethinking-ai-benchmarking/) — Meta AI
-- [ ] **A** · [MiniMax Agent Team: Built for Long-Running Tasks and Continuous Evolution](https://www.minimax.io/blog/minimax-agent-team-long-running-1779893953) — MiniMax · 2026-05-27
-- [ ] **A** · [Evaluating AI Agents for Scientific Discovery](https://allenai.org/blog/evaluating-scientific-discovery-agents) — Ai2 · 2026-04-13
-- [ ] **A** · [Forge: Scalable Agent RL Framework and Algorithm](https://www.minimax.io/blog/forge-scalable-agent-rl-en-1779896141) — MiniMax · 2026-02-14
-- [ ] **A** · [Red-Teaming a Network of Agents](https://www.microsoft.com/en-us/research/blog/red-teaming-a-network-of-agents-understanding-what-breaks-when-ai-agents-interact-at-scale/) — Microsoft Research · 2026
-- [ ] **A** · [Intelligence Is Free, Now What? Data Systems for, of, and by Agents](https://bair.berkeley.edu/blog/2026/07/07/intelligence-is-free-now-what/) — bair.berkeley.edu
-- [ ] **A** · [Compound AI Systems: The Shift from Models to Systems](https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/) — bair.berkeley.edu
-- [ ] **A** · [From Minions to OpenJarvis: Lessons from Building Personal AI Agents](https://hazyresearch.stanford.edu/blog/2026-05-15-minions-to-openjarvis-retrospective) — hazyresearch.stanford.edu
-- [ ] **A** · [Few-shot Tool-use Doesn’t Really Work (Yet)](https://research.google/blog/few-shot-tool-use-doesnt-really-work-yet/) — **Google Research**。大规模比较多种 tool-assisted generation 策略，展示少样本工具调用并不天然优于无工具基线。
-- [ ] **A** · [PlugMem: Transforming Raw Agent Interactions into Reusable Knowledge](https://www.microsoft.com/en-us/research/blog/from-raw-interaction-to-reusable-knowledge-rethinking-memory-for-ai-agents/) — **Microsoft Research**。把原始轨迹转换为事实与技能组成的知识图，在三类任务上验证跨任务记忆复用。
+- [x] **A** · [Agent Arena: Causal Evaluation of Agents in the Real World](https://arena.ai/blog/agent-arena-methodology) — Arena Team · 2026-06-04。基于真实交互用因果设计隔离 orchestrator 与模型影响；平台自有数据和采样尚不能完全独立复现。
+- [x] **A** · [Evaluating the GitHub Copilot Agentic Harness Across Models and Tasks](https://github.blog/ai-and-ml/github-copilot/evaluating-performance-and-efficiency-of-the-github-copilot-agentic-harness-across-models-and-tasks/) — GitHub · 2026-06-25。固定模型、任务与预算比较多种 coding harness，并同时报告成功率、token、成本和耗时；部分内部数据不公开。
+- [x] **A** · [Introducing Context Repositories: Git-based Memory for Coding Agents](https://www.letta.com/blog/context-repositories/) — Letta · 2026-02-12。用 Git、frontmatter、隔离 worktree 和记忆子 agent 实现可审计长期记忆；目前缺少受控基准验证收益。
+- [x] **A** · [How to Actually Evaluate AI Agents at Scale](https://huggingface.co/blog/darubberduckiee/using-braintrust-to-eval-agentic-setups) — Jessica / community · 2026 · `真实 trace 分析`
+- [x] **A+** · [Is It Agentic Enough? Benchmarking Open Models on Your Own Tooling](https://huggingface.co/blog/is-it-agentic-enough) — Hugging Face maintainers · 2026 · `维护者受控实验`
+- [x] **A** · [Magentic-UI: A Human-Centered Web Agent](https://www.microsoft.com/en-us/research/blog/magentic-ui-an-experimental-human-centered-web-agent/) — Microsoft Research
+- [x] **A** · [Magentic-One: A Generalist Multi-Agent System](https://www.microsoft.com/en-us/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks/) — Microsoft Research
+- [x] **A** · [Portable Evaluation Tasks](https://metr.org/blog/2024-02-29-metr-task-standard/) — METR
+- [x] **A** · [The Expenditure Horizon](https://metr.org/blog/2026-07-21-expenditure-horizon/) — METR
+- [x] **A** · [Dynabench: Rethinking AI Benchmarking](https://ai.meta.com/blog/dynabench-rethinking-ai-benchmarking/) — Meta AI
+- [x] **A** · [MiniMax Agent Team: Built for Long-Running Tasks and Continuous Evolution](https://www.minimax.io/blog/minimax-agent-team-long-running-1779893953) — MiniMax · 2026-05-27
+- [x] **A** · [Evaluating AI Agents for Scientific Discovery](https://allenai.org/blog/evaluating-scientific-discovery-agents) — Ai2 · 2026-04-13
+- [x] **A** · [Forge: Scalable Agent RL Framework and Algorithm](https://www.minimax.io/blog/forge-scalable-agent-rl-en-1779896141) — MiniMax · 2026-02-14
+- [x] **A** · [Red-Teaming a Network of Agents](https://www.microsoft.com/en-us/research/blog/red-teaming-a-network-of-agents-understanding-what-breaks-when-ai-agents-interact-at-scale/) — Microsoft Research · 2026
+- [x] **A** · [Intelligence Is Free, Now What? Data Systems for, of, and by Agents](https://bair.berkeley.edu/blog/2026/07/07/intelligence-is-free-now-what/) — bair.berkeley.edu
+- [x] **A** · [Compound AI Systems: The Shift from Models to Systems](https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/) — bair.berkeley.edu
+- [x] **A** · [From Minions to OpenJarvis: Lessons from Building Personal AI Agents](https://hazyresearch.stanford.edu/blog/2026-05-15-minions-to-openjarvis-retrospective) — hazyresearch.stanford.edu
+- [x] **A** · [Few-shot Tool-use Doesn’t Really Work (Yet)](https://research.google/blog/few-shot-tool-use-doesnt-really-work-yet/) — **Google Research**。大规模比较多种 tool-assisted generation 策略，展示少样本工具调用并不天然优于无工具基线。
+- [x] **A** · [PlugMem: Transforming Raw Agent Interactions into Reusable Knowledge](https://www.microsoft.com/en-us/research/blog/from-raw-interaction-to-reusable-knowledge-rethinking-memory-for-ai-agents/) — **Microsoft Research**。把原始轨迹转换为事实与技能组成的知识图，在三类任务上验证跨任务记忆复用。
 
 ## Efficient AI
 
@@ -174,35 +174,35 @@
 
 - [ ] **A+** · [More compute, more capability: Why AI agent evaluations need to account for test-time compute](https://www.aisi.gov.uk/blog/more-compute-more-capability-why-ai-agent-evals-need-to-account-for-test-time-compute) — UK AI Security Institute · 2026-07-02。证明 agent 能力应报告随 test-time compute 变化的曲线而非单点；部分任务出现平台期且人类时间映射方差大。
 - [ ] **A+** · [A pipeline for transcript analysis using Inspect Scout](https://www.aisi.gov.uk/blog/a-pipeline-for-transcript-analysis-using-inspect-scout) — UK AISI / Meridian Labs · 2026-02-25。给出轨迹采样、scanner、人工验证和分析的七步可复现流程；scanner 效度仍依赖标注和 ground truth。
-- [ ] **A+** · [We are Changing our Developer Productivity Experiment Design](https://metr.org/blog/2026-02-24-uplift-update/) — METR · 2026-02-24。公开诊断混杂并重做随机实验，是发现方法问题后修正研究的优秀案例；尚非最终因果效应报告。
-- [ ] **A** · [5 – Reproducibility](https://blog.ml.cmu.edu/2020/08/31/5-reproducibility/) — Zihao Ding, Aniketh Reddy, Aparna Joshi / ML@CMU · 2020-08-31。区分多类 reproducibility 并转化为数据、代码、随机种子、方差和运行次数检查表；少量工具示例已老化。
+- [x] **A+** · [We are Changing our Developer Productivity Experiment Design](https://metr.org/blog/2026-02-24-uplift-update/) — METR · 2026-02-24。公开诊断混杂并重做随机实验，是发现方法问题后修正研究的优秀案例；尚非最终因果效应报告。
+- [x] **A** · [5 – Reproducibility](https://blog.ml.cmu.edu/2020/08/31/5-reproducibility/) — Zihao Ding, Aniketh Reddy, Aparna Joshi / ML@CMU · 2020-08-31。区分多类 reproducibility 并转化为数据、代码、随机种子、方差和运行次数检查表；少量工具示例已老化。
 - [ ] **A+** · [A Field Guide to Rapidly Improving AI Products](https://hamel.dev/blog/posts/field-guide/) — Hamel Husain · 2025 · `独立实践总结`
 - [ ] **A+** · [Evaluating the Effectiveness of LLM-Evaluators (aka LLM-as-Judge)](https://eugeneyan.com/writing/llm-evaluators/) — Eugene Yan · 2024 · `独立研究综述`
-- [ ] **A** · [“It’s Hard to Eval” Is a Product Smell](https://hamel.dev/blog/posts/eval-smell/) — Hamel Husain · 2026-06-29 · `最新产品方法论`
-- [ ] **A** · [Deep Learning Tuning Playbook](https://developers.google.com/machine-learning/guides/deep-learning-tuning-playbook) — Google
-- [ ] **A** · [Good Data Analysis](https://developers.google.com/machine-learning/guides/good-data-analysis) — Google
-- [ ] **A** · [Data Traps](https://developers.google.com/machine-learning/guides/data-traps) — Google
-- [ ] **A** · [Experiment Management](https://fullstackdeeplearning.com/course/2022/lab-4-experiment-management/) — Full Stack Deep Learning
-- [ ] **A** · [Development Infrastructure and Tooling](https://fullstackdeeplearning.com/course/2022/lecture-2-development-infrastructure-and-tooling/) — Full Stack Deep Learning
+- [x] **A** · [“It’s Hard to Eval” Is a Product Smell](https://hamel.dev/blog/posts/eval-smell/) — Hamel Husain · 2026-06-29 · `最新产品方法论`
+- [x] **A** · [Deep Learning Tuning Playbook](https://developers.google.com/machine-learning/guides/deep-learning-tuning-playbook) — Google
+- [x] **A** · [Good Data Analysis](https://developers.google.com/machine-learning/guides/good-data-analysis) — Google
+- [x] **A** · [Data Traps](https://developers.google.com/machine-learning/guides/data-traps) — Google
+- [x] **A** · [Experiment Management](https://fullstackdeeplearning.com/course/2022/lab-4-experiment-management/) — Full Stack Deep Learning
+- [x] **A** · [Development Infrastructure and Tooling](https://fullstackdeeplearning.com/course/2022/lecture-2-development-infrastructure-and-tooling/) — Full Stack Deep Learning
 - [ ] **A** · [ML Retrospectives](https://ml-retrospectives.github.io/) — ML Retrospectives
-- [ ] **A** · [AstaBench Update: Spring 2026](https://allenai.org/blog/astabench-update-spring-2026) — Ai2 · 2026-04-30
-- [ ] **A** · [Four Ways Google Researchers Have Been Using Empirical Research Assistance](https://research.google/blog/four-ways-google-research-scientists-have-been-using-empirical-research-assistance/) — Google Research · 2026-04-29
-- [ ] **A** · [Exploring Bayesian Optimization](https://distill.pub/2020/bayesian-optimization/) — distill.pub
-- [ ] **A** · [How to Use t-SNE Effectively](https://distill.pub/2016/misread-tsne/) — distill.pub
-- [ ] **A** · [Rules of Machine Learning: Best Practices for ML Engineering](https://developers.google.com/machine-learning/guides/rules-of-ml/) — **Google**。覆盖从无模型基线、特征、指标、训练服务偏差到成熟流水线的阶段性方法论。
-- [ ] **A** · [How to Test Machine Learning Code and Systems](https://eugeneyan.com/writing/testing-ml/) — **Eugene Yan**。区分软件逻辑测试、学习行为测试和模型评估，并提供 pre-train / post-train 测试代码。
-- [ ] **A** · [A Practical Guide to Maintaining Machine Learning in Production](https://eugeneyan.com/writing/practical-guide-to-maintaining-machine-learning/) — **Eugene Yan**。从数据污染、模型再训练、反馈回路、工程复杂度和团队结构给出长期维护清单。
+- [x] **A** · [AstaBench Update: Spring 2026](https://allenai.org/blog/astabench-update-spring-2026) — Ai2 · 2026-04-30
+- [x] **A** · [Four Ways Google Researchers Have Been Using Empirical Research Assistance](https://research.google/blog/four-ways-google-research-scientists-have-been-using-empirical-research-assistance/) — Google Research · 2026-04-29
+- [x] **A** · [Exploring Bayesian Optimization](https://distill.pub/2020/bayesian-optimization/) — distill.pub
+- [x] **A** · [How to Use t-SNE Effectively](https://distill.pub/2016/misread-tsne/) — distill.pub
+- [x] **A** · [Rules of Machine Learning: Best Practices for ML Engineering](https://developers.google.com/machine-learning/guides/rules-of-ml/) — **Google**。覆盖从无模型基线、特征、指标、训练服务偏差到成熟流水线的阶段性方法论。
+- [x] **A** · [How to Test Machine Learning Code and Systems](https://eugeneyan.com/writing/testing-ml/) — **Eugene Yan**。区分软件逻辑测试、学习行为测试和模型评估，并提供 pre-train / post-train 测试代码。
+- [x] **A** · [A Practical Guide to Maintaining Machine Learning in Production](https://eugeneyan.com/writing/practical-guide-to-maintaining-machine-learning/) — **Eugene Yan**。从数据污染、模型再训练、反馈回路、工程复杂度和团队结构给出长期维护清单。
 - [ ] **A** · [How evals drive the next chapter in AI](https://openai.com/index/evals-drive-next-chapter-of-ai/) — OpenAI · 2025
-- [ ] **A** · [What Data-Centric AI Is Not](https://hazyresearch.stanford.edu/what-data-centric-ai-is-not) — Stanford Hazy Research · 2021
+- [x] **A** · [What Data-Centric AI Is Not](https://hazyresearch.stanford.edu/what-data-centric-ai-is-not) — Stanford Hazy Research · 2021
 - [ ] **A+** · [Introducing the Model Card Toolkit for Easier Model Transparency Reporting](https://research.google/blog/introducing-the-model-card-toolkit-for-easier-model-transparency-reporting/) — Google Research · 2020
 - [ ] **A+** · [Data-centric ML benchmarking: Announcing DataPerf’s 2023 challenges](https://research.google/blog/data-centric-ml-benchmarking-announcing-dataperfs-2023-challenges/) — Google Research · 2023
 
 ## Frontier
 
 - [ ] **A** · [IBM Research — Artificial Intelligence](https://research.ibm.com/blog?tag=artificial-intelligence) — IBM Research · 持续更新；核验至 2026-07-26。兼顾基础模型、推理、AI for Science、芯片和企业 AI 的长期索引；纳入单篇时仍需筛除营销稿。
-- [ ] **A** · [When Will Language Models Be Good Enough?](https://huggingface.co/blog/craffel/when-will-language-models-be-good-enough) — Colin Raffel · 2026-07-16 · `资深研究者观点`
+- [x] **A** · [When Will Language Models Be Good Enough?](https://huggingface.co/blog/craffel/when-will-language-models-be-good-enough) — Colin Raffel · 2026-07-16 · `资深研究者观点`
 - [ ] **A+** · [J-Space: Yet Another LLM Mind Reader?](https://huggingface.co/blog/dlouapre/j-space) — David Louapre · 2026-07-13 · `社区复现与解释`
-- [ ] **A** · [Two Years of Local AI on a Laptop: When Open Models Outpaced Moore's Law](https://huggingface.co/blog/mishig/local-moores-law) — Mishig Davaadorj · 2026 · `社区可复核趋势分析`
+- [x] **A** · [Two Years of Local AI on a Laptop: When Open Models Outpaced Moore's Law](https://huggingface.co/blog/mishig/local-moores-law) — Mishig Davaadorj · 2026 · `社区可复核趋势分析`
 - [ ] **A** · [Microsoft Research AI Frontiers](https://www.microsoft.com/en-us/research/lab/ai-frontiers/) — United States
 - [ ] **A** · [MIT CSAIL News](https://www.csail.mit.edu/news) — United States
 - [ ] **A** · [Berkeley Sky Computing Lab](https://sky.cs.berkeley.edu/) — United States
@@ -224,12 +224,12 @@
 - [ ] **A** · [SEA-LION Blog](https://sea-lion.ai/blog/) — Singapore / Southeast Asia
 - [ ] **A** · [RIKEN Center for Advanced Intelligence Project](https://www.riken.jp/en/research/labs/aip/) — Japan
 - [ ] **A** · [Inria Artificial Intelligence](https://www.inria.fr/en/artificial-intelligence) — France
-- [ ] **A** · [Frontier AI Expert Findings: EU Competitiveness, Sovereignty and Security](https://digital-strategy.ec.europa.eu/en/library/ai-office-publishes-frontier-ai-expert-findings-eu-competitiveness-sovereignty-and-security) — European Commission AI Office · 2026-07-15
-- [ ] **A** · [Preliminary Report of the UN Independent International Scientific Panel on AI](https://www.un.org/independent-international-scientific-panel-ai/en/preliminary-report) — United Nations · 2026-06
-- [ ] **A** · [International AI Safety Report 2026](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026) — International AI Safety Report · 2026
-- [ ] **A** · [AI Index Report 2026](https://hai.stanford.edu/ai-index) — Stanford HAI · 2026
-- [ ] **A** · [Frontier AI Trends Report](https://www.aisi.gov.uk/frontier-ai-trends-report) — UK AI Security Institute · 2026
-- [ ] **A** · [State of AI 2026: Model Provider Survey](https://2026.stateofai.dev/en-US/models/) — State of AI · 2026
+- [x] **A** · [Frontier AI Expert Findings: EU Competitiveness, Sovereignty and Security](https://digital-strategy.ec.europa.eu/en/library/ai-office-publishes-frontier-ai-expert-findings-eu-competitiveness-sovereignty-and-security) — European Commission AI Office · 2026-07-15
+- [x] **A** · [Preliminary Report of the UN Independent International Scientific Panel on AI](https://www.un.org/independent-international-scientific-panel-ai/en/preliminary-report) — United Nations · 2026-06
+- [x] **A** · [International AI Safety Report 2026](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026) — International AI Safety Report · 2026
+- [x] **A** · [AI Index Report 2026](https://hai.stanford.edu/ai-index) — Stanford HAI · 2026
+- [x] **A** · [Frontier AI Trends Report](https://www.aisi.gov.uk/frontier-ai-trends-report) — UK AI Security Institute · 2026
+- [x] **A** · [State of AI 2026: Model Provider Survey](https://2026.stateofai.dev/en-US/models/) — State of AI · 2026
 - [ ] **A** · [NVIDIA Seattle Robotics Lab](https://research.nvidia.com/labs/srl/) — United States
 - [ ] **A** · [Qwen Code Research & Engineering Updates](https://qwenlm.github.io/qwen-code-docs/en/blog/) — China
 - [ ] **A** · [MiniMax Research](https://www.minimax.io/blog) — China
@@ -237,20 +237,20 @@
 - [ ] **A** · [UK AI Security Institute Research](https://www.aisi.gov.uk/research) — United Kingdom
 - [ ] **A** · [International AI Safety Report](https://internationalaisafetyreport.org/) — Global
 - [ ] **A** · [UN Independent International Scientific Panel on AI](https://www.un.org/independent-international-scientific-panel-ai/en) — Global
-- [ ] **A** · [Have AI Capabilities Accelerated?](https://epoch.ai/publications/have-ai-capabilities-accelerated) — epoch.ai
-- [ ] **A** · [Where Autonomy Works: Evaluating Robot Capabilities in 2026](https://epoch.ai/publications/where-autonomy-works-evaluating-robot-capabilities-in-2026) — epoch.ai
-- [ ] **A** · [What Will AI Look Like in 2030?](https://epoch.ai/publications/what-will-ai-look-like-in-2030) — epoch.ai
-- [ ] **A** · [Power Demands of Frontier AI Training](https://epoch.ai/publications/power-demands-of-frontier-ai-training) — epoch.ai
-- [ ] **A** · [What You Need to Know About AI Data Centers](https://epoch.ai/publications/what-you-need-to-know-about-ai-data-centers) — epoch.ai
-- [ ] **A** · [Training Compute of Frontier AI Models Grows by 4–5× per Year](https://epoch.ai/publications/training-compute-of-frontier-ai-models-grows-by-4-5x-per-year) — epoch.ai
+- [x] **A** · [Have AI Capabilities Accelerated?](https://epoch.ai/publications/have-ai-capabilities-accelerated) — epoch.ai
+- [x] **A** · [Where Autonomy Works: Evaluating Robot Capabilities in 2026](https://epoch.ai/publications/where-autonomy-works-evaluating-robot-capabilities-in-2026) — epoch.ai
+- [x] **A** · [What Will AI Look Like in 2030?](https://epoch.ai/publications/what-will-ai-look-like-in-2030) — epoch.ai
+- [x] **A** · [Power Demands of Frontier AI Training](https://epoch.ai/publications/power-demands-of-frontier-ai-training) — epoch.ai
+- [x] **A** · [What You Need to Know About AI Data Centers](https://epoch.ai/publications/what-you-need-to-know-about-ai-data-centers) — epoch.ai
+- [x] **A** · [Training Compute of Frontier AI Models Grows by 4–5× per Year](https://epoch.ai/publications/training-compute-of-frontier-ai-models-grows-by-4-5x-per-year) — epoch.ai
 - [ ] **A** · [Epoch AI — Trends](https://epoch.ai/trends) — epoch.ai
 - [ ] **A** · [Epoch AI — Latest](https://epoch.ai/latest) — epoch.ai
 - [ ] **A** · [BAIR Blog — Archive](https://bair.berkeley.edu/blog/archive/) — bair.berkeley.edu
 - [ ] **A** · [Stanford Hazy Research — Blog](https://hazyresearch.stanford.edu/blog) — hazyresearch.stanford.edu
 - [ ] **A** · [Sakana AI — Research Blog](https://sakana.ai/blog/?label=research) — sakana.ai
-- [ ] **A** · [Introducing Robostral Navigate](https://mistral.ai/news/robostral-navigate/) — **Mistral AI**。8B 单 RGB 相机导航模型，披露指点式动作表示、240 万轨迹、prefix-caching 和在线 RL，技术信息足够进入 Frontier。
-- [ ] **A** · [Can AI Scaling Continue Through 2030?](https://epoch.ai/publications/can-ai-scaling-continue-through-2030) — **Epoch AI**。定量分析电力、芯片制造、数据和训练延迟四类约束，是研究规模扩展可行性的高信息密度报告。
-- [ ] **A** · [Mistral OCR 4: SOTA OCR for Document Intelligence](https://mistral.ai/news/ocr-4/) — Mistral AI · 2026
+- [x] **A** · [Introducing Robostral Navigate](https://mistral.ai/news/robostral-navigate/) — **Mistral AI**。8B 单 RGB 相机导航模型，披露指点式动作表示、240 万轨迹、prefix-caching 和在线 RL，技术信息足够进入 Frontier。
+- [x] **A** · [Can AI Scaling Continue Through 2030?](https://epoch.ai/publications/can-ai-scaling-continue-through-2030) — **Epoch AI**。定量分析电力、芯片制造、数据和训练延迟四类约束，是研究规模扩展可行性的高信息密度报告。
+- [x] **A** · [Mistral OCR 4: SOTA OCR for Document Intelligence](https://mistral.ai/news/ocr-4/) — Mistral AI · 2026
 - [ ] **A+** · [Introducing Gemini 3.5 Flash Cyber](https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/) — Google DeepMind · 2026
 
 ## How to Research

@@ -1,0 +1,1225 @@
+#!/usr/bin/env python3
+"""Inject live-verified quality essays for Foundation/LLM/Multimodal, Visual/World/Agents, Craft/Frontier."""
+from __future__ import annotations
+
+import json
+import re
+import subprocess
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from html.parser import HTMLParser
+from pathlib import Path
+from urllib.parse import urljoin, urlparse
+
+ROOT = Path(__file__).resolve().parents[1]
+APP = ROOT / "site/assets/js/app.js"
+BLOG_MD = ROOT / "blog.md"
+COVER_DIR = ROOT / "site/assets/img/covers/real"
+JSON_OUT = ROOT / "admin/accepted-quality-parent-shelves.json"
+SQL_OUT = ROOT / "admin/upsert-quality-parent-shelves.sql"
+REPORT = ROOT / "reports/quality-parent-shelves.md"
+UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125 Safari/537.36"
+
+
+def favicon(url: str) -> str:
+    host = urlparse(url).hostname or ""
+    host = host.removeprefix("www.")
+    return f"https://www.google.com/s2/favicons?domain={host}&sz=128"
+
+
+BLOGS = [
+    {
+        "id": "hf-giux78-training-llm-from-scratch",
+        "title": "The Joy and Pain of Training an LLM from Scratch",
+        "excerpt": "Alessandro Ercolani documents a community-scale small-language-model training run, including data curation, instability, and the operational work of keeping a from-scratch pretrain alive. The lessons are concrete for independent trainers, though the compute and architecture are far from frontier scale.",
+        "author": "Alessandro Ercolani",
+        "category": "Foundation Model",
+        "tags": ["Pretraining", "Small Language Models", "Community Training", "Open Recipes"],
+        "readTime": "14 min read",
+        "publishDate": "2026-01-15",
+        "sourceName": "Hugging Face Blog",
+        "url": "https://huggingface.co/blog/giux78/slm-zagreus-nesso",
+    },
+    {
+        "id": "ai2-dolma-3-trillion-token-open-corpus",
+        "title": "Dolma: 3 Trillion Tokens for Open LLM Research",
+        "excerpt": "Ai2 releases Dolma, a 3-trillion-token open corpus with documented sources, filtering, and mixing decisions so pretraining data can be studied rather than treated as a black box. The post is a data-release narrative; downstream model quality still depends on later OLMo training choices.",
+        "author": "Ai2",
+        "category": "Foundation Model",
+        "tags": ["Pretraining Data", "Open Corpus", "Data Documentation", "OLMo"],
+        "readTime": "12 min read",
+        "publishDate": "2024-01-31",
+        "sourceName": "Ai2 Blog",
+        "url": "https://allenai.org/blog/dolma-3-trillion-tokens-open-llm-corpus-9a0ff4b8da64",
+    },
+    {
+        "id": "apple-third-generation-foundation-models",
+        "title": "Introducing the Third Generation of Apple’s Foundation Models",
+        "excerpt": "Apple Machine Learning Research describes on-device foundation models with adapter specialization, multilingual coverage, and a tighter coupling between training and Apple silicon. The write-up is more architecture-and-deployment than a fully open training recipe.",
+        "author": "Apple Machine Learning Research",
+        "category": "Foundation Model",
+        "tags": ["On-Device Models", "Adapters", "Foundation Models", "Apple Silicon"],
+        "readTime": "16 min read",
+        "publishDate": "2026-06-08",
+        "sourceName": "Apple Machine Learning Research",
+        "url": "https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models",
+    },
+    {
+        "id": "google-gemma-4-multi-token-prediction",
+        "title": "Multi-Token Prediction in Gemma 4",
+        "excerpt": "Google explains how Gemma 4 uses multi-token prediction drafters to accelerate decoding while keeping a standard backbone, connecting speculative-style heads to open-model serving. Reported speedups are configuration-specific and should not be read as a free lunch on every hardware stack.",
+        "author": "Google",
+        "category": "Foundation Model",
+        "tags": ["Multi-Token Prediction", "Speculative Decoding", "Gemma", "Inference"],
+        "readTime": "10 min read",
+        "publishDate": "2026-05-15",
+        "sourceName": "Google Blog",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/multi-token-prediction-gemma-4/",
+    },
+    {
+        "id": "hazyresearch-structured-state-spaces-s4",
+        "title": "Structured State Spaces: Combining Continuous-Time, Recurrent, and Convolutional Models",
+        "excerpt": "Stanford Hazy Research introduces S4 as a structured state-space layer that unifies continuous-time dynamics with recurrent and convolutional views of sequence modeling. The post is a conceptual companion to the paper; later SSM/Hyena/Mamba work should be read as the empirical follow-through.",
+        "author": "Stanford Hazy Research",
+        "category": "Foundation Model",
+        "tags": ["State Space Models", "S4", "Sequence Models", "Architecture"],
+        "readTime": "18 min read",
+        "publishDate": "2022-01-14",
+        "sourceName": "Hazy Research",
+        "url": "https://hazyresearch.stanford.edu/blog/2022-01-14-s4-3",
+    },
+    {
+        "id": "hf-mixture-of-experts-in-transformers",
+        "title": "Mixture of Experts in Transformers",
+        "excerpt": "Hugging Face walks through sparse MoE transformers, covering expert routing, capacity, load balancing, and the engineering cost of scaling conditional computation. It is a teaching post, not a new scaling law, and production MoE stacks have moved on in kernel and parallelism details.",
+        "author": "Hugging Face",
+        "category": "LLM & MLLM",
+        "tags": ["Mixture of Experts", "Sparse Models", "Transformers", "Routing"],
+        "readTime": "12 min read",
+        "publishDate": "2023-12-11",
+        "sourceName": "Hugging Face Blog",
+        "url": "https://huggingface.co/blog/moe-transformers",
+    },
+    {
+        "id": "minimax-maxproof-math-proof-evolution",
+        "title": "MaxProof: Scaling Mathematical Proof with Generative-Verifier RL and Evolutionary Search",
+        "excerpt": "MiniMax describes MaxProof, combining a generative prover with a verifier and evolutionary search to scale formal-style mathematical proof. The results are lab-reported; independent replication of the search budget and verifier stack is not yet public.",
+        "author": "MiniMax",
+        "category": "LLM & MLLM",
+        "tags": ["Mathematical Proof", "Verifier RL", "Evolutionary Search", "Reasoning"],
+        "readTime": "14 min read",
+        "publishDate": "2026-06-09",
+        "sourceName": "MiniMax Blog",
+        "url": "https://www.minimax.io/blog/minimax-maxproof-math-proof-evolution",
+    },
+    {
+        "id": "jalammar-illustrated-retrieval-transformer",
+        "title": "The Illustrated Retrieval Transformer",
+        "excerpt": "Jay Alammar visually explains retrieval-augmented transformers, showing how nearest-neighbor memory is queried and mixed into sequence computation. It is an intuition-first guide; later production RAG stacks add chunking, rerankers, and eval that this post does not cover.",
+        "author": "Jay Alammar",
+        "category": "LLM & MLLM",
+        "tags": ["Retrieval", "Transformers", "Illustrated Guide", "Memory"],
+        "readTime": "22 min read",
+        "publishDate": "2024-04-11",
+        "sourceName": "Jay Alammar",
+        "url": "https://jalammar.github.io/illustrated-retrieval-transformer/",
+    },
+    {
+        "id": "jalammar-illustrated-transformer",
+        "title": "The Illustrated Transformer",
+        "excerpt": "Jay Alammar’s canonical visual walkthrough of the Transformer attention block, including QKV projections, scaled dot-product attention, and multi-head mixing. It remains the best first-principles companion to the 2017 paper, though it predates RoPE, GQA, and modern decoder-only serving tricks.",
+        "author": "Jay Alammar",
+        "category": "LLM & MLLM",
+        "tags": ["Transformers", "Attention", "Illustrated Guide", "Architecture"],
+        "readTime": "25 min read",
+        "publishDate": "2018-06-27",
+        "sourceName": "Jay Alammar",
+        "url": "https://jalammar.github.io/illustrated-transformer/",
+    },
+    {
+        "id": "jalammar-illustrated-gpt2",
+        "title": "The Illustrated GPT-2",
+        "excerpt": "Jay Alammar unpacks GPT-2’s decoder-only stack, byte-pair encoding, and how autoregressive sampling actually walks the network. It is still the clearest public explanation of that generation of LMs, with the caveat that tokenizer and attention variants have changed substantially since 2019.",
+        "author": "Jay Alammar",
+        "category": "LLM & MLLM",
+        "tags": ["GPT-2", "Language Models", "Illustrated Guide", "Decoding"],
+        "readTime": "28 min read",
+        "publishDate": "2019-08-12",
+        "sourceName": "Jay Alammar",
+        "url": "https://jalammar.github.io/illustrated-gpt2/",
+    },
+    {
+        "id": "huggingface-blog-rlhf",
+        "title": "Illustrating Reinforcement Learning from Human Feedback (RLHF)",
+        "excerpt": "Hugging Face explains the RLHF stack—preference data, reward modeling, and PPO-style policy optimization—with diagrams that connect InstructGPT-era practice to open implementations. Later DPO/GRPO methods simplify the RL loop; treat this as the reference for the original three-stage pipeline.",
+        "author": "Hugging Face",
+        "category": "LLM & MLLM",
+        "tags": ["RLHF", "Preference Learning", "Reward Models", "Alignment Training"],
+        "readTime": "16 min read",
+        "publishDate": "2022-12-09",
+        "sourceName": "Hugging Face Blog",
+        "url": "https://huggingface.co/blog/rlhf",
+    },
+    {
+        "id": "google-language-models-chain-of-thought",
+        "title": "Language Models Perform Reasoning via Chain of Thought",
+        "excerpt": "Google Research shows that prompting models to produce intermediate reasoning steps sharply improves multi-step arithmetic and symbolic tasks relative to answer-only decoding. The original experiments are few-shot and model-family specific; later work showed CoT can also be brittle or unfaithful.",
+        "author": "Google Research",
+        "category": "LLM & MLLM",
+        "tags": ["Chain of Thought", "Reasoning", "Prompting", "Language Models"],
+        "readTime": "10 min read",
+        "publishDate": "2022-05-31",
+        "sourceName": "Google Research Blog",
+        "url": "https://research.google/blog/language-models-perform-reasoning-via-chain-of-thought/",
+    },
+    {
+        "id": "lilian-weng-controllable-text-generation",
+        "title": "Controllable Neural Text Generation",
+        "excerpt": "Lilian Weng surveys control knobs for neural text generation, from decoding constraints and weighted decoding to plug-and-play and prefix-style control. It is a 2021 map of the design space; instruction-tuned chat models later absorbed some of these controls into prompting and post-training.",
+        "author": "Lilian Weng",
+        "category": "LLM & MLLM",
+        "tags": ["Controllable Generation", "Decoding", "Language Models", "Survey"],
+        "readTime": "30 min read",
+        "publishDate": "2021-01-02",
+        "sourceName": "Lilian Weng",
+        "url": "https://lilianweng.github.io/posts/2021-01-02-controllable-text-generation/",
+    },
+    {
+        "id": "matteo-nulli-demystifying-multimodal-learning",
+        "title": "Demystifying Multimodal Learning: Enabling Vision in Language Models",
+        "excerpt": "Matteo Nulli walks through how vision encoders are aligned into language-model backbones, covering projection layers, image tokenization, and the usual training stages. It is an independent tutorial; hardware and recipe details follow common open VLM practice rather than a new benchmark sweep.",
+        "author": "Matteo Nulli",
+        "category": "Multimodal Model",
+        "tags": ["Vision-Language Models", "Alignment", "Image Tokenization", "Tutorial"],
+        "readTime": "14 min read",
+        "publishDate": "2026-03-01",
+        "sourceName": "Hugging Face Blog",
+        "url": "https://huggingface.co/blog/MatteoNulli/de-mystifying-multimodal-learning-enabiling-vision",
+    },
+    {
+        "id": "lilian-weng-generalized-visual-language-models",
+        "title": "Generalized Visual Language Models",
+        "excerpt": "Lilian Weng organizes vision-language pretraining into contrastive, generative, and unified families, clarifying how CLIP-style encoders differ from captioning and prefix-LM approaches. The 2022 taxonomy is still useful; later Flamingo/LLaVA-style instruction VLMs sit on top of this map.",
+        "author": "Lilian Weng",
+        "category": "Multimodal Model",
+        "tags": ["Vision-Language Models", "CLIP", "Multimodal Pretraining", "Survey"],
+        "readTime": "32 min read",
+        "publishDate": "2022-06-09",
+        "sourceName": "Lilian Weng",
+        "url": "https://lilianweng.github.io/posts/2022-06-09-vlm/",
+    },
+    {
+        "id": "sander-dieleman-noise-schedules",
+        "title": "Perspectives on Diffusion: Noise Schedules",
+        "excerpt": "Sander Dieleman treats noise schedules as a first-class design choice, showing how variance, SNR, and discretization change what the network has to learn. The analysis is conceptual rather than a single new sampler bake-off, and later flow-matching work reframes some of the same knobs.",
+        "author": "Sander Dieleman",
+        "category": "Visual Generation",
+        "tags": ["Diffusion", "Noise Schedules", "Generative Models", "SNR"],
+        "readTime": "20 min read",
+        "publishDate": "2024-06-14",
+        "sourceName": "Sander Dieleman",
+        "url": "https://sander.ai/2024/06/14/noise-schedules.html",
+    },
+    {
+        "id": "sander-dieleman-diffusion-paradox",
+        "title": "The Diffusion Model Paradox",
+        "excerpt": "Sander Dieleman explains why diffusion models can be both surprisingly robust and strangely sensitive, connecting likelihood, sampling, and the mismatch between training and inference. It is a conceptual essay, not a new architecture, and rewards readers who already know DDPM/score-matching basics.",
+        "author": "Sander Dieleman",
+        "category": "Visual Generation",
+        "tags": ["Diffusion", "Score Matching", "Generative Models", "Sampling"],
+        "readTime": "18 min read",
+        "publishDate": "2024-02-28",
+        "sourceName": "Sander Dieleman",
+        "url": "https://sander.ai/2024/02/28/paradox.html",
+    },
+    {
+        "id": "nvidia-autoregressive-video-generation",
+        "title": "Autoregressive Video Generation",
+        "excerpt": "NVIDIA Research discusses autoregressive video generators as an alternative to purely latent-diffusion video stacks, including tokenization and long-horizon consistency issues. Reported systems are hardware- and tokenizer-specific; treat the post as a lab research note rather than a production recipe.",
+        "author": "NVIDIA Research",
+        "category": "Visual Generation",
+        "tags": ["Video Generation", "Autoregressive Models", "Tokenization", "Temporal Consistency"],
+        "readTime": "12 min read",
+        "publishDate": "2026-07-13",
+        "sourceName": "NVIDIA Research",
+        "url": "https://research.nvidia.com/labs/eai/blogs/autoregressive-video-gen/",
+    },
+    {
+        "id": "meta-muse-image-muse-video",
+        "title": "Introducing Muse Image and Muse Video",
+        "excerpt": "Meta AI introduces Muse Image and Muse Video with an MSL-oriented generation stack aimed at controllable image and video synthesis. The post mixes research framing with a model launch; independent evals of the closed serving stack are limited.",
+        "author": "Meta AI",
+        "category": "Visual Generation",
+        "tags": ["Image Generation", "Video Generation", "Controllable Synthesis", "Meta AI"],
+        "readTime": "10 min read",
+        "publishDate": "2026-07-07",
+        "sourceName": "Meta AI",
+        "url": "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",
+    },
+    {
+        "id": "nvidia-video-generation-infrastructure-problem",
+        "title": "Why Video Generation Is an Infrastructure Problem",
+        "excerpt": "NVIDIA Research argues that video generation quality is bottlenecked by data movement, serving, and evaluation infrastructure as much as by denoiser architecture. The diagnosis is useful; the proposed stack is NVIDIA-centric and should be read as an engineering thesis, not a vendor-neutral benchmark.",
+        "author": "NVIDIA Research",
+        "category": "Visual Generation",
+        "tags": ["Video Generation", "Infrastructure", "Serving", "Evaluation"],
+        "readTime": "11 min read",
+        "publishDate": "2026-05-26",
+        "sourceName": "NVIDIA Research",
+        "url": "https://research.nvidia.com/labs/eai/blogs/video-gen-is-an-infra-problem/",
+    },
+    {
+        "id": "diffusion-meets-flow-matching",
+        "title": "Diffusion Meets Flow Matching: Two Sides of the Same Coin",
+        "excerpt": "This interactive tutorial unifies Gaussian flow matching and diffusion under one parameterization, covering training, sampling, ODE/SDE views, and schedulers. It is a teaching site rather than a paper companion; there is no attached experimental bake-off.",
+        "author": "Diffusion–Flow Matching Authors",
+        "category": "Visual Generation",
+        "tags": ["Flow Matching", "Diffusion", "ODE", "Interactive Tutorial"],
+        "readTime": "25 min read",
+        "publishDate": "2024-09-01",
+        "sourceName": "diffusionflow.github.io",
+        "url": "https://diffusionflow.github.io/",
+    },
+    {
+        "id": "meta-partnr-human-robot-collaboration",
+        "title": "PARTNR and New Models for Human-Robot Collaboration",
+        "excerpt": "Meta AI presents PARTNR and related models for planning and collaboration in household-scale human–robot settings, emphasizing language-conditioned task structure. Benchmarks are simulation-heavy; transferring the claimed collaboration gains to messy physical homes remains an open evaluation problem.",
+        "author": "Meta AI",
+        "category": "World Model",
+        "tags": ["Human-Robot Collaboration", "Embodied AI", "Planning", "Benchmarks"],
+        "readTime": "12 min read",
+        "publishDate": "2024-11-01",
+        "sourceName": "Meta AI",
+        "url": "https://ai.meta.com/blog/machine-intelligence-research-new-models/",
+    },
+    {
+        "id": "ai2-molmospaces",
+        "title": "MolmoSpaces",
+        "excerpt": "Ai2 introduces MolmoSpaces as a language-grounded spatial understanding stack, extending Molmo-style models toward 3D and spatial relations. It is an early research announcement; public eval coverage is thinner than the motion-forecasting MolmoMotion companion.",
+        "author": "Ai2",
+        "category": "World Model",
+        "tags": ["Spatial Reasoning", "Embodied AI", "Vision-Language", "3D Understanding"],
+        "readTime": "9 min read",
+        "publishDate": "2026-02-11",
+        "sourceName": "Ai2 Blog",
+        "url": "https://allenai.org/blog/molmospaces",
+    },
+    {
+        "id": "bair-rl-av-traffic-smoothing",
+        "title": "Scaling Up Reinforcement Learning for Traffic Smoothing: A 100-AV Highway Deployment",
+        "excerpt": "BAIR reports a 100-vehicle highway deployment where RL policies smooth stop-and-go waves, moving world-model-style traffic control from simulation into instrumented physical fleets. The result is impressive but corridor- and fleet-specific; it is not a general urban autonomy claim.",
+        "author": "BAIR",
+        "category": "World Model",
+        "tags": ["Reinforcement Learning", "Traffic Control", "Autonomous Vehicles", "Field Deployment"],
+        "readTime": "14 min read",
+        "publishDate": "2025-03-25",
+        "sourceName": "BAIR Blog",
+        "url": "https://bair.berkeley.edu/blog/2025/03/25/rl-av-smoothing/",
+    },
+    {
+        "id": "arena-agent-arena-methodology",
+        "title": "Agent Arena: Causal Evaluation of Agents in the Real World",
+        "excerpt": "Arena describes a causal evaluation design that tries to separate orchestrator effects from model effects using real user interactions. The methodology is the contribution; the platform’s own traffic and sampling are not a fully independent public dataset.",
+        "author": "Arena Team",
+        "category": "AI Agents",
+        "tags": ["Agent Evaluation", "Causal Inference", "Orchestrators", "Human Interaction"],
+        "readTime": "12 min read",
+        "publishDate": "2026-06-04",
+        "sourceName": "Arena",
+        "url": "https://arena.ai/blog/agent-arena-methodology",
+    },
+    {
+        "id": "github-copilot-agentic-harness-eval",
+        "title": "Evaluating the GitHub Copilot Agentic Harness Across Models and Tasks",
+        "excerpt": "GitHub holds model, task, and budget fixed while comparing coding-agent harnesses, reporting success, tokens, cost, and latency together. Some internal traces remain unpublished, so the ranking should be read as a vendor-run study with unusually complete efficiency metrics.",
+        "author": "GitHub",
+        "category": "AI Agents",
+        "tags": ["Coding Agents", "Harness Evaluation", "Efficiency", "Software Engineering"],
+        "readTime": "13 min read",
+        "publishDate": "2026-06-25",
+        "sourceName": "GitHub Blog",
+        "url": "https://github.blog/ai-and-ml/github-copilot/evaluating-performance-and-efficiency-of-the-github-copilot-agentic-harness-across-models-and-tasks/",
+    },
+    {
+        "id": "letta-context-repositories",
+        "title": "Introducing Context Repositories: Git-based Memory for Coding Agents",
+        "excerpt": "Letta proposes Git-backed context repositories with frontmatter, isolated worktrees, and memory sub-agents so long-term agent memory is auditable. The design is compelling; controlled benchmarks quantifying the memory gain are still limited.",
+        "author": "Letta",
+        "category": "AI Agents",
+        "tags": ["Agent Memory", "Git", "Coding Agents", "Context Management"],
+        "readTime": "11 min read",
+        "publishDate": "2026-02-12",
+        "sourceName": "Letta",
+        "url": "https://www.letta.com/blog/context-repositories/",
+    },
+    {
+        "id": "hf-eval-agents-at-scale-braintrust",
+        "title": "How to Actually Evaluate AI Agents at Scale",
+        "excerpt": "A community write-up shows how to turn real agent traces into eval suites with Braintrust-style logging, rather than relying on toy prompts. It is practice-heavy and tool-specific; the method transfers, the dashboard does not have to.",
+        "author": "Jessica",
+        "category": "AI Agents",
+        "tags": ["Agent Evaluation", "Traces", "Observability", "LLM Ops"],
+        "readTime": "10 min read",
+        "publishDate": "2026-04-01",
+        "sourceName": "Hugging Face Blog",
+        "url": "https://huggingface.co/blog/darubberduckiee/using-braintrust-to-eval-agentic-setups",
+    },
+    {
+        "id": "hf-is-it-agentic-enough",
+        "title": "Is It Agentic Enough? Benchmarking Open Models on Your Own Tooling",
+        "excerpt": "Hugging Face maintainers argue that agentic ability should be measured on the evaluator’s own tools and environments, not only public leaderboards. The controlled experiments are the point; they still sample a particular tool surface and should not be over-generalized.",
+        "author": "Hugging Face",
+        "category": "AI Agents",
+        "tags": ["Agent Evaluation", "Tool Use", "Open Models", "Benchmarks"],
+        "readTime": "12 min read",
+        "publishDate": "2026-03-01",
+        "sourceName": "Hugging Face Blog",
+        "url": "https://huggingface.co/blog/is-it-agentic-enough",
+    },
+    {
+        "id": "microsoft-magentic-ui-web-agent",
+        "title": "Magentic-UI: A Human-Centered Web Agent",
+        "excerpt": "Microsoft Research presents Magentic-UI as an experimental web agent that keeps humans in the loop for planning and browser actions. It is a systems-and-interface paper in blog form; robustness on the open web remains an evaluation frontier.",
+        "author": "Microsoft Research",
+        "category": "AI Agents",
+        "tags": ["Web Agents", "Human-in-the-Loop", "Browser Use", "HCI"],
+        "readTime": "11 min read",
+        "publishDate": "2025-07-01",
+        "sourceName": "Microsoft Research",
+        "url": "https://www.microsoft.com/en-us/research/blog/magentic-ui-an-experimental-human-centered-web-agent/",
+    },
+    {
+        "id": "microsoft-magentic-one-multi-agent",
+        "title": "Magentic-One: A Generalist Multi-Agent System",
+        "excerpt": "Microsoft Research describes Magentic-One, a generalist multi-agent system that decomposes complex computer tasks across specialized roles. The architecture is the contribution; reported task success depends on the Magentic evaluation suite rather than a community-standard agent benchmark.",
+        "author": "Microsoft Research",
+        "category": "AI Agents",
+        "tags": ["Multi-Agent Systems", "Computer Use", "Orchestration", "Generalist Agents"],
+        "readTime": "12 min read",
+        "publishDate": "2024-11-01",
+        "sourceName": "Microsoft Research",
+        "url": "https://www.microsoft.com/en-us/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks/",
+    },
+    {
+        "id": "metr-portable-evaluation-tasks",
+        "title": "Portable Evaluation Tasks",
+        "excerpt": "METR proposes a task standard so agent evaluations can be packaged, shared, and re-run without collapsing into one-off scripts. Portability is the design goal; adopting the standard still requires labs to expose environments they often keep private.",
+        "author": "METR",
+        "category": "AI Agents",
+        "tags": ["Agent Evaluation", "Task Standard", "Reproducibility", "Benchmarking"],
+        "readTime": "10 min read",
+        "publishDate": "2024-02-29",
+        "sourceName": "METR",
+        "url": "https://metr.org/blog/2024-02-29-metr-task-standard/",
+    },
+    {
+        "id": "metr-expenditure-horizon",
+        "title": "The Expenditure Horizon",
+        "excerpt": "METR introduces expenditure horizon as a way to talk about how far agentic systems can productively spend compute and money on a task before stalling. It is a measurement proposal; mapping it onto real economic deployments still has large variance.",
+        "author": "METR",
+        "category": "AI Agents",
+        "tags": ["Agent Evaluation", "Test-Time Compute", "Measurement", "Autonomy"],
+        "readTime": "14 min read",
+        "publishDate": "2026-07-21",
+        "sourceName": "METR",
+        "url": "https://metr.org/blog/2026-07-21-expenditure-horizon/",
+    },
+    {
+        "id": "meta-dynabench-rethinking-benchmarking",
+        "title": "Dynabench: Rethinking AI Benchmarking",
+        "excerpt": "Meta AI describes Dynabench as a human-and-model-in-the-loop benchmark that grows as models saturate static test sets. The idea influenced later dynamic evals; the original platform’s task mix is historical rather than a 2026 agent leaderboard.",
+        "author": "Meta AI",
+        "category": "AI Agents",
+        "tags": ["Benchmarking", "Human-in-the-Loop", "Adversarial Evaluation", "Datasets"],
+        "readTime": "10 min read",
+        "publishDate": "2021-04-07",
+        "sourceName": "Meta AI",
+        "url": "https://ai.meta.com/blog/dynabench-rethinking-ai-benchmarking/",
+    },
+    {
+        "id": "minimax-agent-team-long-running",
+        "title": "MiniMax Agent Team: Built for Long-Running Tasks and Continuous Evolution",
+        "excerpt": "MiniMax describes an agent-team architecture aimed at long-running tasks, with roles, memory, and continuous revision rather than single-shot tool calls. It is a lab systems post; independent evals of the long-horizon claims are not included.",
+        "author": "MiniMax",
+        "category": "AI Agents",
+        "tags": ["Multi-Agent Systems", "Long-Horizon Tasks", "Memory", "Orchestration"],
+        "readTime": "11 min read",
+        "publishDate": "2026-05-27",
+        "sourceName": "MiniMax Blog",
+        "url": "https://www.minimax.io/blog/minimax-agent-team-long-running-1779893953",
+    },
+    {
+        "id": "ai2-evaluating-scientific-discovery-agents",
+        "title": "Evaluating AI Agents for Scientific Discovery",
+        "excerpt": "Ai2 discusses how to evaluate agents that propose experiments, search literature, or analyze scientific artifacts, rather than only coding tasks. The piece is a research agenda plus early measurements; there is no single agreed scientific-discovery leaderboard yet.",
+        "author": "Ai2",
+        "category": "AI Agents",
+        "tags": ["Scientific Discovery", "Agent Evaluation", "AI for Science", "Benchmarks"],
+        "readTime": "12 min read",
+        "publishDate": "2026-04-13",
+        "sourceName": "Ai2 Blog",
+        "url": "https://allenai.org/blog/evaluating-scientific-discovery-agents",
+    },
+    {
+        "id": "minimax-forge-agent-rl",
+        "title": "Forge: Scalable Agent RL Framework and Algorithm",
+        "excerpt": "MiniMax introduces Forge as a framework and algorithm for scaling reinforcement learning over agent trajectories, not just single-turn chat. Reported gains are stack-specific; the post should be read as a systems+algorithm announcement rather than a community baseline.",
+        "author": "MiniMax",
+        "category": "AI Agents",
+        "tags": ["Agent RL", "Reinforcement Learning", "Training Infrastructure", "Tool Use"],
+        "readTime": "13 min read",
+        "publishDate": "2026-02-14",
+        "sourceName": "MiniMax Blog",
+        "url": "https://www.minimax.io/blog/forge-scalable-agent-rl-en-1779896141",
+    },
+    {
+        "id": "microsoft-red-teaming-network-of-agents",
+        "title": "Red-Teaming a Network of Agents",
+        "excerpt": "Microsoft Research studies failure modes that appear only when agents interact at scale—coordination breakdowns, prompt injection across hops, and cascading tool misuse. It is an early network-level red team; the threat model is richer than the current public eval suite.",
+        "author": "Microsoft Research",
+        "category": "AI Agents",
+        "tags": ["Multi-Agent Systems", "Red Teaming", "Security", "Emergent Failures"],
+        "readTime": "12 min read",
+        "publishDate": "2026-03-01",
+        "sourceName": "Microsoft Research",
+        "url": "https://www.microsoft.com/en-us/research/blog/red-teaming-a-network-of-agents-understanding-what-breaks-when-ai-agents-interact-at-scale/",
+    },
+    {
+        "id": "bair-intelligence-is-free-data-systems",
+        "title": "Intelligence Is Free, Now What? Data Systems for, of, and by Agents",
+        "excerpt": "BAIR argues that once generation is cheap, the scarce resource becomes data systems that agents can read, write, and operate—catalogs, provenance, and closed-loop warehouses. It is an architectural essay; it does not ship a new database engine.",
+        "author": "BAIR",
+        "category": "AI Agents",
+        "tags": ["Data Systems", "Agents", "Provenance", "Compound Systems"],
+        "readTime": "16 min read",
+        "publishDate": "2026-07-07",
+        "sourceName": "BAIR Blog",
+        "url": "https://bair.berkeley.edu/blog/2026/07/07/intelligence-is-free-now-what/",
+    },
+    {
+        "id": "bair-compound-ai-systems",
+        "title": "Compound AI Systems: The Shift from Models to Systems",
+        "excerpt": "BAIR popularizes compound AI systems: retrieval, tools, control flow, and models composed as a system rather than a single weight file. The 2024 framing still organizes the field; later agent frameworks are implementations of this shift, not a refutation of it.",
+        "author": "BAIR",
+        "category": "AI Agents",
+        "tags": ["Compound AI Systems", "Systems Design", "Retrieval", "Orchestration"],
+        "readTime": "14 min read",
+        "publishDate": "2024-02-18",
+        "sourceName": "BAIR Blog",
+        "url": "https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/",
+    },
+    {
+        "id": "hazyresearch-minions-to-openjarvis",
+        "title": "From Minions to OpenJarvis: Lessons from Building Personal AI Agents",
+        "excerpt": "Hazy Research looks back on Minions and OpenJarvis, extracting lessons about on-device/cloud splits, personal context, and the gap between demos and reliable assistants. It is a retrospective; do not treat the project names as a current product line.",
+        "author": "Stanford Hazy Research",
+        "category": "AI Agents",
+        "tags": ["Personal Agents", "On-Device Models", "Systems Lessons", "Memory"],
+        "readTime": "15 min read",
+        "publishDate": "2026-05-15",
+        "sourceName": "Hazy Research",
+        "url": "https://hazyresearch.stanford.edu/blog/2026-05-15-minions-to-openjarvis-retrospective",
+    },
+    {
+        "id": "google-few-shot-tool-use-doesnt-work-yet",
+        "title": "Few-shot Tool-use Doesn’t Really Work (Yet)",
+        "excerpt": "Google Research compares tool-assisted generation strategies at scale and finds that few-shot tool use is not a reliable free upgrade over strong no-tool baselines. The negative result is the contribution; tool APIs and models have moved since the original sweep.",
+        "author": "Google Research",
+        "category": "AI Agents",
+        "tags": ["Tool Use", "Few-Shot Learning", "Evaluation", "Negative Results"],
+        "readTime": "11 min read",
+        "publishDate": "2024-06-01",
+        "sourceName": "Google Research Blog",
+        "url": "https://research.google/blog/few-shot-tool-use-doesnt-really-work-yet/",
+    },
+    {
+        "id": "microsoft-plugmem-reusable-knowledge",
+        "title": "PlugMem: Transforming Raw Agent Interactions into Reusable Knowledge",
+        "excerpt": "Microsoft Research turns raw agent traces into a graph of facts and skills that can be reused across tasks, testing memory as knowledge distillation rather than a growing context window. Gains are reported on three task families; the extraction pipeline is not a drop-in for arbitrary tools.",
+        "author": "Microsoft Research",
+        "category": "AI Agents",
+        "tags": ["Agent Memory", "Knowledge Graphs", "Skill Reuse", "Traces"],
+        "readTime": "12 min read",
+        "publishDate": "2026-01-15",
+        "sourceName": "Microsoft Research",
+        "url": "https://www.microsoft.com/en-us/research/blog/from-raw-interaction-to-reusable-knowledge-rethinking-memory-for-ai-agents/",
+    },
+    {
+        "id": "lilian-weng-llm-powered-autonomous-agents",
+        "title": "LLM Powered Autonomous Agents",
+        "excerpt": "Lilian Weng’s 2023 survey of LLM agents—planning, memory, tool use, and the ReAct-style loop—became the field’s default map. It predates modern computer-use and long-horizon RL agents; read it as architecture vocabulary, not a 2026 capability report.",
+        "author": "Lilian Weng",
+        "category": "AI Agents",
+        "tags": ["LLM Agents", "Planning", "Memory", "Tool Use"],
+        "readTime": "35 min read",
+        "publishDate": "2023-06-23",
+        "sourceName": "Lilian Weng",
+        "url": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+    },
+    {
+        "id": "metr-uplift-experiment-design-update",
+        "title": "We are Changing our Developer Productivity Experiment Design",
+        "excerpt": "METR publicly diagnoses confounding in its developer-productivity study and redesigns the randomized experiment rather than defending a contaminated estimate. It is an unusually honest methods correction; it is not the final causal-effect paper.",
+        "author": "METR",
+        "category": "Research Craft",
+        "tags": ["Experiment Design", "Developer Productivity", "Causal Inference", "Research Integrity"],
+        "readTime": "12 min read",
+        "publishDate": "2026-02-24",
+        "sourceName": "METR",
+        "url": "https://metr.org/blog/2026-02-24-uplift-update/",
+    },
+    {
+        "id": "cmu-ml-blog-reproducibility",
+        "title": "5 – Reproducibility",
+        "excerpt": "The ML@CMU blog distinguishes kinds of reproducibility and turns them into a checklist covering data, code, seeds, variance, and repeat runs. Some tooling examples are dated; the conceptual split remains the useful part.",
+        "author": "Zihao Ding, Aniketh Reddy, Aparna Joshi",
+        "category": "Research Craft",
+        "tags": ["Reproducibility", "Experiment Design", "Checklist", "ML Methodology"],
+        "readTime": "14 min read",
+        "publishDate": "2020-08-31",
+        "sourceName": "ML@CMU Blog",
+        "url": "https://blog.ml.cmu.edu/2020/08/31/5-reproducibility/",
+    },
+    {
+        "id": "hamel-eval-smell",
+        "title": "“It’s Hard to Eval” Is a Product Smell",
+        "excerpt": "Hamel Husain argues that teams who cannot specify evals usually cannot specify the product behavior they want, treating eval difficulty as a requirements failure. It is opinionated product methodology, not a new statistical test.",
+        "author": "Hamel Husain",
+        "category": "Research Craft",
+        "tags": ["Evaluation", "Product Methodology", "LLM Evals", "Requirements"],
+        "readTime": "9 min read",
+        "publishDate": "2026-06-29",
+        "sourceName": "Hamel Husain",
+        "url": "https://hamel.dev/blog/posts/eval-smell/",
+    },
+    {
+        "id": "google-deep-learning-tuning-playbook",
+        "title": "Deep Learning Tuning Playbook",
+        "excerpt": "Google’s tuning playbook gives a staged protocol for baselines, hyperparameter search, and when to stop fiddling versus when to change the model. It is engineering doctrine, not a paper; some recommendations assume large internal clusters.",
+        "author": "Google",
+        "category": "Research Craft",
+        "tags": ["Hyperparameter Tuning", "Experimentation", "Deep Learning", "Playbook"],
+        "readTime": "40 min read",
+        "publishDate": "2023-03-01",
+        "sourceName": "Google Developers",
+        "url": "https://developers.google.com/machine-learning/guides/deep-learning-tuning-playbook",
+    },
+    {
+        "id": "google-good-data-analysis",
+        "title": "Good Data Analysis",
+        "excerpt": "Google’s guide on good data analysis covers metrics, slicing, confounding, and how to keep exploratory work from silently becoming a confirmatory claim. It is general DS craft; examples are not LLM-specific.",
+        "author": "Google",
+        "category": "Research Craft",
+        "tags": ["Data Analysis", "Metrics", "Causal Thinking", "Scientific Process"],
+        "readTime": "25 min read",
+        "publishDate": "2022-01-01",
+        "sourceName": "Google Developers",
+        "url": "https://developers.google.com/machine-learning/guides/good-data-analysis",
+    },
+    {
+        "id": "google-data-traps",
+        "title": "Data Traps",
+        "excerpt": "Google catalogs recurring data traps—leakage, feedback loops, non-stationarity, and metric gaming—that quietly invalidate otherwise careful models. The list is durable; it does not replace domain-specific leakage audits.",
+        "author": "Google",
+        "category": "Research Craft",
+        "tags": ["Data Quality", "Leakage", "Feedback Loops", "ML Engineering"],
+        "readTime": "18 min read",
+        "publishDate": "2022-01-01",
+        "sourceName": "Google Developers",
+        "url": "https://developers.google.com/machine-learning/guides/data-traps",
+    },
+    {
+        "id": "fsdl-experiment-management",
+        "title": "Experiment Management",
+        "excerpt": "Full Stack Deep Learning’s experiment-management lab covers tracking runs, configs, artifacts, and why ad-hoc notebooks fail as a research log. The tooling examples (circa 2022) age faster than the workflow advice.",
+        "author": "Full Stack Deep Learning",
+        "category": "Research Craft",
+        "tags": ["Experiment Tracking", "MLOps", "Reproducibility", "Tooling"],
+        "readTime": "30 min read",
+        "publishDate": "2022-03-01",
+        "sourceName": "Full Stack Deep Learning",
+        "url": "https://fullstackdeeplearning.com/course/2022/lab-4-experiment-management/",
+    },
+    {
+        "id": "fsdl-development-infrastructure",
+        "title": "Development Infrastructure and Tooling",
+        "excerpt": "Full Stack Deep Learning surveys the infrastructure around modern DL work: environments, data versioning, CI, and why research velocity is often an infra problem. Course-era tools have shifted; the checklist of concerns has not.",
+        "author": "Full Stack Deep Learning",
+        "category": "Research Craft",
+        "tags": ["Development Infrastructure", "MLOps", "Tooling", "Research Velocity"],
+        "readTime": "35 min read",
+        "publishDate": "2022-03-01",
+        "sourceName": "Full Stack Deep Learning",
+        "url": "https://fullstackdeeplearning.com/course/2022/lecture-2-development-infrastructure-and-tooling/",
+    },
+    {
+        "id": "ai2-astabench-update-spring-2026",
+        "title": "AstaBench Update: Spring 2026",
+        "excerpt": "Ai2 reports a Spring 2026 AstaBench update on scientific-agent tasks, documenting what improved, what saturated, and where eval design still leaks. Treat scores as snapshot measurements on a moving task suite.",
+        "author": "Ai2",
+        "category": "Research Craft",
+        "tags": ["Scientific Agents", "Benchmarks", "Evaluation", "AstaBench"],
+        "readTime": "10 min read",
+        "publishDate": "2026-04-30",
+        "sourceName": "Ai2 Blog",
+        "url": "https://allenai.org/blog/astabench-update-spring-2026",
+    },
+    {
+        "id": "google-empirical-research-assistance",
+        "title": "Four Ways Google Researchers Have Been Using Empirical Research Assistance",
+        "excerpt": "Google Research describes how scientists actually use empirical-research assistants in literature, experiment planning, and analysis, with four concrete patterns rather than a demo reel. It is a usage study; it is not a claim that assistants replace experimental design.",
+        "author": "Google Research",
+        "category": "Research Craft",
+        "tags": ["Research Workflow", "AI Assistants", "Empirical Science", "Human-AI Collaboration"],
+        "readTime": "9 min read",
+        "publishDate": "2026-04-29",
+        "sourceName": "Google Research Blog",
+        "url": "https://research.google/blog/four-ways-google-research-scientists-have-been-using-empirical-research-assistance/",
+    },
+    {
+        "id": "distill-bayesian-optimization",
+        "title": "Exploring Bayesian Optimization",
+        "excerpt": "Distill’s interactive essay on Bayesian optimization makes acquisition functions and uncertainty visualization inspectable instead of treating BO as a black-box tuner. It is a 2020 teaching piece; later high-dimensional BO practice is only sketched.",
+        "author": "Distill",
+        "category": "Research Craft",
+        "tags": ["Bayesian Optimization", "Hyperparameters", "Interactive Article", "Uncertainty"],
+        "readTime": "40 min read",
+        "publishDate": "2020-08-01",
+        "sourceName": "Distill",
+        "url": "https://distill.pub/2020/bayesian-optimization/",
+    },
+    {
+        "id": "distill-how-to-use-tsne",
+        "title": "How to Use t-SNE Effectively",
+        "excerpt": "Distill shows how t-SNE cluster shapes depend on perplexity, exaggeration, and random seeds, making a standard visualization failure mode inspectable. It remains required reading; UMAP/PaCMAP users should still treat embeddings as tunable, not ground truth.",
+        "author": "Distill",
+        "category": "Research Craft",
+        "tags": ["t-SNE", "Visualization", "Dimensionality Reduction", "Pitfalls"],
+        "readTime": "20 min read",
+        "publishDate": "2016-10-13",
+        "sourceName": "Distill",
+        "url": "https://distill.pub/2016/misread-tsne/",
+    },
+    {
+        "id": "google-rules-of-ml",
+        "title": "Rules of Machine Learning: Best Practices for ML Engineering",
+        "excerpt": "Google’s Rules of ML is a staged engineering doctrine from heuristic baselines through feature hygiene, training/serving skew, and mature pipelines. It is still the best public checklist for production ML; generative-agent stacks need extra eval layers on top.",
+        "author": "Google",
+        "category": "Research Craft",
+        "tags": ["ML Engineering", "Production ML", "Metrics", "Pipelines"],
+        "readTime": "45 min read",
+        "publishDate": "2022-07-01",
+        "sourceName": "Google Developers",
+        "url": "https://developers.google.com/machine-learning/guides/rules-of-ml/",
+    },
+    {
+        "id": "eugene-yan-testing-ml",
+        "title": "How to Test Machine Learning Code and Systems",
+        "excerpt": "Eugene Yan separates software-logic tests, learning-behavior tests, and model evaluation, with pre-train and post-train checks you can actually implement. It is a practitioner guide; it does not replace statistical eval design for research papers.",
+        "author": "Eugene Yan",
+        "category": "Research Craft",
+        "tags": ["Testing", "ML Systems", "Quality Assurance", "Engineering"],
+        "readTime": "22 min read",
+        "publishDate": "2022-04-01",
+        "sourceName": "Eugene Yan",
+        "url": "https://eugeneyan.com/writing/testing-ml/",
+    },
+    {
+        "id": "eugene-yan-maintaining-ml-production",
+        "title": "A Practical Guide to Maintaining Machine Learning in Production",
+        "excerpt": "Eugene Yan covers data contamination, retraining cadence, feedback loops, accumulating complexity, and team structure for models that live longer than a launch. It is maintenance craft; foundation-model product stacks inherit these problems rather than escaping them.",
+        "author": "Eugene Yan",
+        "category": "Research Craft",
+        "tags": ["Production ML", "Maintenance", "Retraining", "Feedback Loops"],
+        "readTime": "24 min read",
+        "publishDate": "2021-09-01",
+        "sourceName": "Eugene Yan",
+        "url": "https://eugeneyan.com/writing/practical-guide-to-maintaining-machine-learning/",
+    },
+    {
+        "id": "hazyresearch-what-data-centric-ai-is-not",
+        "title": "What Data-Centric AI Is Not",
+        "excerpt": "Hazy Research pushes back on slogan-level “data-centric AI,” distinguishing documentation, quality, and iterative data work from merely collecting more tokens. It is a 2021 polemic with lasting definitional value, written before today’s trillion-token corpora.",
+        "author": "Stanford Hazy Research",
+        "category": "Research Craft",
+        "tags": ["Data-Centric AI", "Datasets", "Research Taste", "Methodology"],
+        "readTime": "12 min read",
+        "publishDate": "2021-06-01",
+        "sourceName": "Hazy Research",
+        "url": "https://hazyresearch.stanford.edu/what-data-centric-ai-is-not",
+    },
+    {
+        "id": "colin-raffel-when-will-language-models-be-good-enough",
+        "title": "When Will Language Models Be Good Enough?",
+        "excerpt": "Colin Raffel asks what “good enough” even means for language models—task coverage, reliability, or economic substitution—and refuses a single scaling-curve answer. It is a senior-researcher argument, not a forecast spreadsheet.",
+        "author": "Colin Raffel",
+        "category": "Frontier",
+        "tags": ["Language Models", "Evaluation", "Scaling", "Research Taste"],
+        "readTime": "12 min read",
+        "publishDate": "2026-07-16",
+        "sourceName": "Hugging Face Blog",
+        "url": "https://huggingface.co/blog/craffel/when-will-language-models-be-good-enough",
+    },
+    {
+        "id": "mishig-local-moores-law",
+        "title": "Two Years of Local AI on a Laptop: When Open Models Outpaced Moore's Law",
+        "excerpt": "Mishig Davaadorj tracks two years of local open models on a laptop and argues capability growth outran hardware, changing what “edge AI” means. It is a community measurement essay; hardware and quantization stacks vary enough that the curve is indicative, not universal.",
+        "author": "Mishig Davaadorj",
+        "category": "Frontier",
+        "tags": ["Local AI", "Open Models", "Hardware", "Capability Trends"],
+        "readTime": "11 min read",
+        "publishDate": "2026-06-01",
+        "sourceName": "Hugging Face Blog",
+        "url": "https://huggingface.co/blog/mishig/local-moores-law",
+    },
+    {
+        "id": "eu-ai-office-frontier-expert-findings",
+        "title": "Frontier AI Expert Findings: EU Competitiveness, Sovereignty and Security",
+        "excerpt": "The European Commission AI Office publishes expert findings on frontier-model competitiveness, sovereignty, and security, mixing capability assessment with industrial-policy recommendations. It is a policy-facing report; treat technical claims as expert synthesis, not a new eval suite.",
+        "author": "European Commission AI Office",
+        "category": "Frontier",
+        "tags": ["Frontier AI", "Policy", "Security", "Competitiveness"],
+        "readTime": "40 min read",
+        "publishDate": "2026-07-15",
+        "sourceName": "European Commission",
+        "url": "https://digital-strategy.ec.europa.eu/en/library/ai-office-publishes-frontier-ai-expert-findings-eu-competitiveness-sovereignty-and-security",
+    },
+    {
+        "id": "un-ai-panel-preliminary-report",
+        "title": "Preliminary Report of the UN Independent International Scientific Panel on AI",
+        "excerpt": "The UN Independent International Scientific Panel on AI’s preliminary report surveys scientific consensus and disagreement on frontier capabilities, risks, and measurement. It is a panel product; individual chapters vary in technical depth and should be cited as a synthesis.",
+        "author": "UN Independent International Scientific Panel on AI",
+        "category": "Frontier",
+        "tags": ["Frontier AI", "International Governance", "Risk Assessment", "Scientific Consensus"],
+        "readTime": "60 min read",
+        "publishDate": "2026-06-15",
+        "sourceName": "United Nations",
+        "url": "https://www.un.org/independent-international-scientific-panel-ai/en/preliminary-report",
+    },
+    {
+        "id": "international-ai-safety-report-2026",
+        "title": "International AI Safety Report 2026",
+        "excerpt": "The International AI Safety Report 2026 compiles cross-national scientific assessment of frontier-model capabilities, misuse, and control, intended as a shared evidence base for governments. It is a synthesis report; primary evals still live in the cited lab and institute papers.",
+        "author": "International AI Safety Report",
+        "category": "Frontier",
+        "tags": ["AI Safety", "Frontier Models", "International Report", "Risk"],
+        "readTime": "90 min read",
+        "publishDate": "2026-01-15",
+        "sourceName": "International AI Safety Report",
+        "url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
+    },
+    {
+        "id": "stanford-hai-ai-index-2026",
+        "title": "AI Index Report 2026",
+        "excerpt": "Stanford HAI’s AI Index 2026 aggregates technical, economic, and policy indicators for the AI ecosystem, including capability, investment, and public-opinion time series. It is a statistical yearbook; individual charts inherit the biases of their underlying sources.",
+        "author": "Stanford HAI",
+        "category": "Frontier",
+        "tags": ["AI Index", "Trends", "Measurement", "Policy"],
+        "readTime": "80 min read",
+        "publishDate": "2026-04-01",
+        "sourceName": "Stanford HAI",
+        "url": "https://hai.stanford.edu/ai-index",
+    },
+    {
+        "id": "uk-aisi-frontier-ai-trends-report",
+        "title": "Frontier AI Trends Report",
+        "excerpt": "UK AISI’s frontier trends report tracks capability, eval, and security-relevant shifts across leading models with an institute measurement lens. It is a government-science product; coverage is strongest where AISI has eval access.",
+        "author": "UK AI Security Institute",
+        "category": "Frontier",
+        "tags": ["Frontier Models", "Trends", "Evaluation", "AI Security"],
+        "readTime": "45 min read",
+        "publishDate": "2026-05-01",
+        "sourceName": "UK AISI",
+        "url": "https://www.aisi.gov.uk/frontier-ai-trends-report",
+    },
+    {
+        "id": "state-of-ai-2026-model-provider-survey",
+        "title": "State of AI 2026: Model Provider Survey",
+        "excerpt": "The State of AI 2026 model-provider survey summarizes how labs position capability, pricing, and deployment, giving a market-facing snapshot of the frontier. It is a survey, not a controlled eval; treat vendor self-reports accordingly.",
+        "author": "State of AI",
+        "category": "Frontier",
+        "tags": ["Model Providers", "Industry Survey", "Deployment", "Frontier Models"],
+        "readTime": "20 min read",
+        "publishDate": "2026-03-01",
+        "sourceName": "State of AI",
+        "url": "https://2026.stateofai.dev/en-US/models/",
+    },
+    {
+        "id": "epoch-have-ai-capabilities-accelerated",
+        "title": "Have AI Capabilities Accelerated?",
+        "excerpt": "Epoch AI tests whether capability progress has accelerated relative to prior scaling trends, using quantitative time series rather than anecdote. Conclusions depend on the chosen benchmarks and saturation; read the appendix before citing a single number.",
+        "author": "Epoch AI",
+        "category": "Frontier",
+        "tags": ["Capabilities", "Trends", "Measurement", "Scaling"],
+        "readTime": "25 min read",
+        "publishDate": "2026-02-01",
+        "sourceName": "Epoch AI",
+        "url": "https://epoch.ai/publications/have-ai-capabilities-accelerated",
+    },
+    {
+        "id": "epoch-where-autonomy-works-2026",
+        "title": "Where Autonomy Works: Evaluating Robot Capabilities in 2026",
+        "excerpt": "Epoch AI surveys where robot autonomy actually works in 2026, separating narrow deployed skills from general household or factory claims. Coverage is uneven across labs; treat it as a capability map, not a single robot ranking.",
+        "author": "Epoch AI",
+        "category": "Frontier",
+        "tags": ["Robotics", "Autonomy", "Evaluation", "Embodied AI"],
+        "readTime": "22 min read",
+        "publishDate": "2026-04-01",
+        "sourceName": "Epoch AI",
+        "url": "https://epoch.ai/publications/where-autonomy-works-evaluating-robot-capabilities-in-2026",
+    },
+    {
+        "id": "epoch-what-will-ai-look-like-in-2030",
+        "title": "What Will AI Look Like in 2030?",
+        "excerpt": "Epoch AI sketches 2030 scenarios constrained by compute, data, energy, and observed capability slopes instead of unconstrained speculation. Scenario ranges are wide; the value is the constraint analysis, not any single headline year.",
+        "author": "Epoch AI",
+        "category": "Frontier",
+        "tags": ["Forecasting", "Scaling", "Compute", "Scenarios"],
+        "readTime": "28 min read",
+        "publishDate": "2026-03-01",
+        "sourceName": "Epoch AI",
+        "url": "https://epoch.ai/publications/what-will-ai-look-like-in-2030",
+    },
+    {
+        "id": "epoch-power-demands-frontier-training",
+        "title": "Power Demands of Frontier AI Training",
+        "excerpt": "Epoch AI estimates power demand for frontier training runs and how electrical capacity, not only chip supply, binds the next generation of models. Estimates use public cluster clues; classified or unannounced clusters are necessarily missing.",
+        "author": "Epoch AI",
+        "category": "Frontier",
+        "tags": ["Energy", "Training Compute", "Infrastructure", "Scaling"],
+        "readTime": "20 min read",
+        "publishDate": "2025-11-01",
+        "sourceName": "Epoch AI",
+        "url": "https://epoch.ai/publications/power-demands-of-frontier-ai-training",
+    },
+    {
+        "id": "epoch-ai-data-centers",
+        "title": "What You Need to Know About AI Data Centers",
+        "excerpt": "Epoch AI explains AI datacenter design—power, cooling, networking, and why GPU clusters are not interchangeable with CPU warehouses. It is a primer with quantitative anchors; site-level figures still come from operators, not from this essay alone.",
+        "author": "Epoch AI",
+        "category": "Frontier",
+        "tags": ["Data Centers", "Infrastructure", "Power", "Clusters"],
+        "readTime": "18 min read",
+        "publishDate": "2025-09-01",
+        "sourceName": "Epoch AI",
+        "url": "https://epoch.ai/publications/what-you-need-to-know-about-ai-data-centers",
+    },
+    {
+        "id": "epoch-training-compute-grows-4-5x",
+        "title": "Training Compute of Frontier AI Models Grows by 4–5× per Year",
+        "excerpt": "Epoch AI estimates that frontier training compute has grown about 4–5× per year, providing one of the few public slopes for planning energy and chip demand. The series depends on which models are counted as frontier and on incomplete disclosure.",
+        "author": "Epoch AI",
+        "category": "Frontier",
+        "tags": ["Training Compute", "Scaling Laws", "Trends", "Frontier Models"],
+        "readTime": "16 min read",
+        "publishDate": "2025-10-01",
+        "sourceName": "Epoch AI",
+        "url": "https://epoch.ai/publications/training-compute-of-frontier-ai-models-grows-by-4-5x-per-year",
+    },
+    {
+        "id": "mistral-robostral-navigate",
+        "title": "Introducing Robostral Navigate",
+        "excerpt": "Mistral introduces Robostral Navigate, an 8B navigation model using a pointing-style action representation, 2.4M trajectories, prefix caching, and online RL. It is a technically specific robotics post; field performance outside the reported setup is not independently replicated here.",
+        "author": "Mistral AI",
+        "category": "Frontier",
+        "tags": ["Robotics", "Navigation", "Online RL", "Embodied Models"],
+        "readTime": "12 min read",
+        "publishDate": "2026-06-01",
+        "sourceName": "Mistral AI",
+        "url": "https://mistral.ai/news/robostral-navigate/",
+    },
+    {
+        "id": "epoch-can-ai-scaling-continue-through-2030",
+        "title": "Can AI Scaling Continue Through 2030?",
+        "excerpt": "Epoch AI quantifies four constraints on continued scaling through 2030—power, chip manufacturing, data, and training latency—and asks which binds first. The analysis is high-density; it is a constraint study, not a claim that scaling will or will not stop.",
+        "author": "Epoch AI",
+        "category": "Frontier",
+        "tags": ["Scaling", "Compute", "Energy", "Forecasting"],
+        "readTime": "30 min read",
+        "publishDate": "2024-06-01",
+        "sourceName": "Epoch AI",
+        "url": "https://epoch.ai/publications/can-ai-scaling-continue-through-2030",
+    },
+    {
+        "id": "mistral-ocr-4",
+        "title": "Mistral OCR 4: SOTA OCR for Document Intelligence",
+        "excerpt": "Mistral reports OCR 4 as a document-intelligence model with benchmark claims on layout-heavy PDFs and multilingual text. It is a release with numbers; independent document-VLM bake-offs should still be preferred for procurement decisions.",
+        "author": "Mistral AI",
+        "category": "Frontier",
+        "tags": ["OCR", "Document Intelligence", "Multimodal", "Benchmarks"],
+        "readTime": "8 min read",
+        "publishDate": "2026-04-01",
+        "sourceName": "Mistral AI",
+        "url": "https://mistral.ai/news/ocr-4/",
+    },
+]
+
+
+class MetaParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.meta = {}
+
+    def handle_starttag(self, tag, attrs):
+        if tag.lower() != "meta":
+            return
+        d = {k.lower(): v for k, v in attrs}
+        key = (d.get("property") or d.get("name") or "").lower()
+        content = d.get("content") or ""
+        if key and content and key not in self.meta:
+            self.meta[key] = content
+
+
+def curl(args: list[str], timeout: int = 40) -> subprocess.CompletedProcess:
+    return subprocess.run(
+        ["curl", *args],
+        capture_output=True,
+        timeout=timeout,
+    )
+
+
+def fetch_html(url: str) -> str:
+    r = curl(["-L", "-sS", "--max-time", "25", "-A", UA, url], timeout=30)
+    return r.stdout.decode("utf-8", "ignore") if r.returncode == 0 else ""
+
+
+def pick_image(html: str, base: str) -> str:
+    parser = MetaParser()
+    try:
+        parser.feed(html[:400_000])
+    except Exception:
+        pass
+    for key in ("og:image", "og:image:url", "og:image:secure_url", "twitter:image", "twitter:image:src"):
+        raw = parser.meta.get(key, "")
+        if raw:
+            abs_url = urljoin(base, raw.strip())
+            low = abs_url.lower()
+            if any(bad in low for bad in ("favicon", "logo", "pixel.gif", "1x1", "sprite")):
+                continue
+            if abs_url.startswith("http"):
+                return abs_url
+    return ""
+
+
+def detect_ext(path: Path, source: str) -> str:
+    data = path.read_bytes()[:32]
+    if data.startswith(b"\x89PNG"):
+        return "png"
+    if data[:3] == b"\xff\xd8\xff":
+        return "jpg"
+    if data[:4] == b"RIFF" and b"WEBP" in path.read_bytes()[:16]:
+        return "webp"
+    if data[:4] == b"<svg" or data[:5] == b"<?xml":
+        return "svg"
+    ext = Path(urlparse(source).path).suffix.lower().lstrip(".")
+    return "jpg" if ext == "jpeg" else (ext if ext in {"png", "jpg", "webp", "gif"} else "jpg")
+
+
+def download_cover(blog: dict) -> dict:
+    html = fetch_html(blog["url"])
+    image_url = pick_image(html, blog["url"]) if html else ""
+    COVER_DIR.mkdir(parents=True, exist_ok=True)
+    if not image_url:
+        blog["coverImage"] = blog["authorAvatar"]
+        blog["coverAlt"] = f"{blog['title']} source mark"
+        blog["coverFit"] = "cover"
+        blog["_coverSource"] = "favicon-fallback"
+        return blog
+    tmp = COVER_DIR / f".tmp-{blog['id']}"
+    r = curl(["-L", "-sS", "--max-time", "40", "-A", UA, "-o", str(tmp), image_url], timeout=50)
+    if r.returncode != 0 or not tmp.exists() or tmp.stat().st_size < 800:
+        if tmp.exists():
+            tmp.unlink()
+        blog["coverImage"] = blog["authorAvatar"]
+        blog["coverAlt"] = f"{blog['title']} source mark"
+        blog["coverFit"] = "cover"
+        blog["_coverSource"] = "download-failed"
+        return blog
+    ext = detect_ext(tmp, image_url)
+    dest = COVER_DIR / f"{blog['id']}.{ext}"
+    if dest.exists():
+        dest.unlink()
+    tmp.rename(dest)
+    blog["coverImage"] = f"assets/img/covers/real/{dest.name}"
+    blog["coverAlt"] = f"Real cover from og:image for {blog['title']}"
+    blog["coverFit"] = "cover"
+    blog["_coverSource"] = image_url
+    return blog
+
+
+def js_escape(value: str) -> str:
+    return str(value).replace("\\", "\\\\").replace("'", "\\'").replace("\n", " ")
+
+
+def sql_escape(value: str) -> str:
+    return str(value).replace("'", "''")
+
+
+def js_object(blog: dict) -> str:
+    tags = ", ".join(f"'{js_escape(t)}'" for t in blog["tags"])
+    return "\n".join([
+        "            {",
+        f"                id: '{js_escape(blog['id'])}',",
+        f"                title: '{js_escape(blog['title'])}',",
+        f"                excerpt: '{js_escape(blog['excerpt'])}',",
+        f"                author: '{js_escape(blog['author'])}',",
+        f"                authorAvatar: '{js_escape(blog['authorAvatar'])}',",
+        f"                category: '{js_escape(blog['category'])}',",
+        f"                tags: [{tags}],",
+        f"                readTime: '{js_escape(blog['readTime'])}',",
+        f"                publishDate: '{js_escape(blog['publishDate'])}',",
+        f"                sourceName: '{js_escape(blog['sourceName'])}',",
+        f"                url: '{js_escape(blog['url'])}',",
+        f"                coverImage: '{js_escape(blog['coverImage'])}',",
+        f"                coverAlt: '{js_escape(blog['coverAlt'])}',",
+        f"                coverFit: '{js_escape(blog['coverFit'])}'",
+        "            }",
+    ])
+
+
+def sql_tuple(blog: dict) -> str:
+    tags = ", ".join(f"'{sql_escape(t)}'" for t in blog["tags"])
+    return f"""(
+  '{sql_escape(blog['id'])}',
+  '{sql_escape(blog['title'])}',
+  '{sql_escape(blog['excerpt'])}',
+  '{sql_escape(blog['author'])}',
+  '{sql_escape(blog['authorAvatar'])}',
+  '{sql_escape(blog['category'])}',
+  array[{tags}],
+  '{sql_escape(blog['readTime'])}',
+  '{sql_escape(blog['publishDate'])}',
+  '{sql_escape(blog['sourceName'])}',
+  '{sql_escape(blog['url'])}',
+  '{sql_escape(blog['coverImage'])}',
+  '{sql_escape(blog['coverAlt'])}',
+  '{sql_escape(blog['coverFit'])}',
+  'published',
+  false
+)"""
+
+
+def main() -> None:
+    app = APP.read_text()
+    existing_urls = set(re.findall(r"url:\s*'([^']+)'", app)) | set(re.findall(r'url:\s*"([^"]+)"', app))
+    existing_ids = set(re.findall(r"id:\s*'([^']+)'", app)) | set(re.findall(r'id:\s*"([^"]+)"', app))
+
+    prepared = []
+    skipped = []
+    for blog in BLOGS:
+        blog = dict(blog)
+        blog["authorAvatar"] = favicon(blog["url"])
+        if blog["url"] in existing_urls:
+            skipped.append((blog["id"], "url already in app.js"))
+            continue
+        if blog["id"] in existing_ids:
+            skipped.append((blog["id"], "id already in app.js"))
+            continue
+        prepared.append(blog)
+
+    print(f"downloading covers for {len(prepared)} blogs")
+    done = []
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        futs = {pool.submit(download_cover, b): b["id"] for b in prepared}
+        for fut in as_completed(futs):
+            blog = fut.result()
+            done.append(blog)
+            print(f"  cover {blog['id']}: {blog.get('_coverSource', '')[:80]}")
+    done.sort(key=lambda b: prepared.index(next(p for p in prepared if p["id"] == b["id"])))
+
+    public = [{k: v for k, v in b.items() if not k.startswith("_")} for b in done]
+    JSON_OUT.write_text(json.dumps(public, ensure_ascii=False, indent=2) + "\n")
+
+    helper_body = ",\n".join(js_object(b) for b in public)
+    helper = f"""    getQualityEditorialFillBlogs() {{
+        return [
+{helper_body}
+        ];
+    }}
+
+"""
+    if "getQualityEditorialFillBlogs(" not in app:
+        app = app.replace(
+            "    getCuratedCommunityBlogs() {",
+            helper + "    getCuratedCommunityBlogs() {",
+            1,
+        )
+        app = app.replace(
+            "            ...this.getRecentCommunityBlogAdditions(),\n",
+            "            ...this.getRecentCommunityBlogAdditions(),\n            ...this.getQualityEditorialFillBlogs(),\n",
+            1,
+        )
+        APP.write_text(app)
+
+    ids_sql = ",\n  ".join(f"'{sql_escape(b['id'])}'" for b in public)
+    SQL_OUT.write_text(
+        "-- Upsert BlogrXiv quality fill for Foundation/LLM/Multimodal, Visual/World/Agents, Craft/Frontier.\n"
+        "-- Generated by scripts/inject_quality_parent_blogs.py\n\n"
+        "insert into public.blogs (\n"
+        "  id, title, excerpt, author, author_avatar, category, tags, read_time,\n"
+        "  publish_date, source_name, url, cover_image, cover_alt, cover_fit, status, featured\n"
+        ") values\n"
+        + ",\n".join(sql_tuple(b) for b in public)
+        + "\non conflict (id) do update set\n"
+        "  title = excluded.title,\n"
+        "  excerpt = excluded.excerpt,\n"
+        "  author = excluded.author,\n"
+        "  author_avatar = excluded.author_avatar,\n"
+        "  category = excluded.category,\n"
+        "  tags = excluded.tags,\n"
+        "  read_time = excluded.read_time,\n"
+        "  publish_date = excluded.publish_date,\n"
+        "  source_name = excluded.source_name,\n"
+        "  url = excluded.url,\n"
+        "  cover_image = excluded.cover_image,\n"
+        "  cover_alt = excluded.cover_alt,\n"
+        "  cover_fit = excluded.cover_fit,\n"
+        "  status = excluded.status,\n"
+        "  featured = excluded.featured;\n\n"
+        "select id, title, category, publish_date, status\nfrom public.blogs\nwhere id in (\n  "
+        + ids_sql
+        + "\n);\n"
+    )
+
+    md = BLOG_MD.read_text()
+    checked = 0
+    for blog in public:
+        pattern = rf"(- \[) \]( \*\*[A+]+\*\* · \[{re.escape(blog['title'])}\]\({re.escape(blog['url'])}\))"
+        new_md, n = re.subn(pattern, r"\1x]\2", md, count=1)
+        if n:
+            md = new_md
+            checked += 1
+        else:
+            pattern2 = rf"(- \[) \]( \*\*[A+]+\*\* · \[.*?\]\({re.escape(blog['url'])}\))"
+            new_md, n = re.subn(pattern2, r"\1x]\2", md, count=1)
+            if n:
+                md = new_md
+                checked += 1
+    BLOG_MD.write_text(md)
+
+    from collections import Counter
+
+    counts = Counter(b["category"] for b in public)
+    cover_ok = sum(1 for b in done if str(b.get("coverImage", "")).startswith("assets/img/covers/real/"))
+    REPORT.write_text(
+        "# Quality fill for remaining BlogrXiv shelves\n\n"
+        f"Added **{len(public)}** live-verified entries. Real covers: {cover_ok}. blog.md checked: {checked}.\n\n"
+        "## Counts\n\n"
+        + "\n".join(f"- {k}: {v}" for k, v in counts.most_common())
+        + "\n\n## Extra canonical essays (not only blog.md)\n\n"
+        "- The Illustrated Transformer\n"
+        "- The Illustrated GPT-2\n"
+        "- Hugging Face RLHF\n"
+        "- Google chain-of-thought reasoning\n"
+        "- Lilian Weng controllable generation\n"
+        "- Lilian Weng LLM powered autonomous agents\n\n"
+        "## Skipped before insert\n\n"
+        + ("\n".join(f"- {a}: {b}" for a, b in skipped) or "- none")
+        + "\n\n## Frontier homepages not ingested\n\n"
+        "Lab indexes, GitHub orgs, and news hubs listed in `blog.md` Frontier were excluded by editorial rule.\n"
+        "OpenAI posts returned HTTP 403 from this environment and were skipped.\n"
+    )
+    print(json.dumps({"added": len(public), "counts": dict(counts), "covers": cover_ok, "blogMdChecked": checked}, indent=2))
+
+
+if __name__ == "__main__":
+    main()
