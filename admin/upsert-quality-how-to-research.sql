@@ -720,6 +720,24 @@ insert into public.blogs (
   'cover',
   'published',
   false
+),
+(
+  'jacob-steinhardt-advice-for-authors',
+  'Advice for Authors',
+  'Distilled from reviewing batches of ICML submissions, Steinhardt''s advice concentrates on local writing style: be precise to maximize information content, prefer concrete claims over vague ones, and treat sentence-level clarity as more important than global structure. It is a compact reviewer''s checklist rather than a full guide to composing a research paper.',
+  'Jacob Steinhardt',
+  'https://www.google.com/s2/favicons?domain=jsteinhardt.stat.berkeley.edu&sz=128',
+  'How to Research',
+  array['Paper Writing','Scientific Writing','Peer Review','Machine Learning'],
+  '8 min read',
+  '2017-02-28',
+  'Jacob Steinhardt',
+  'https://jsteinhardt.stat.berkeley.edu/blog/advice-for-authors',
+  'assets/img/covers/cover-research-adjudication.svg',
+  'Thematic research writing and review cover',
+  'cover',
+  'published',
+  false
 )
 on conflict (id) do update set
   title = excluded.title,
@@ -779,6 +797,7 @@ where id in (
   'david-patterson-how-to-have-a-bad-career',
   'matt-might-phd-thesis-proposal-is-a-contract',
   'terence-tao-take-the-initiative',
-  'patrick-kidger-just-know-stuff'
+  'patrick-kidger-just-know-stuff',
+  'jacob-steinhardt-advice-for-authors'
 )
 order by publish_date desc, id asc;

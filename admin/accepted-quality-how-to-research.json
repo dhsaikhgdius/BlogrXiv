@@ -6,7 +6,12 @@
     "author": "David Chapman (ed.)",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=dspace.mit.edu&sz=128",
     "category": "How to Research",
-    "tags": ["Research Apprenticeship", "Reading Papers", "Advisor Relationships", "Graduate School"],
+    "tags": [
+      "Research Apprenticeship",
+      "Reading Papers",
+      "Advisor Relationships",
+      "Graduate School"
+    ],
     "readTime": "75 min read",
     "publishDate": "1988-09-01",
     "sourceName": "MIT AI Lab",
@@ -22,7 +27,12 @@
     "author": "Jacob Steinhardt",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=jsteinhardt.stat.berkeley.edu&sz=128",
     "category": "How to Research",
-    "tags": ["Deliberate Practice", "Research Training", "Skill Acquisition", "Mentorship"],
+    "tags": [
+      "Deliberate Practice",
+      "Research Training",
+      "Skill Acquisition",
+      "Mentorship"
+    ],
     "readTime": "10 min read",
     "publishDate": "2021-06-28",
     "sourceName": "Jacob Steinhardt",
@@ -38,7 +48,12 @@
     "author": "Richard Hamming",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=cs.virginia.edu&sz=128",
     "category": "How to Research",
-    "tags": ["Important Problems", "Career Strategy", "Compound Effort", "Bell Labs"],
+    "tags": [
+      "Important Problems",
+      "Career Strategy",
+      "Compound Effort",
+      "Bell Labs"
+    ],
     "readTime": "45 min read",
     "publishDate": "1986-03-07",
     "sourceName": "University of Virginia CS",
@@ -54,7 +69,12 @@
     "author": "Michael Nielsen",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=michaelnielsen.org&sz=128",
     "category": "How to Research",
-    "tags": ["Self-Development", "Proactive Research", "Problem Selection", "Research Vision"],
+    "tags": [
+      "Self-Development",
+      "Proactive Research",
+      "Problem Selection",
+      "Research Vision"
+    ],
     "readTime": "30 min read",
     "publishDate": "2004-07-01",
     "sourceName": "Michael Nielsen",
@@ -70,7 +90,12 @@
     "author": "S. Keshav",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=cl.cam.ac.uk&sz=128",
     "category": "How to Research",
-    "tags": ["Three-Pass Method", "Paper Reading", "Literature Surveys", "Research Skills"],
+    "tags": [
+      "Three-Pass Method",
+      "Paper Reading",
+      "Literature Surveys",
+      "Research Skills"
+    ],
     "readTime": "8 min read",
     "publishDate": "2007-07-01",
     "sourceName": "ACM SIGCOMM CCR",
@@ -86,7 +111,12 @@
     "author": "Stephen C. Stearns",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=stearnslab.yale.edu&sz=128",
     "category": "How to Research",
-    "tags": ["Graduate School", "Risk Management", "Advisor Relationships", "Thesis Planning"],
+    "tags": [
+      "Graduate School",
+      "Risk Management",
+      "Advisor Relationships",
+      "Thesis Planning"
+    ],
     "readTime": "12 min read",
     "publishDate": "1987-01-01",
     "sourceName": "Stearns Lab, Yale",
@@ -102,7 +132,12 @@
     "author": "Terence Tao",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=terrytao.wordpress.com&sz=128",
     "category": "How to Research",
-    "tags": ["Field Mastery", "Re-deriving Results", "Mathematical Maturity", "Career Advice"],
+    "tags": [
+      "Field Mastery",
+      "Re-deriving Results",
+      "Mathematical Maturity",
+      "Career Advice"
+    ],
     "readTime": "4 min read",
     "publishDate": "2007-01-01",
     "sourceName": "Terence Tao",
@@ -118,7 +153,12 @@
     "author": "Terence Tao",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=terrytao.wordpress.com&sz=128",
     "category": "How to Research",
-    "tags": ["Partial Results", "Toy Problems", "Failed Approaches", "Problem Solving"],
+    "tags": [
+      "Partial Results",
+      "Toy Problems",
+      "Failed Approaches",
+      "Problem Solving"
+    ],
     "readTime": "5 min read",
     "publishDate": "2012-07-17",
     "sourceName": "Terence Tao",
@@ -134,7 +174,12 @@
     "author": "Ronald T. Azuma",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=cs.unc.edu&sz=128",
     "category": "How to Research",
-    "tags": ["PhD Survival", "Initiative", "Advisor Management", "Career Paths"],
+    "tags": [
+      "PhD Survival",
+      "Initiative",
+      "Advisor Management",
+      "Career Paths"
+    ],
     "readTime": "60 min read",
     "publishDate": "1997-01-01",
     "sourceName": "UNC Computer Science",
@@ -150,7 +195,12 @@
     "author": "Matt Might",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=matt.might.net&sz=128",
     "category": "How to Research",
-    "tags": ["PhD Perspective", "Research Frontier", "Specialization", "Visual Explanation"],
+    "tags": [
+      "PhD Perspective",
+      "Research Frontier",
+      "Specialization",
+      "Visual Explanation"
+    ],
     "readTime": "3 min read",
     "publishDate": "2010-01-01",
     "sourceName": "matt.might.net",
@@ -166,7 +216,12 @@
     "author": "Chris Olah",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=colah.github.io&sz=128",
     "category": "How to Research",
-    "tags": ["Research Taste", "Deliberate Practice", "Problem Selection", "Interpretability"],
+    "tags": [
+      "Research Taste",
+      "Deliberate Practice",
+      "Problem Selection",
+      "Interpretability"
+    ],
     "readTime": "8 min read",
     "publishDate": "2021-01-09",
     "sourceName": "colah's blog",
@@ -182,7 +237,12 @@
     "author": "Nick Feamster",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=practicespace.substack.com&sz=128",
     "category": "How to Research",
-    "tags": ["Research Taste", "Problem Selection", "Mentorship", "Research Career"],
+    "tags": [
+      "Research Taste",
+      "Problem Selection",
+      "Mentorship",
+      "Research Career"
+    ],
     "readTime": "9 min read",
     "publishDate": "2025-10-29",
     "sourceName": "Practice Space",
@@ -198,7 +258,12 @@
     "author": "John Regehr",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=blog.regehr.org&sz=128",
     "category": "How to Research",
-    "tags": ["Topic Selection", "Computer Systems", "Technology Trends", "Research Strategy"],
+    "tags": [
+      "Topic Selection",
+      "Computer Systems",
+      "Technology Trends",
+      "Research Strategy"
+    ],
     "readTime": "10 min read",
     "publishDate": "2010-03-21",
     "sourceName": "Embedded in Academia",
@@ -214,7 +279,12 @@
     "author": "Jason Eisner",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=cs.jhu.edu&sz=128",
     "category": "How to Research",
-    "tags": ["Problem Discovery", "Research Questions", "NLP", "Graduate School"],
+    "tags": [
+      "Problem Discovery",
+      "Research Questions",
+      "NLP",
+      "Graduate School"
+    ],
     "readTime": "7 min read",
     "publishDate": "1997-01-01",
     "sourceName": "Johns Hopkins CS",
@@ -230,7 +300,12 @@
     "author": "Noah A. Smith",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=cs.cmu.edu&sz=128",
     "category": "How to Research",
-    "tags": ["Choosing an Advisor", "PhD Applications", "Graduate School", "Mentorship"],
+    "tags": [
+      "Choosing an Advisor",
+      "PhD Applications",
+      "Graduate School",
+      "Mentorship"
+    ],
     "readTime": "5 min read",
     "publishDate": "2007-01-01",
     "sourceName": "Noah A. Smith",
@@ -246,7 +321,12 @@
     "author": "Simon Peyton Jones",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=simon.peytonjones.org&sz=128",
     "category": "How to Research",
-    "tags": ["Research Proposals", "Grant Writing", "Problem Framing", "Research Communication"],
+    "tags": [
+      "Research Proposals",
+      "Grant Writing",
+      "Problem Framing",
+      "Research Communication"
+    ],
     "readTime": "12 min read",
     "publishDate": "2016-07-27",
     "sourceName": "Simon Peyton Jones",
@@ -262,7 +342,12 @@
     "author": "Simon Peyton Jones, John Hughes, and John Launchbury",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=simon.peytonjones.org&sz=128",
     "category": "How to Research",
-    "tags": ["Research Talks", "Presentation Skills", "Conference Speaking", "Research Communication"],
+    "tags": [
+      "Research Talks",
+      "Presentation Skills",
+      "Conference Speaking",
+      "Research Communication"
+    ],
     "readTime": "10 min read",
     "publishDate": "1993-11-01",
     "sourceName": "Simon Peyton Jones",
@@ -278,7 +363,12 @@
     "author": "CS Guides Community",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=csguides.github.io&sz=128",
     "category": "How to Research",
-    "tags": ["Academic Job Market", "Industry Research Jobs", "Application Materials", "Interviewing"],
+    "tags": [
+      "Academic Job Market",
+      "Industry Research Jobs",
+      "Application Materials",
+      "Interviewing"
+    ],
     "readTime": "45 min read",
     "publishDate": "2020-01-01",
     "sourceName": "CS Guides",
@@ -294,7 +384,12 @@
     "author": "Antonio Torralba, Phillip Isola, and William Freeman",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=visionbook.mit.edu&sz=128",
     "category": "How to Research",
-    "tags": ["Research Process", "Problem Selection", "Computer Vision", "Scientific Method"],
+    "tags": [
+      "Research Process",
+      "Problem Selection",
+      "Computer Vision",
+      "Scientific Method"
+    ],
     "readTime": "25 min read",
     "publishDate": "2024-04-16",
     "sourceName": "Foundations of Computer Vision",
@@ -310,7 +405,12 @@
     "author": "Antonio Torralba, Phillip Isola, and William Freeman",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=visionbook.mit.edu&sz=128",
     "category": "How to Research",
-    "tags": ["Paper Writing", "Scientific Writing", "Figures", "Peer Review"],
+    "tags": [
+      "Paper Writing",
+      "Scientific Writing",
+      "Figures",
+      "Peer Review"
+    ],
     "readTime": "30 min read",
     "publishDate": "2024-04-16",
     "sourceName": "Foundations of Computer Vision",
@@ -326,7 +426,12 @@
     "author": "Antonio Torralba, Phillip Isola, and William Freeman",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=visionbook.mit.edu&sz=128",
     "category": "How to Research",
-    "tags": ["Research Talks", "Presentation Design", "Storytelling", "Conference Speaking"],
+    "tags": [
+      "Research Talks",
+      "Presentation Design",
+      "Storytelling",
+      "Conference Speaking"
+    ],
     "readTime": "25 min read",
     "publishDate": "2024-04-16",
     "sourceName": "Foundations of Computer Vision",
@@ -342,7 +447,12 @@
     "author": "Stanford Computer Science Department",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=cs.stanford.edu&sz=128",
     "category": "How to Research",
-    "tags": ["PhD Advising", "Advisor Relationships", "Rotations", "Expectations Setting"],
+    "tags": [
+      "PhD Advising",
+      "Advisor Relationships",
+      "Rotations",
+      "Expectations Setting"
+    ],
     "readTime": "10 min read",
     "publishDate": "2023-01-01",
     "sourceName": "Stanford Computer Science",
@@ -358,7 +468,12 @@
     "author": "Mor Harchol-Balter",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=cs.cmu.edu&sz=128",
     "category": "How to Research",
-    "tags": ["PhD Applications", "Statement of Purpose", "Recommendation Letters", "Admissions"],
+    "tags": [
+      "PhD Applications",
+      "Statement of Purpose",
+      "Recommendation Letters",
+      "Admissions"
+    ],
     "readTime": "35 min read",
     "publishDate": "2014-04-03",
     "sourceName": "Carnegie Mellon University",
@@ -374,7 +489,12 @@
     "author": "Udaya Shankar",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=cs.umd.edu&sz=128",
     "category": "How to Research",
-    "tags": ["Choosing an Advisor", "Research Style", "Graduate School", "Mentorship"],
+    "tags": [
+      "Choosing an Advisor",
+      "Research Style",
+      "Graduate School",
+      "Mentorship"
+    ],
     "readTime": "3 min read",
     "publishDate": "2010-01-01",
     "sourceName": "UMD Computer Science",
@@ -390,7 +510,12 @@
     "author": "Jason Wei",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=jasonwei.net&sz=128",
     "category": "How to Research",
-    "tags": ["AI Research", "Deliberate Practice", "Fast Iteration", "Paper Writing"],
+    "tags": [
+      "AI Research",
+      "Deliberate Practice",
+      "Fast Iteration",
+      "Paper Writing"
+    ],
     "readTime": "8 min read",
     "publishDate": "2023-02-07",
     "sourceName": "Jason Wei",
@@ -406,7 +531,12 @@
     "author": "Neel Guha",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=neelguha.github.io&sz=128",
     "category": "How to Research",
-    "tags": ["Paper Writing", "ML Papers", "Argument Structure", "Research Communication"],
+    "tags": [
+      "Paper Writing",
+      "ML Papers",
+      "Argument Structure",
+      "Research Communication"
+    ],
     "readTime": "12 min read",
     "publishDate": "2026-03-24",
     "sourceName": "Neel Guha",
@@ -422,7 +552,12 @@
     "author": "Jeff Dean",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=research.google&sz=128",
     "category": "How to Research",
-    "tags": ["Industrial Research", "Research Portfolio", "Long-term Research", "Google Brain"],
+    "tags": [
+      "Industrial Research",
+      "Research Portfolio",
+      "Long-term Research",
+      "Google Brain"
+    ],
     "readTime": "9 min read",
     "publishDate": "2017-09-13",
     "sourceName": "Google Research",
@@ -438,7 +573,12 @@
     "author": "Ming Zhou",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=microsoft.com&sz=128",
     "category": "How to Research",
-    "tags": ["NLP", "Early Career", "Baselines", "Research Community"],
+    "tags": [
+      "NLP",
+      "Early Career",
+      "Baselines",
+      "Research Community"
+    ],
     "readTime": "10 min read",
     "publishDate": "2017-12-04",
     "sourceName": "Microsoft Research Asia",
@@ -454,7 +594,12 @@
     "author": "Chris Olah and Shan Carter",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=distill.pub&sz=128",
     "category": "How to Research",
-    "tags": ["Research Distillation", "Exposition", "Interpretive Labor", "Scientific Communication"],
+    "tags": [
+      "Research Distillation",
+      "Exposition",
+      "Interpretive Labor",
+      "Scientific Communication"
+    ],
     "readTime": "11 min read",
     "publishDate": "2017-03-22",
     "sourceName": "Distill",
@@ -470,7 +615,12 @@
     "author": "Fred Hohman, Matthew Conlen, Jeffrey Heer, and Duen Horng Chau",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=distill.pub&sz=128",
     "category": "How to Research",
-    "tags": ["Interactive Articles", "Scientific Communication", "Visualization", "Explorable Explanations"],
+    "tags": [
+      "Interactive Articles",
+      "Scientific Communication",
+      "Visualization",
+      "Explorable Explanations"
+    ],
     "readTime": "35 min read",
     "publishDate": "2020-09-11",
     "sourceName": "Distill",
@@ -486,7 +636,12 @@
     "author": "Andrej Karpathy",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=karpathy.github.io&sz=128",
     "category": "How to Research",
-    "tags": ["PhD Survival", "Topic Selection", "Paper Writing", "Academic Career"],
+    "tags": [
+      "PhD Survival",
+      "Topic Selection",
+      "Paper Writing",
+      "Academic Career"
+    ],
     "readTime": "35 min read",
     "publishDate": "2016-09-07",
     "sourceName": "Andrej Karpathy",
@@ -502,7 +657,12 @@
     "author": "John Schulman",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=joschu.net&sz=128",
     "category": "How to Research",
-    "tags": ["ML Research", "Goal-driven Research", "Research Taste", "Reimplementation"],
+    "tags": [
+      "ML Research",
+      "Goal-driven Research",
+      "Research Taste",
+      "Reimplementation"
+    ],
     "readTime": "18 min read",
     "publishDate": "2020-01-24",
     "sourceName": "John Schulman",
@@ -518,7 +678,12 @@
     "author": "Markus Heinonen",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=markusheinonen.github.io&sz=128",
     "category": "How to Research",
-    "tags": ["ML PhD", "Fundamentals", "Simplification", "Research Cadence"],
+    "tags": [
+      "ML PhD",
+      "Fundamentals",
+      "Simplification",
+      "Research Cadence"
+    ],
     "readTime": "12 min read",
     "publishDate": "2025-01-01",
     "sourceName": "Markus Heinonen",
@@ -534,7 +699,12 @@
     "author": "Stanford Engineering (on Michael Fischbach)",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=engineering.stanford.edu&sz=128",
     "category": "How to Research",
-    "tags": ["Problem Selection", "Decision Trees", "Research Ambition", "Bioengineering"],
+    "tags": [
+      "Problem Selection",
+      "Decision Trees",
+      "Research Ambition",
+      "Bioengineering"
+    ],
     "readTime": "6 min read",
     "publishDate": "2024-10-23",
     "sourceName": "Stanford Engineering",
@@ -550,7 +720,12 @@
     "author": "Eugene Yan",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=eugeneyan.com&sz=128",
     "category": "How to Research",
-    "tags": ["Problem Prioritization", "Applied ML", "Impact Estimation", "Industry Data Science"],
+    "tags": [
+      "Problem Prioritization",
+      "Applied ML",
+      "Impact Estimation",
+      "Industry Data Science"
+    ],
     "readTime": "12 min read",
     "publishDate": "2021-03-21",
     "sourceName": "Eugene Yan",
@@ -566,7 +741,12 @@
     "author": "David Patterson",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=eecs.berkeley.edu&sz=128",
     "category": "How to Research",
-    "tags": ["Career Anti-patterns", "Technology Transfer", "Academic Career", "Computer Systems"],
+    "tags": [
+      "Career Anti-patterns",
+      "Technology Transfer",
+      "Academic Career",
+      "Computer Systems"
+    ],
     "readTime": "15 min read",
     "publishDate": "2001-12-10",
     "sourceName": "UC Berkeley EECS",
@@ -582,7 +762,12 @@
     "author": "Matt Might",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=matt.might.net&sz=128",
     "category": "How to Research",
-    "tags": ["Thesis Proposal", "Committee Management", "PhD Milestones", "Dissertation"],
+    "tags": [
+      "Thesis Proposal",
+      "Committee Management",
+      "PhD Milestones",
+      "Dissertation"
+    ],
     "readTime": "6 min read",
     "publishDate": "2010-01-01",
     "sourceName": "matt.might.net",
@@ -598,7 +783,12 @@
     "author": "Terence Tao",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=terrytao.wordpress.com&sz=128",
     "category": "How to Research",
-    "tags": ["Research Initiative", "Self-Direction", "Career Development", "Mathematics"],
+    "tags": [
+      "Research Initiative",
+      "Self-Direction",
+      "Career Development",
+      "Mathematics"
+    ],
     "readTime": "5 min read",
     "publishDate": "2007-01-01",
     "sourceName": "Terence Tao",
@@ -614,13 +804,39 @@
     "author": "Patrick Kidger",
     "authorAvatar": "https://www.google.com/s2/favicons?domain=kidger.site&sz=128",
     "category": "How to Research",
-    "tags": ["ML PhD", "Technical Fundamentals", "Software Craft", "Skill Checklist"],
+    "tags": [
+      "ML PhD",
+      "Technical Fundamentals",
+      "Software Craft",
+      "Skill Checklist"
+    ],
     "readTime": "15 min read",
     "publishDate": "2023-01-26",
     "sourceName": "Patrick Kidger",
     "url": "https://kidger.site/thoughts/just-know-stuff/",
     "coverImage": "assets/img/covers/real/patrick-kidger-just-know-stuff.png",
     "coverAlt": "Just Know Stuff essay page",
+    "coverFit": "cover"
+  },
+  {
+    "id": "jacob-steinhardt-advice-for-authors",
+    "title": "Advice for Authors",
+    "excerpt": "Distilled from reviewing batches of ICML submissions, Steinhardt's advice concentrates on local writing style: be precise to maximize information content, prefer concrete claims over vague ones, and treat sentence-level clarity as more important than global structure. It is a compact reviewer's checklist rather than a full guide to composing a research paper.",
+    "author": "Jacob Steinhardt",
+    "authorAvatar": "https://www.google.com/s2/favicons?domain=jsteinhardt.stat.berkeley.edu&sz=128",
+    "category": "How to Research",
+    "tags": [
+      "Paper Writing",
+      "Scientific Writing",
+      "Peer Review",
+      "Machine Learning"
+    ],
+    "readTime": "8 min read",
+    "publishDate": "2017-02-28",
+    "sourceName": "Jacob Steinhardt",
+    "url": "https://jsteinhardt.stat.berkeley.edu/blog/advice-for-authors",
+    "coverImage": "assets/img/covers/cover-research-adjudication.svg",
+    "coverAlt": "Thematic research writing and review cover",
     "coverFit": "cover"
   }
 ]
