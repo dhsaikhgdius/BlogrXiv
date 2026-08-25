@@ -96,13 +96,13 @@
 
 ## Efficient AI
 
-- [ ] **A+** · [Continuous Batching from First Principles](https://huggingface.co/blog/continuous_batching) — Hugging Face Engineering · 2025-11-25。从 attention/KV cache 推导 continuous batching、prefill/decode 混排和调度；教学实现未覆盖完整生产容错。
-- [ ] **A+** · [Run High-Performance LLM Inference Kernels from NVIDIA Using FlashInfer](https://developer.nvidia.com/blog/run-high-performance-llm-inference-kernels-from-nvidia-using-flashinfer/) — NVIDIA / University of Washington / CMU et al. · 2025-06-13。系统介绍引擎无关的 attention、GEMM、通信和采样 kernel 栈；性能结论具 NVIDIA/CUDA 硬件针对性。
-- [ ] **A+** · [Training MoEs at Scale with PyTorch](https://pytorch.org/blog/training-moes/) — PyTorch / Databricks · 2024-06-23。拆解 dropless sparse kernels、expert parallel、3D device mesh 与弹性 checkpoint；结果依赖特定集群和软件栈。
-- [ ] **A+** · [A First Comprehensive Study of TurboQuant: Accuracy and Performance](https://vllm.ai/blog/2026-05-11-turboquant) — Red Hat AI / vLLM · 2026-05-11。跨 dense/MoE 与长上下文复现 TurboQuant 的精度和吞吐，报告重要负结果；结论限所测 H100/vLLM 配置。
+- [x] **A+** · [Continuous Batching from First Principles](https://huggingface.co/blog/continuous_batching) — Hugging Face Engineering · 2025-11-25。从 attention/KV cache 推导 continuous batching、prefill/decode 混排和调度；教学实现未覆盖完整生产容错。
+- [x] **A+** · [Run High-Performance LLM Inference Kernels from NVIDIA Using FlashInfer](https://developer.nvidia.com/blog/run-high-performance-llm-inference-kernels-from-nvidia-using-flashinfer/) — NVIDIA / University of Washington / CMU et al. · 2025-06-13。系统介绍引擎无关的 attention、GEMM、通信和采样 kernel 栈；性能结论具 NVIDIA/CUDA 硬件针对性。
+- [x] **A+** · [Training MoEs at Scale with PyTorch](https://pytorch.org/blog/training-moes/) — PyTorch / Databricks · 2024-06-23。拆解 dropless sparse kernels、expert parallel、3D device mesh 与弹性 checkpoint；结果依赖特定集群和软件栈。
+- [x] **A+** · [A First Comprehensive Study of TurboQuant: Accuracy and Performance](https://vllm.ai/blog/2026-05-11-turboquant) — Red Hat AI / vLLM · 2026-05-11。跨 dense/MoE 与长上下文复现 TurboQuant 的精度和吞吐，报告重要负结果；结论限所测 H100/vLLM 配置。
 - [x] **A** · [Kernel Fusion in NVIDIA CUDA: Optimizing Memory Traffic and Launch Overhead](https://developer.nvidia.com/blog/kernel-fusion-in-nvidia-cuda-optimizing-memory-traffic-and-launch-overhead/) — NVIDIA / Daniel Rodriguez · 2026-07-10。用 Nsight 比较手写 CUDA、torch.compile 与显式融合，展示内存流量和 launch overhead 权衡；只是单 GPU 微基准。
 - [x] **A** · [System Performance Optimizations](https://leimao.github.io/article/System-Performance-Optimizations/) — Lei Mao · 2026 · `独立系统文章`
-- [ ] **A+** · [High-Performance LLM Inference](https://modal.com/docs/guide/high-performance-llm-inference) — Modal engineering · 持续维护，2026 审计 · `生产工程指南`
+- [x] **A+** · [High-Performance LLM Inference](https://modal.com/docs/guide/high-performance-llm-inference) — Modal engineering · 持续维护，2026 审计 · `生产工程指南`
 - [x] **A+** · [Achieve State-of-the-Art Inference Latencies with Speculative Decoding](https://modal.com/blog/achieve-sota-specdec) — Charles Frye & Shankha Biswas · 2026 · `生产实测`
 - [x] **A** · [Optimizing LLM Inference with TensorRT-LLM](https://developer.nvidia.com/blog/optimizing-inference-on-llms-with-tensorrt-llm-now-publicly-available/) — NVIDIA Technical Blog
 - [x] **A** · [New KV Cache Reuse Optimizations in TensorRT-LLM](https://developer.nvidia.com/blog/introducing-new-kv-cache-reuse-optimizations-in-nvidia-tensorrt-llm/) — NVIDIA Technical Blog
@@ -137,19 +137,22 @@
 - [x] **A** · [Accelerating LLM Inference with GemLite, TorchAO and SGLang](https://pytorch.org/blog/accelerating-llm-inference/) — **PyTorch / Mobius Labs / SGLang**。以可复现实验展示低比特 kernel、量化抽象、tensor parallel 与 serving engine 的端到端组合。
 - [x] **A+** · [FlashAttention: Fast Transformer Training with Long Sequences](https://hazyresearch.stanford.edu/blog/2023-01-12-flashattention-long-sequences) — Stanford Hazy Research · 2023
 - [x] **A** · [FlashFFTConv: Efficient Convolutions for Long Sequences with Tensor Cores](https://hazyresearch.stanford.edu/blog/2023-11-13-flashfftconv) — Stanford Hazy Research · 2023
-- [ ] **A+** · [ZeRO & DeepSpeed: New system optimizations enable training models with over 100 billion parameters](https://www.microsoft.com/en-us/research/blog/zero-deepspeed-new-system-optimizations-enable-training-models-with-over-100-billion-parameters/) — Microsoft Research · 2020
-- [ ] **A+** · [Introducing PyTorch Fully Sharded Data Parallel (FSDP) API](https://pytorch.org/blog/introducing-pytorch-fully-sharded-data-parallel-api/) — PyTorch · 2022
+- [x] **A+** · [ZeRO & DeepSpeed: New system optimizations enable training models with over 100 billion parameters](https://www.microsoft.com/en-us/research/blog/zero-deepspeed-new-system-optimizations-enable-training-models-with-over-100-billion-parameters/) — Microsoft Research · 2020
+- [x] **A+** · [Introducing PyTorch Fully Sharded Data Parallel (FSDP) API](https://pytorch.org/blog/introducing-pytorch-fully-sharded-data-parallel-api/) — PyTorch · 2022
 - [x] **A** · [Looking back at speculative decoding](https://research.google/blog/looking-back-at-speculative-decoding/) — Google Research · 2024
 - [x] **A+** · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](https://hazyresearch.stanford.edu/blog/2023-07-17-flash2) — Stanford Hazy Research · 2023
 - [x] **A+** · [GSPMD: General and Scalable Parallelization for ML Computation Graphs](https://research.google/blog/general-and-scalable-parallelization-for-neural-networks/) — Google Research · 2021
 - [x] **A+** · [Scaling Language Model Training to a Trillion Parameters Using Megatron](https://developer.nvidia.com/blog/scaling-language-model-training-to-a-trillion-parameters-using-megatron/) — NVIDIA Technical Blog · 2021
+- [x] **A+** · [Large Transformer Model Inference Optimization](https://lilianweng.github.io/posts/2023-01-10-inference-optimization/) — Lilian Weng · 2023-01-10。系统梳理蒸馏、量化、剪枝、稀疏与 MoE 等推理优化路线，是该领域的经典综述。
+- [x] **A+** · [How Continuous Batching Enables 23x Throughput in LLM Inference While Reducing p50 Latency](https://www.anyscale.com/blog/continuous-batching-llm-inference) — Anyscale · 2023-06-22。用受控基准解释 iteration-level scheduling，并量化 continuous batching + PagedAttention 的吞吐收益。
+- [x] **A+** · [Optimizing AI Inference at Character.AI](https://research.character.ai/optimizing-inference/) — Character.AI · 2024-06-20。MQA、混合注意力窗口、跨层 KV 共享与 int8 QAT 组合，把 KV cache 压缩 20 倍以上并将服务成本降低 33 倍。
 
 ## Trustworthy AI
 
-- [ ] **A+** · [Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/) — Anthropic Fellows / Anthropic / MATS / UK AISI · 2026-07-13。跨实验室和模型研究四类 agentic misalignment 并开放 Petri transcripts；模拟红队频率不能解释为真实事故率。
-- [ ] **A+** · [Cheating behaviour in frontier model evaluations](https://www.aisi.gov.uk/blog/cheating-behaviour-in-frontier-model-evaluations) — UK AI Security Institute · 2026-07-21。以 LLM monitor 和人工复核分析 cyber eval 轨迹，证明 CoT/自报不足以发现越界行为；行为标签不等于欺骗意图。
+- [x] **A+** · [Agentic Misalignment in Summer 2026](https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/) — Anthropic Fellows / Anthropic / MATS / UK AISI · 2026-07-13。跨实验室和模型研究四类 agentic misalignment 并开放 Petri transcripts；模拟红队频率不能解释为真实事故率。
+- [x] **A+** · [Cheating behaviour in frontier model evaluations](https://www.aisi.gov.uk/blog/cheating-behaviour-in-frontier-model-evaluations) — UK AI Security Institute · 2026-07-21。以 LLM monitor 和人工复核分析 cyber eval 轨迹，证明 CoT/自报不足以发现越界行为；行为标签不等于欺骗意图。
 - [x] **A+** · [How our new Control Red Team is stress-testing frontier monitors](https://www.aisi.gov.uk/blog/how-our-new-control-red-team-is-stress-testing-frontier-monitors) — UK AISI Control Red Team · 2026-07-23。对前沿实验室内部监控器做红队和进化搜索；属早期压力测试，优化器反馈权限高于常见真实攻击者。
-- [ ] **A+** · [Introducing LinuxArena](https://blog.redwoodresearch.org/p/introducing-linuxarena) — Redwood Research · 2026 · `开放安全环境`
+- [x] **A+** · [Introducing LinuxArena](https://blog.redwoodresearch.org/p/introducing-linuxarena) — Redwood Research · 2026 · `开放安全环境`
 - [x] **A** · [Prioritizing Threats for AI Control](https://blog.redwoodresearch.org/p/prioritizing-threats-for-ai-control) — Ryan Greenblatt · 2025 · `研究者威胁模型`
 - [x] **A** · [Strengthening Our Frontier Safety Framework](https://deepmind.google/blog/strengthening-our-frontier-safety-framework/) — Google DeepMind
 - [x] **A** · [An Early Warning System for Novel AI Risks](https://deepmind.google/blog/an-early-warning-system-for-novel-ai-risks/) — Google DeepMind
@@ -169,11 +172,14 @@
 - [x] **A** · [How Undesired Goals Can Arise with Correct Rewards](https://deepmind.google/blog/how-undesired-goals-can-arise-with-correct-rewards/) — **Google DeepMind**。清楚区分 specification gaming 与 goal misgeneralisation，并给出 RL 和 LLM 的具体例子。
 - [x] **A** · [Deliberative Alignment: Reasoning Enables Safer Language Models](https://openai.com/index/deliberative-alignment/) — **OpenAI**。直接教授安全规范，并通过 SFT 与 RL 训练模型在推理时按规范审议，包含方法和安全评测。
 - [x] **A** · [Simple probes can catch sleeper agents](https://www.anthropic.com/research/probes-catch-sleeper-agents) — Anthropic · 2024
+- [x] **A+** · [Weak-to-Strong Generalization](https://openai.com/index/weak-to-strong-generalization/) — OpenAI Superalignment · 2023-12-14。用 GPT-2 级弱监督者对齐 GPT-4，验证 weak-to-strong 泛化作为对齐超人类模型的可实验路径。
+- [x] **A+** · [Core Views on AI Safety: When, Why, What, and How](https://www.anthropic.com/news/core-views-on-ai-safety) — Anthropic · 2023-03-08。以乐观/中性/悲观三种情景组合安全研究组合，是理解 Anthropic 安全策略的基石文章。
+- [x] **A+** · [Detecting Misbehavior in Frontier Reasoning Models](https://openai.com/index/chain-of-thought-monitoring/) — OpenAI · 2025-03-10。展示 CoT 监控可捕捉 reward hacking，且直接优化 CoT 观感会教模型隐藏意图而非停止违规。
 
 ## Research Craft
 
-- [ ] **A+** · [More compute, more capability: Why AI agent evaluations need to account for test-time compute](https://www.aisi.gov.uk/blog/more-compute-more-capability-why-ai-agent-evals-need-to-account-for-test-time-compute) — UK AI Security Institute · 2026-07-02。证明 agent 能力应报告随 test-time compute 变化的曲线而非单点；部分任务出现平台期且人类时间映射方差大。
-- [ ] **A+** · [A pipeline for transcript analysis using Inspect Scout](https://www.aisi.gov.uk/blog/a-pipeline-for-transcript-analysis-using-inspect-scout) — UK AISI / Meridian Labs · 2026-02-25。给出轨迹采样、scanner、人工验证和分析的七步可复现流程；scanner 效度仍依赖标注和 ground truth。
+- [x] **A+** · [More compute, more capability: Why AI agent evaluations need to account for test-time compute](https://www.aisi.gov.uk/blog/more-compute-more-capability-why-ai-agent-evals-need-to-account-for-test-time-compute) — UK AI Security Institute · 2026-07-02。证明 agent 能力应报告随 test-time compute 变化的曲线而非单点；部分任务出现平台期且人类时间映射方差大。
+- [x] **A+** · [A pipeline for transcript analysis using Inspect Scout](https://www.aisi.gov.uk/blog/a-pipeline-for-transcript-analysis-using-inspect-scout) — UK AISI / Meridian Labs · 2026-02-25。给出轨迹采样、scanner、人工验证和分析的七步可复现流程；scanner 效度仍依赖标注和 ground truth。
 - [x] **A+** · [We are Changing our Developer Productivity Experiment Design](https://metr.org/blog/2026-02-24-uplift-update/) — METR · 2026-02-24。公开诊断混杂并重做随机实验，是发现方法问题后修正研究的优秀案例；尚非最终因果效应报告。
 - [x] **A** · [5 – Reproducibility](https://blog.ml.cmu.edu/2020/08/31/5-reproducibility/) — Zihao Ding, Aniketh Reddy, Aparna Joshi / ML@CMU · 2020-08-31。区分多类 reproducibility 并转化为数据、代码、随机种子、方差和运行次数检查表；少量工具示例已老化。
 - [ ] **A+** · [A Field Guide to Rapidly Improving AI Products](https://hamel.dev/blog/posts/field-guide/) — Hamel Husain · 2025 · `独立实践总结`
@@ -251,7 +257,9 @@
 - [x] **A** · [Introducing Robostral Navigate](https://mistral.ai/news/robostral-navigate/) — **Mistral AI**。8B 单 RGB 相机导航模型，披露指点式动作表示、240 万轨迹、prefix-caching 和在线 RL，技术信息足够进入 Frontier。
 - [x] **A** · [Can AI Scaling Continue Through 2030?](https://epoch.ai/publications/can-ai-scaling-continue-through-2030) — **Epoch AI**。定量分析电力、芯片制造、数据和训练延迟四类约束，是研究规模扩展可行性的高信息密度报告。
 - [x] **A** · [Mistral OCR 4: SOTA OCR for Document Intelligence](https://mistral.ai/news/ocr-4/) — Mistral AI · 2026
-- [ ] **A+** · [Introducing Gemini 3.5 Flash Cyber](https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/) — Google DeepMind · 2026
+- [x] **A+** · [Introducing Gemini 3.5 Flash Cyber](https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/) — Google DeepMind · 2026
+- [x] **A+** · [FunSearch: Making New Discoveries in Mathematical Sciences Using Large Language Models](https://deepmind.google/discover/blog/funsearch-making-new-discoveries-in-mathematical-sciences-using-large-language-models/) — Google DeepMind · 2023-12-14。LLM 与自动评估器组成进化回路，在 cap set 问题上取得首个 LLM 驱动的数学新构造。
+- [x] **A+** · [The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery](https://sakana.ai/ai-scientist/) — Sakana AI · 2024-08-13。端到端自动化想法生成、实验、写作与自动评审，并坦率讨论失败模式，是研究自动化的标志性文章。
 
 ## How to Research
 
