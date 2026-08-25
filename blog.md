@@ -176,8 +176,8 @@
 - [ ] **A+** · [A pipeline for transcript analysis using Inspect Scout](https://www.aisi.gov.uk/blog/a-pipeline-for-transcript-analysis-using-inspect-scout) — UK AISI / Meridian Labs · 2026-02-25。给出轨迹采样、scanner、人工验证和分析的七步可复现流程；scanner 效度仍依赖标注和 ground truth。
 - [x] **A+** · [We are Changing our Developer Productivity Experiment Design](https://metr.org/blog/2026-02-24-uplift-update/) — METR · 2026-02-24。公开诊断混杂并重做随机实验，是发现方法问题后修正研究的优秀案例；尚非最终因果效应报告。
 - [x] **A** · [5 – Reproducibility](https://blog.ml.cmu.edu/2020/08/31/5-reproducibility/) — Zihao Ding, Aniketh Reddy, Aparna Joshi / ML@CMU · 2020-08-31。区分多类 reproducibility 并转化为数据、代码、随机种子、方差和运行次数检查表；少量工具示例已老化。
-- [ ] **A+** · [A Field Guide to Rapidly Improving AI Products](https://hamel.dev/blog/posts/field-guide/) — Hamel Husain · 2025 · `独立实践总结`
-- [ ] **A+** · [Evaluating the Effectiveness of LLM-Evaluators (aka LLM-as-Judge)](https://eugeneyan.com/writing/llm-evaluators/) — Eugene Yan · 2024 · `独立研究综述`
+- [x] **A+** · [A Field Guide to Rapidly Improving AI Products](https://hamel.dev/blog/posts/field-guide/) — Hamel Husain · 2025 · `独立实践总结`
+- [x] **A+** · [Evaluating the Effectiveness of LLM-Evaluators (aka LLM-as-Judge)](https://eugeneyan.com/writing/llm-evaluators/) — Eugene Yan · 2024 · `独立研究综述`
 - [x] **A** · [“It’s Hard to Eval” Is a Product Smell](https://hamel.dev/blog/posts/eval-smell/) — Hamel Husain · 2026-06-29 · `最新产品方法论`
 - [x] **A** · [Deep Learning Tuning Playbook](https://developers.google.com/machine-learning/guides/deep-learning-tuning-playbook) — Google
 - [x] **A** · [Good Data Analysis](https://developers.google.com/machine-learning/guides/good-data-analysis) — Google
@@ -194,14 +194,14 @@
 - [x] **A** · [A Practical Guide to Maintaining Machine Learning in Production](https://eugeneyan.com/writing/practical-guide-to-maintaining-machine-learning/) — **Eugene Yan**。从数据污染、模型再训练、反馈回路、工程复杂度和团队结构给出长期维护清单。
 - [x] **A** · [How evals drive the next chapter in AI](https://openai.com/index/evals-drive-next-chapter-of-ai/) — OpenAI · 2025
 - [x] **A** · [What Data-Centric AI Is Not](https://hazyresearch.stanford.edu/what-data-centric-ai-is-not) — Stanford Hazy Research · 2021
-- [ ] **A+** · [Introducing the Model Card Toolkit for Easier Model Transparency Reporting](https://research.google/blog/introducing-the-model-card-toolkit-for-easier-model-transparency-reporting/) — Google Research · 2020
-- [ ] **A+** · [Data-centric ML benchmarking: Announcing DataPerf’s 2023 challenges](https://research.google/blog/data-centric-ml-benchmarking-announcing-dataperfs-2023-challenges/) — Google Research · 2023
+- [x] **A+** · [Introducing the Model Card Toolkit for Easier Model Transparency Reporting](https://research.google/blog/introducing-the-model-card-toolkit-for-easier-model-transparency-reporting/) — Google Research · 2020
+- [x] **A+** · [Data-centric ML benchmarking: Announcing DataPerf’s 2023 challenges](https://research.google/blog/data-centric-ml-benchmarking-announcing-dataperfs-2023-challenges/) — Google Research · 2023
 
 ## Frontier
 
 - [ ] **A** · [IBM Research — Artificial Intelligence](https://research.ibm.com/blog?tag=artificial-intelligence) — IBM Research · 持续更新；核验至 2026-07-26。兼顾基础模型、推理、AI for Science、芯片和企业 AI 的长期索引；纳入单篇时仍需筛除营销稿。
 - [x] **A** · [When Will Language Models Be Good Enough?](https://huggingface.co/blog/craffel/when-will-language-models-be-good-enough) — Colin Raffel · 2026-07-16 · `资深研究者观点`
-- [ ] **A+** · [J-Space: Yet Another LLM Mind Reader?](https://huggingface.co/blog/dlouapre/j-space) — David Louapre · 2026-07-13 · `社区复现与解释`
+- [x] **A+** · [J-Space: Yet Another LLM Mind Reader?](https://huggingface.co/blog/dlouapre/j-space) — David Louapre · 2026-07-13 · `社区复现与解释`
 - [x] **A** · [Two Years of Local AI on a Laptop: When Open Models Outpaced Moore's Law](https://huggingface.co/blog/mishig/local-moores-law) — Mishig Davaadorj · 2026 · `社区可复核趋势分析`
 - [ ] **A** · [Microsoft Research AI Frontiers](https://www.microsoft.com/en-us/research/lab/ai-frontiers/) — United States
 - [ ] **A** · [MIT CSAIL News](https://www.csail.mit.edu/news) — United States
@@ -255,15 +255,15 @@
 
 ## How to Research
 
-- [ ] **A+** · [How to Do Great Research](https://noise-lab.net/research-course/) — Nick Feamster, Alex Gray / Georgia Tech · 2006–2010。完整 CS 博士研究课程，覆盖想法生成、批判、mini-project 与可发表主项目；未涵盖现代 LLM 实验室特殊工作流。
+- [x] **A+** · [How to Do Great Research](https://noise-lab.net/research-course/) — Nick Feamster, Alex Gray / Georgia Tech · 2006–2010。完整 CS 博士研究课程，覆盖想法生成、批判、mini-project 与可发表主项目；未涵盖现代 LLM 实验室特殊工作流。
 - [x] **A+** · [How to do Research At the MIT AI Lab](https://dspace.mit.edu/bitstream/handle/1721.1/41487/AI_WP_316.pdf) — MIT AI Lab graduate researchers / David Chapman · 1988-09。第一手研究学徒手册，覆盖阅读、写作、编程、选题、导师与情绪管理；工具和文化背景显著过时。
 - [x] **A** · [Some Modest Advice for Graduate Students](https://stearnslab.yale.edu/modest-advice) — Stephen C. Stearns / Yale · 1987。提供研究生风险管理、替代路线、主动沟通与职业选择框架；是尖锐个人经验，不是普适制度建议。
 - [x] **A** · [Learn and relearn your field](https://terrytao.wordpress.com/career-advice/learn-and-relearn-your-field/) — Terence Tao · 2007。给出替代证明、假设检查、模型例子、类比、引文追踪和解释性笔记清单；高度数学导向。
 - [x] **A** · [On the importance of partial progress](https://terrytao.wordpress.com/career-advice/on-the-importance-of-partial-progress/) — Terence Tao · 2012-07-17。把失败方法和 toy cases 视为可复用部分结果，帮助定位剩余障碍；主要依据数学问题求解案例。
 - [x] **A** · [So long, and thanks for the Ph.D.!: A Graduate School Survival Guide](https://www.cs.unc.edu/~azuma/hitch4.html) — Ronald T. Azuma / UNC Computer Science · 1997; 2019 修订。长篇 CS 指南，讨论主动性、韧性、导师、资源、每日进展和职业路径；具有明显美国 CS 情境。
-- [ ] **A+** · [Research as a Stochastic Decision Process](https://cs.stanford.edu/~jsteinhardt/ResearchasaStochasticDecisionProcess.html) — Jacob Steinhardt · 2018 · `研究者第一方方法`
+- [x] **A+** · [Research as a Stochastic Decision Process](https://cs.stanford.edu/~jsteinhardt/ResearchasaStochasticDecisionProcess.html) — Jacob Steinhardt · 2018 · `研究者第一方方法`
 - [x] **A+** · [Film Study for Research](https://jsteinhardt.stat.berkeley.edu/blog/film-study) — Jacob Steinhardt · 2021 · `研究训练方法`
-- [ ] **A+** · [Replication Issues in AI Research](https://dennybritz.com/posts/ai-replication-issues/) — Denny Britz · 2020 · `独立研究反思`
+- [x] **A+** · [Replication Issues in AI Research](https://dennybritz.com/posts/ai-replication-issues/) — Denny Britz · 2020 · `独立研究反思`
 - [x] **A** · [The Illustrated Guide to a Ph.D.](https://matt.might.net/articles/phd-school-in-pictures/) — Matt Might
 - [x] **A** · [Research Taste Exercises](https://colah.github.io/notes/taste/) — Christopher Olah
 - [x] **A** · [Cultivating Your Research Taste](https://practicespace.substack.com/p/cultivating-your-research-taste-fbd) — Practice Space
@@ -299,11 +299,18 @@
 - [x] **A+** · [You and Your Research](https://www.cs.virginia.edu/~robins/YouAndYourResearch.html) — Richard Hamming · 1986
 - [x] **A+** · [Principles of Effective Research](https://michaelnielsen.org/blog/principles-of-effective-research/) — Michael Nielsen · 2004
 - [x] **A** · [How to Have a Bad Career in Research/Academia](https://people.eecs.berkeley.edu/~pattrsn/talks/research.html) — David Patterson / UC Berkeley · 1997
-- [ ] **A+** · [Becoming an AI Researcher: Practical Advice for Graduate Students](https://www.phd-in-ai.com/) — Stefano V. Albrecht · 2026
+- [x] **A+** · [Becoming an AI Researcher: Practical Advice for Graduate Students](https://www.phd-in-ai.com/) — Stefano V. Albrecht · 2026
 - [x] **A** · [A Ph.D. thesis proposal is a contract](https://matt.might.net/articles/advice-for-phd-thesis-proposals/) — Matt Might · 2010s
 - [x] **A+** · [How to Read a Paper](https://svr-sk818-web.cl.cam.ac.uk/keshav/publications/htrap.html) — S. Keshav / University of Cambridge · 2007
-- [ ] **A+** · [How to Write a Great Research Paper](https://www.microsoft.com/en-us/research/video/how-to-write-a-great-research-paper-4/) — Simon Peyton Jones / Microsoft Research · 2016
+- [x] **A+** · [How to Write a Great Research Paper](https://www.microsoft.com/en-us/research/video/how-to-write-a-great-research-paper-4/) — Simon Peyton Jones / Microsoft Research · 2016
 - [x] **A** · [Take the initiative](https://terrytao.wordpress.com/career-advice/take-the-initiative/) — Terence Tao · 2007
+- [x] **A+** · [How to Do Great Work](https://www.paulgraham.com/greatwork.html) — Paul Graham · 2023-07。跨领域合并「做出伟大工作」的通用配方：天赋与好奇心匹配的选题、在前沿看见缺口、由好奇心而非计划驱动；格言式长文，需读者自行映射到本领域。
+- [x] **A+** · [10 Tips for Research and a PhD](https://www.ruder.io/10-tips-for-research-and-a-phd/) — Sebastian Ruder · 2020-05-22。刚完成博士时总结的十条习惯：第一天就开始写作、专注一两个项目、敢于冒险、刻意合作、发布代码与博客等长寿产物；面向 ML/NLP 学生。
+- [x] **A+** · [Machine Learning PhD Applications — Everything You Need to Know](https://timdettmers.com/2018/11/26/phd-applications/) — Tim Dettmers · 2018-11-26。用自己的申请数据拆解 ML 博士录取如何加权论文、推荐信与研究匹配；机制针对 2018 年前后北美项目，但优先级排序仍适用。
+- [x] **A+** · [Cargo Cult Science](https://calteches.library.caltech.edu/51/2/CargoCult.htm) — Richard Feynman · 1974-06-14。命名「货物崇拜科学」：具备科学外形却缺乏彻底诚实；Millikan 电子电荷漂移案例是实验者偏差的经典寓言。
+- [x] **A+** · [The Importance of Stupidity in Scientific Research](https://journals.biologists.com/jcs/article/121/11/1771/30038/The-importance-of-stupidity-in-scientific-research) — Martin A. Schwartz / Journal of Cell Science · 2008-06。一页论文式随笔：研究意味着大部分时间处于主动困惑，「高产的愚蠢」是成为科学家的核心心理转变。
+- [x] **A** · [How to Write a Technical Paper](https://homes.cs.washington.edu/~mernst/advice/write-technical-paper.html) — Michael Ernst / University of Washington · 持续更新。观点先行、一段一义、图表设计、命名、回复审稿与反复修订的工作型清单，附真实草稿的前后对照示例。
+- [x] **A+** · [Ten Simple Rules for Structuring Papers](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005619) — Brett Mensh, Konrad Kording / PLOS Computational Biology · 2017-09-28。围绕单一核心贡献的十条结构规则：从句子到全文应用 context-content-conclusion，为时间受限的读者写作。
 
 ## 入库顺序
 
