@@ -256,54 +256,54 @@
 ## How to Research
 
 - [ ] **A+** · [How to Do Great Research](https://noise-lab.net/research-course/) — Nick Feamster, Alex Gray / Georgia Tech · 2006–2010。完整 CS 博士研究课程，覆盖想法生成、批判、mini-project 与可发表主项目；未涵盖现代 LLM 实验室特殊工作流。
-- [ ] **A+** · [How to do Research At the MIT AI Lab](https://dspace.mit.edu/bitstream/handle/1721.1/41487/AI_WP_316.pdf) — MIT AI Lab graduate researchers / David Chapman · 1988-09。第一手研究学徒手册，覆盖阅读、写作、编程、选题、导师与情绪管理；工具和文化背景显著过时。
-- [ ] **A** · [Some Modest Advice for Graduate Students](https://stearnslab.yale.edu/modest-advice) — Stephen C. Stearns / Yale · 1987。提供研究生风险管理、替代路线、主动沟通与职业选择框架；是尖锐个人经验，不是普适制度建议。
-- [ ] **A** · [Learn and relearn your field](https://terrytao.wordpress.com/career-advice/learn-and-relearn-your-field/) — Terence Tao · 2007。给出替代证明、假设检查、模型例子、类比、引文追踪和解释性笔记清单；高度数学导向。
-- [ ] **A** · [On the importance of partial progress](https://terrytao.wordpress.com/career-advice/on-the-importance-of-partial-progress/) — Terence Tao · 2012-07-17。把失败方法和 toy cases 视为可复用部分结果，帮助定位剩余障碍；主要依据数学问题求解案例。
-- [ ] **A** · [So long, and thanks for the Ph.D.!: A Graduate School Survival Guide](https://www.cs.unc.edu/~azuma/hitch4.html) — Ronald T. Azuma / UNC Computer Science · 1997; 2019 修订。长篇 CS 指南，讨论主动性、韧性、导师、资源、每日进展和职业路径；具有明显美国 CS 情境。
+- [x] **A+** · [How to do Research At the MIT AI Lab](https://dspace.mit.edu/bitstream/handle/1721.1/41487/AI_WP_316.pdf) — MIT AI Lab graduate researchers / David Chapman · 1988-09。第一手研究学徒手册，覆盖阅读、写作、编程、选题、导师与情绪管理；工具和文化背景显著过时。
+- [x] **A** · [Some Modest Advice for Graduate Students](https://stearnslab.yale.edu/modest-advice) — Stephen C. Stearns / Yale · 1987。提供研究生风险管理、替代路线、主动沟通与职业选择框架；是尖锐个人经验，不是普适制度建议。
+- [x] **A** · [Learn and relearn your field](https://terrytao.wordpress.com/career-advice/learn-and-relearn-your-field/) — Terence Tao · 2007。给出替代证明、假设检查、模型例子、类比、引文追踪和解释性笔记清单；高度数学导向。
+- [x] **A** · [On the importance of partial progress](https://terrytao.wordpress.com/career-advice/on-the-importance-of-partial-progress/) — Terence Tao · 2012-07-17。把失败方法和 toy cases 视为可复用部分结果，帮助定位剩余障碍；主要依据数学问题求解案例。
+- [x] **A** · [So long, and thanks for the Ph.D.!: A Graduate School Survival Guide](https://www.cs.unc.edu/~azuma/hitch4.html) — Ronald T. Azuma / UNC Computer Science · 1997; 2019 修订。长篇 CS 指南，讨论主动性、韧性、导师、资源、每日进展和职业路径；具有明显美国 CS 情境。
 - [ ] **A+** · [Research as a Stochastic Decision Process](https://cs.stanford.edu/~jsteinhardt/ResearchasaStochasticDecisionProcess.html) — Jacob Steinhardt · 2018 · `研究者第一方方法`
-- [ ] **A+** · [Film Study for Research](https://jsteinhardt.stat.berkeley.edu/blog/film-study) — Jacob Steinhardt · 2021 · `研究训练方法`
+- [x] **A+** · [Film Study for Research](https://jsteinhardt.stat.berkeley.edu/blog/film-study) — Jacob Steinhardt · 2021 · `研究训练方法`
 - [ ] **A+** · [Replication Issues in AI Research](https://dennybritz.com/posts/ai-replication-issues/) — Denny Britz · 2020 · `独立研究反思`
-- [ ] **A** · [The Illustrated Guide to a Ph.D.](https://matt.might.net/articles/phd-school-in-pictures/) — Matt Might
-- [ ] **A** · [Research Taste Exercises](https://colah.github.io/notes/taste/) — Christopher Olah
-- [ ] **A** · [Cultivating Your Research Taste](https://practicespace.substack.com/p/cultivating-your-research-taste-fbd) — Practice Space
-- [ ] **A** · [Picking a Research Topic](https://blog.regehr.org/archives/46) — John Regehr
-- [ ] **A** · [How to Find Research Problems](https://www.cs.jhu.edu/~jason/advice/how-to-find-research-problems.html) — Jason Eisner
+- [x] **A** · [The Illustrated Guide to a Ph.D.](https://matt.might.net/articles/phd-school-in-pictures/) — Matt Might
+- [x] **A** · [Research Taste Exercises](https://colah.github.io/notes/taste/) — Christopher Olah
+- [x] **A** · [Cultivating Your Research Taste](https://practicespace.substack.com/p/cultivating-your-research-taste-fbd) — Practice Space
+- [x] **A** · [Picking a Research Topic](https://blog.regehr.org/archives/46) — John Regehr
+- [x] **A** · [How to Find Research Problems](https://www.cs.jhu.edu/~jason/advice/how-to-find-research-problems.html) — Jason Eisner
 - [ ] **A** · [Advice on Research and Writing](https://www.cs.cmu.edu/~eginting/how-to.html) — CMU
-- [ ] **A** · [Advice for Graduate Students](https://www.cs.cmu.edu/~nasmith/advice.html) — Noah A. Smith
-- [ ] **A** · [How to Write a Great Research Proposal](https://simon.peytonjones.org/assets/pdfs/great-research-proposal.pdf) — Simon Peyton Jones
-- [ ] **A** · [How to Give a Great Research Talk](https://simon.peytonjones.org/assets/pdfs/giving-a-talk.pdf) — Simon Peyton Jones
-- [ ] **A** · [Computer Science Graduate Job Guide](https://csguides.github.io/grad-job-guide/) — CS Guides
-- [ ] **A** · [How to Do Research](https://visionbook.mit.edu/how_to_do_research.html) — MIT VisionBook
-- [ ] **A** · [How to Write Papers](https://visionbook.mit.edu/how_to_write_papers.html) — MIT VisionBook
-- [ ] **A** · [How to Give Talks](https://visionbook.mit.edu/how_to_give_talks.html) — MIT VisionBook
-- [ ] **A** · [PhD Advising Guide](https://www.cs.stanford.edu/phd-milestones-progress-guidelines/phd-advising-guide) — Stanford Computer Science
+- [x] **A** · [Advice for Graduate Students](https://www.cs.cmu.edu/~nasmith/advice.html) — Noah A. Smith
+- [x] **A** · [How to Write a Great Research Proposal](https://simon.peytonjones.org/assets/pdfs/great-research-proposal.pdf) — Simon Peyton Jones
+- [x] **A** · [How to Give a Great Research Talk](https://simon.peytonjones.org/assets/pdfs/giving-a-talk.pdf) — Simon Peyton Jones
+- [x] **A** · [Computer Science Graduate Job Guide](https://csguides.github.io/grad-job-guide/) — CS Guides
+- [x] **A** · [How to Do Research](https://visionbook.mit.edu/how_to_do_research.html) — MIT VisionBook
+- [x] **A** · [How to Write Papers](https://visionbook.mit.edu/how_to_write_papers.html) — MIT VisionBook
+- [x] **A** · [How to Give Talks](https://visionbook.mit.edu/how_to_give_talks.html) — MIT VisionBook
+- [x] **A** · [PhD Advising Guide](https://www.cs.stanford.edu/phd-milestones-progress-guidelines/phd-advising-guide) — Stanford Computer Science
 - [ ] **A** · [Doctoral Advising Resources](https://www.cs.cmu.edu/education/phd/doctoral-advising/resources) — Carnegie Mellon University
 - [ ] **A** · [Advice on Grad School and Research](https://www.cs.cmu.edu/~jasonh/advice.html) — Jason Hong / Carnegie Mellon University
 - [ ] **A** · [Collected Advice on Research, Writing, and Speaking](https://www.cs.cmu.edu/~dpwu/knowhow.html) — Carnegie Mellon University
-- [ ] **A** · [Applying to Ph.D. Programs in Computer Science](https://www.cs.cmu.edu/~harchol/gradschooltalk.pdf) — Mor Harchol-Balter / Carnegie Mellon University
-- [ ] **A** · [Choosing Your Research Advisor](https://www.cs.umd.edu/grad/choosing-your-advisor) — University of Maryland Computer Science
-- [ ] **A** · [Practicing AI Research](https://www.jasonwei.net/blog/practicing-ai-research) — jasonwei.net
+- [x] **A** · [Applying to Ph.D. Programs in Computer Science](https://www.cs.cmu.edu/~harchol/gradschooltalk.pdf) — Mor Harchol-Balter / Carnegie Mellon University
+- [x] **A** · [Choosing Your Research Advisor](https://www.cs.umd.edu/grad/choosing-your-advisor) — University of Maryland Computer Science
+- [x] **A** · [Practicing AI Research](https://www.jasonwei.net/blog/practicing-ai-research) — jasonwei.net
 - [ ] **A** · [Writing a Good Scientific Paper](https://is.mpg.de/ps/news/writing-a-good-scientific-paper) — is.mpg.de
-- [ ] **A** · [Templates for Machine Learning Research Papers](https://neelguha.github.io/blog/2026/templates/) — neelguha.github.io
-- [ ] **A** · [The Google Brain Team’s Approach to Research](https://research.google/blog/the-google-brain-teams-approach-to-research/) — research.google
-- [ ] **A** · [How to Make Your First Accomplishment in the NLP Field](https://www.microsoft.com/en-us/research/articles/make-first-accomplishment-nlp-field/) — microsoft.com
-- [ ] **A** · [Research Debt](https://distill.pub/2017/research-debt/) — distill.pub
-- [ ] **A** · [Communicating with Interactive Articles](https://distill.pub/2020/communicating-with-interactive-articles/) — distill.pub
+- [x] **A** · [Templates for Machine Learning Research Papers](https://neelguha.github.io/blog/2026/templates/) — neelguha.github.io
+- [x] **A** · [The Google Brain Team’s Approach to Research](https://research.google/blog/the-google-brain-teams-approach-to-research/) — research.google
+- [x] **A** · [How to Make Your First Accomplishment in the NLP Field](https://www.microsoft.com/en-us/research/articles/make-first-accomplishment-nlp-field/) — microsoft.com
+- [x] **A** · [Research Debt](https://distill.pub/2017/research-debt/) — distill.pub
+- [x] **A** · [Communicating with Interactive Articles](https://distill.pub/2020/communicating-with-interactive-articles/) — distill.pub
 - [ ] **A** · [How to Create a Distill Article](https://distill.pub/guide/) — distill.pub
-- [ ] **A** · [A Survival Guide to a PhD](https://karpathy.github.io/2016/09/07/phd/) — **Andrej Karpathy**。覆盖是否读博、导师、选题、研究外循环、写论文、演讲与心理管理，且针对 CS / ML / CV 研究。
-- [ ] **A** · [An Opinionated Guide to ML Research](http://joschu.net/blog/opinionated-guide-ml-research.html) — **John Schulman**。系统讨论研究品味、目标驱动与想法驱动、增量进展、研究笔记、时间分配和复现练习。原站 HTTP 可访问，HTTPS 探测不稳定，入库时建议保留链接健康监控。
-- [ ] **A** · [Advice for Machine Learning PhD Students](https://markusheinonen.github.io/advice.html) — **Markus Heinonen / Aalto University**。从理解、表达、实现三项基本功出发，强调简化问题、迭代和博士阶段的研究节奏。
-- [ ] **A** · [How to Pick—and Solve—the Next Great Problem](https://engineering.stanford.edu/news/how-pick-and-solve-next-great-problem) — **Stanford Engineering / Michael Fischbach**。提供系统化选题与 decision tree 框架，适合补“研究品味如何落成具体决策”。
-- [ ] **A** · [Choosing Problems in Data Science and Machine Learning](https://eugeneyan.com/writing/how-to-choose-problems/) — **Eugene Yan**。把影响范围、严重性、成本收益、能力与学习价值转成可执行的选题和优先级框架。
-- [ ] **A+** · [You and Your Research](https://www.cs.virginia.edu/~robins/YouAndYourResearch.html) — Richard Hamming · 1986
-- [ ] **A+** · [Principles of Effective Research](https://michaelnielsen.org/blog/principles-of-effective-research/) — Michael Nielsen · 2004
-- [ ] **A** · [How to Have a Bad Career in Research/Academia](https://people.eecs.berkeley.edu/~pattrsn/talks/research.html) — David Patterson / UC Berkeley · 1997
+- [x] **A** · [A Survival Guide to a PhD](https://karpathy.github.io/2016/09/07/phd/) — **Andrej Karpathy**。覆盖是否读博、导师、选题、研究外循环、写论文、演讲与心理管理，且针对 CS / ML / CV 研究。
+- [x] **A** · [An Opinionated Guide to ML Research](http://joschu.net/blog/opinionated-guide-ml-research.html) — **John Schulman**。系统讨论研究品味、目标驱动与想法驱动、增量进展、研究笔记、时间分配和复现练习。原站 HTTP 可访问，HTTPS 探测不稳定，入库时建议保留链接健康监控。
+- [x] **A** · [Advice for Machine Learning PhD Students](https://markusheinonen.github.io/advice.html) — **Markus Heinonen / Aalto University**。从理解、表达、实现三项基本功出发，强调简化问题、迭代和博士阶段的研究节奏。
+- [x] **A** · [How to Pick—and Solve—the Next Great Problem](https://engineering.stanford.edu/news/how-pick-and-solve-next-great-problem) — **Stanford Engineering / Michael Fischbach**。提供系统化选题与 decision tree 框架，适合补“研究品味如何落成具体决策”。
+- [x] **A** · [Choosing Problems in Data Science and Machine Learning](https://eugeneyan.com/writing/how-to-choose-problems/) — **Eugene Yan**。把影响范围、严重性、成本收益、能力与学习价值转成可执行的选题和优先级框架。
+- [x] **A+** · [You and Your Research](https://www.cs.virginia.edu/~robins/YouAndYourResearch.html) — Richard Hamming · 1986
+- [x] **A+** · [Principles of Effective Research](https://michaelnielsen.org/blog/principles-of-effective-research/) — Michael Nielsen · 2004
+- [x] **A** · [How to Have a Bad Career in Research/Academia](https://people.eecs.berkeley.edu/~pattrsn/talks/research.html) — David Patterson / UC Berkeley · 1997
 - [ ] **A+** · [Becoming an AI Researcher: Practical Advice for Graduate Students](https://www.phd-in-ai.com/) — Stefano V. Albrecht · 2026
-- [ ] **A** · [A Ph.D. thesis proposal is a contract](https://matt.might.net/articles/advice-for-phd-thesis-proposals/) — Matt Might · 2010s
-- [ ] **A+** · [How to Read a Paper](https://svr-sk818-web.cl.cam.ac.uk/keshav/publications/htrap.html) — S. Keshav / University of Cambridge · 2007
+- [x] **A** · [A Ph.D. thesis proposal is a contract](https://matt.might.net/articles/advice-for-phd-thesis-proposals/) — Matt Might · 2010s
+- [x] **A+** · [How to Read a Paper](https://svr-sk818-web.cl.cam.ac.uk/keshav/publications/htrap.html) — S. Keshav / University of Cambridge · 2007
 - [ ] **A+** · [How to Write a Great Research Paper](https://www.microsoft.com/en-us/research/video/how-to-write-a-great-research-paper-4/) — Simon Peyton Jones / Microsoft Research · 2016
-- [ ] **A** · [Take the initiative](https://terrytao.wordpress.com/career-advice/take-the-initiative/) — Terence Tao · 2007
+- [x] **A** · [Take the initiative](https://terrytao.wordpress.com/career-advice/take-the-initiative/) — Terence Tao · 2007
 
 ## 入库顺序
 
