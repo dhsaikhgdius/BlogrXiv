@@ -372,6 +372,16 @@ class BloggersPage {
                 qualityRank: 7
             },
             {
+                name: 'Jason Wei',
+                institution: 'OpenAI / former Google Brain',
+                homepage: 'https://www.jasonwei.net/',
+                avatar: 'https://www.google.com/s2/favicons?domain=jasonwei.net&sz=128',
+                matches: ['Jason Wei'],
+                specialty: 'How to Research',
+                focus: ['AI research practice', 'chain-of-thought', 'reasoning models'],
+                qualityRank: 8
+            },
+            {
                 name: 'Matt Might',
                 institution: 'University of Alabama at Birmingham',
                 homepage: 'https://matt.might.net/',
