@@ -210,6 +210,126 @@ class BloggersPage {
                 specialty: 'Efficient AI',
                 focus: ['optimization', 'Muon', 'training dynamics'],
                 qualityRank: 7
+            },
+            {
+                name: 'Yang Song',
+                institution: 'Caltech / former OpenAI',
+                homepage: 'https://yang-song.net/',
+                avatar: 'https://github.com/yang-song.png',
+                matches: ['Yang Song', 'yang-song.net'],
+                specialty: 'Visual Generation',
+                focus: ['score-based generative models', 'diffusion theory', 'sampling'],
+                qualityRank: 9
+            },
+            {
+                name: 'Jacob Steinhardt',
+                institution: 'UC Berkeley / Transluce',
+                homepage: 'https://jsteinhardt.stat.berkeley.edu/',
+                avatar: 'https://www.google.com/s2/favicons?domain=jsteinhardt.stat.berkeley.edu&sz=128',
+                matches: ['Jacob Steinhardt', 'jsteinhardt'],
+                specialty: 'How to Research',
+                focus: ['research methodology', 'deliberate practice', 'ML measurement'],
+                qualityRank: 9
+            },
+            {
+                name: 'Terence Tao',
+                institution: 'UCLA',
+                homepage: 'https://terrytao.wordpress.com/',
+                avatar: 'https://github.com/teorth.png',
+                matches: ['Terence Tao', 'terrytao'],
+                specialty: 'How to Research',
+                focus: ['career advice', 'mathematical problem solving', 'partial progress'],
+                qualityRank: 10
+            },
+            {
+                name: 'Victoria Krakovna',
+                institution: 'Google DeepMind',
+                homepage: 'https://vkrakovna.wordpress.com/',
+                avatar: 'https://www.google.com/s2/favicons?domain=vkrakovna.wordpress.com&sz=128',
+                matches: ['Victoria Krakovna', 'vkrakovna'],
+                specialty: 'Trustworthy AI',
+                focus: ['AI safety', 'specification gaming', 'goal misgeneralization'],
+                qualityRank: 8
+            },
+            {
+                name: 'Denny Britz',
+                institution: 'Independent / former Google Brain',
+                homepage: 'https://dennybritz.com/',
+                avatar: 'https://github.com/dennybritz.png',
+                matches: ['Denny Britz', 'dennybritz'],
+                specialty: 'How to Research',
+                focus: ['replication', 'ML engineering', 'independent research'],
+                qualityRank: 8
+            },
+            {
+                name: 'Nick Feamster',
+                institution: 'University of Chicago',
+                homepage: 'https://people.cs.uchicago.edu/~feamster/',
+                avatar: 'https://github.com/feamster.png',
+                matches: ['Nick Feamster', 'noise-lab'],
+                specialty: 'How to Research',
+                focus: ['research taste', 'research training', 'networked systems'],
+                qualityRank: 8
+            },
+            {
+                name: 'Stefano V. Albrecht',
+                institution: 'University of Edinburgh / phd-in-ai.com',
+                homepage: 'https://www.phd-in-ai.com/',
+                avatar: 'https://www.google.com/s2/favicons?domain=phd-in-ai.com&sz=128',
+                matches: ['Stefano V. Albrecht', 'phd-in-ai'],
+                specialty: 'How to Research',
+                focus: ['PhD guidance', 'multi-agent RL', 'research careers'],
+                qualityRank: 7
+            },
+            {
+                name: 'Asankhaya Sharma',
+                institution: 'Patched / CodeLion',
+                homepage: 'https://huggingface.co/codelion',
+                avatar: 'https://github.com/codelion.png',
+                matches: ['Asankhaya Sharma', 'CodeLion'],
+                specialty: 'Foundation Model',
+                focus: ['pretraining data mixing', 'small language models', 'open experiments'],
+                qualityRank: 7
+            },
+            {
+                name: 'Gian Segato',
+                institution: 'Anthropic',
+                homepage: 'https://giansegato.com/',
+                avatar: 'https://www.google.com/s2/favicons?domain=giansegato.com&sz=128',
+                matches: ['Gian Segato'],
+                specialty: 'AI Agents',
+                focus: ['agent evaluations', 'infrastructure noise', 'applied ML products'],
+                qualityRank: 7
+            },
+            {
+                name: 'David Louapre',
+                institution: 'Science Étonnante',
+                homepage: 'https://scienceetonnante.com/',
+                avatar: 'https://github.com/scienceetonnante.png',
+                matches: ['David Louapre', 'dlouapre'],
+                specialty: 'Frontier',
+                focus: ['LLM interpretation', 'science communication', 'community replication'],
+                qualityRank: 7
+            },
+            {
+                name: 'Charles Frye',
+                institution: 'Modal Labs',
+                homepage: 'https://charlesfrye.github.io/',
+                avatar: 'https://github.com/charlesfrye.png',
+                matches: ['Charles Frye'],
+                specialty: 'Efficient AI',
+                focus: ['LLM inference', 'GPU economics', 'developer education'],
+                qualityRank: 7
+            },
+            {
+                name: 'Lei Mao',
+                institution: 'NVIDIA',
+                homepage: 'https://leimao.github.io/',
+                avatar: 'https://github.com/leimao.png',
+                matches: ['Lei Mao', 'leimao'],
+                specialty: 'Efficient AI',
+                focus: ['CUDA optimization', 'systems performance', 'inference engineering'],
+                qualityRank: 7
             }
         ];
 
