@@ -169,6 +169,9 @@
 - [x] **A** · [How Undesired Goals Can Arise with Correct Rewards](https://deepmind.google/blog/how-undesired-goals-can-arise-with-correct-rewards/) — **Google DeepMind**。清楚区分 specification gaming 与 goal misgeneralisation，并给出 RL 和 LLM 的具体例子。
 - [x] **A** · [Deliberative Alignment: Reasoning Enables Safer Language Models](https://openai.com/index/deliberative-alignment/) — **OpenAI**。直接教授安全规范，并通过 SFT 与 RL 训练模型在推理时按规范审议，包含方法和安全评测。
 - [x] **A** · [Simple probes can catch sleeper agents](https://www.anthropic.com/research/probes-catch-sleeper-agents) — Anthropic · 2024
+- [x] **A+** · [Multimodal Neurons in Artificial Neural Networks](https://distill.pub/2021/multimodal-neurons/) — Gabriel Goh et al. / Distill · 2021-03-04
+- [x] **A** · [Recent Frontier Models Are Reward Hacking](https://metr.org/blog/2025-06-05-recent-reward-hacking/) — METR · 2025-06-05
+- [x] **A** · [Safety cases at AISI](https://www.aisi.gov.uk/blog/safety-cases-at-aisi) — Geoffrey Irving / UK AISI · 2024-08
 
 ## Research Craft
 
@@ -196,6 +199,9 @@
 - [x] **A** · [What Data-Centric AI Is Not](https://hazyresearch.stanford.edu/what-data-centric-ai-is-not) — Stanford Hazy Research · 2021
 - [ ] **A+** · [Introducing the Model Card Toolkit for Easier Model Transparency Reporting](https://research.google/blog/introducing-the-model-card-toolkit-for-easier-model-transparency-reporting/) — Google Research · 2020
 - [ ] **A+** · [Data-centric ML benchmarking: Announcing DataPerf’s 2023 challenges](https://research.google/blog/data-centric-ml-benchmarking-announcing-dataperfs-2023-challenges/) — Google Research · 2023
+- [x] **A+** · [Patterns for Building LLM-based Systems & Products](https://eugeneyan.com/writing/llm-patterns/) — Eugene Yan · 2023-07-30
+- [x] **A** · [Fuck You, Show Me The Prompt.](https://hamel.dev/blog/posts/prompt/) — Hamel Husain · 2024-02-14
+- [x] **A+** · [Why Momentum Really Works](https://distill.pub/2017/momentum/) — Gabriel Goh / Distill · 2017-04-04
 
 ## Frontier
 
@@ -252,6 +258,9 @@
 - [x] **A** · [Can AI Scaling Continue Through 2030?](https://epoch.ai/publications/can-ai-scaling-continue-through-2030) — **Epoch AI**。定量分析电力、芯片制造、数据和训练延迟四类约束，是研究规模扩展可行性的高信息密度报告。
 - [x] **A** · [Mistral OCR 4: SOTA OCR for Document Intelligence](https://mistral.ai/news/ocr-4/) — Mistral AI · 2026
 - [ ] **A+** · [Introducing Gemini 3.5 Flash Cyber](https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/) — Google DeepMind · 2026
+- [x] **A+** · [Algorithmic Progress in Language Models](https://epoch.ai/publications/algorithmic-progress-in-language-models) — Epoch AI · 2024-03-12
+- [x] **A** · [How Much Does It Cost to Train Frontier AI Models?](https://epoch.ai/publications/how-much-does-it-cost-to-train-frontier-ai-models) — Epoch AI · 2024-06-03
+- [x] **A+** · [Will We Run Out of Data? Limits of LLM Scaling Based on Human-Generated Data](https://epoch.ai/publications/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data) — Epoch AI · 2024-06-06
 
 ## How to Research
 
@@ -304,6 +313,9 @@
 - [x] **A+** · [How to Read a Paper](https://svr-sk818-web.cl.cam.ac.uk/keshav/publications/htrap.html) — S. Keshav / University of Cambridge · 2007
 - [ ] **A+** · [How to Write a Great Research Paper](https://www.microsoft.com/en-us/research/video/how-to-write-a-great-research-paper-4/) — Simon Peyton Jones / Microsoft Research · 2016
 - [x] **A** · [Take the initiative](https://terrytao.wordpress.com/career-advice/take-the-initiative/) — Terence Tao · 2007
+- [x] **A+** · [How to Do Great Work](https://www.paulgraham.com/greatwork.html) — Paul Graham · 2023-07
+- [x] **A+** · [Augmenting Long-term Memory](https://augmentingcognition.com/ltm.html) — Michael Nielsen · 2018-07
+- [x] **A+** · [Cargo Cult Science](https://calteches.library.caltech.edu/51/2/CargoCult.htm) — Richard P. Feynman · 1974-06
 
 ## 入库顺序
 
