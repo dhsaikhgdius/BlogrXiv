@@ -438,8 +438,7 @@ class BloggersPage {
                 avatar: 'https://www.google.com/s2/favicons?domain=noise-lab.net&sz=128',
                 matches: ['Nick Feamster'],
                 specialty: 'How to Research',
-                focus: ['research methodology', 'PhD training', 'scientific writing'],
-                qualityRank: 8
+                focus: ['research methodology', 'PhD training', 'scientific writing'],                qualityRank: 8
             },
             {
                 name: 'Stefano V. Albrecht',
@@ -529,8 +528,7 @@ class BloggersPage {
                 matches: ['Matt Might'],
                 specialty: 'How to Research',
                 focus: ['PhD guidance', 'research visualization', 'academic careers'],
-                qualityRank: 8
-            }
+                qualityRank: 8            }
         ];
 
         this.init();

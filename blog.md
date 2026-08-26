@@ -322,6 +322,13 @@
 - [x] **A+** · [How to Read a Paper](https://svr-sk818-web.cl.cam.ac.uk/keshav/publications/htrap.html) — S. Keshav / University of Cambridge · 2007
 - [x] **A+** · [How to Write a Great Research Paper](https://www.microsoft.com/en-us/research/video/how-to-write-a-great-research-paper-4/) — Simon Peyton Jones / Microsoft Research · 2016
 - [x] **A** · [Take the initiative](https://terrytao.wordpress.com/career-advice/take-the-initiative/) — Terence Tao · 2007
+- [x] **A+** · [How to Do Great Work](https://www.paulgraham.com/greatwork.html) — Paul Graham · 2023-07。跨领域合并「做出伟大工作」的通用配方：天赋与好奇心匹配的选题、在前沿看见缺口、由好奇心而非计划驱动；格言式长文，需读者自行映射到本领域。
+- [x] **A+** · [10 Tips for Research and a PhD](https://www.ruder.io/10-tips-for-research-and-a-phd/) — Sebastian Ruder · 2020-05-22。刚完成博士时总结的十条习惯：第一天就开始写作、专注一两个项目、敢于冒险、刻意合作、发布代码与博客等长寿产物；面向 ML/NLP 学生。
+- [x] **A+** · [Machine Learning PhD Applications — Everything You Need to Know](https://timdettmers.com/2018/11/26/phd-applications/) — Tim Dettmers · 2018-11-26。用自己的申请数据拆解 ML 博士录取如何加权论文、推荐信与研究匹配；机制针对 2018 年前后北美项目，但优先级排序仍适用。
+- [x] **A+** · [Cargo Cult Science](https://calteches.library.caltech.edu/51/2/CargoCult.htm) — Richard Feynman · 1974-06-14。命名「货物崇拜科学」：具备科学外形却缺乏彻底诚实；Millikan 电子电荷漂移案例是实验者偏差的经典寓言。
+- [x] **A+** · [The Importance of Stupidity in Scientific Research](https://journals.biologists.com/jcs/article/121/11/1771/30038/The-importance-of-stupidity-in-scientific-research) — Martin A. Schwartz / Journal of Cell Science · 2008-06。一页论文式随笔：研究意味着大部分时间处于主动困惑，「高产的愚蠢」是成为科学家的核心心理转变。
+- [x] **A** · [How to Write a Technical Paper](https://homes.cs.washington.edu/~mernst/advice/write-technical-paper.html) — Michael Ernst / University of Washington · 持续更新。观点先行、一段一义、图表设计、命名、回复审稿与反复修订的工作型清单，附真实草稿的前后对照示例。
+- [x] **A+** · [Ten Simple Rules for Structuring Papers](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005619) — Brett Mensh, Konrad Kording / PLOS Computational Biology · 2017-09-28。围绕单一核心贡献的十条结构规则：从句子到全文应用 context-content-conclusion，为时间受限的读者写作。
 
 
 > **跳过说明**： 表示实验室首页、GitHub 组织、新闻索引或 advising 资源页，按 BlogrXiv 规则不入静态语料；单篇 A+ 已优先入库。
