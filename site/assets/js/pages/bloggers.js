@@ -528,7 +528,158 @@ class BloggersPage {
                 matches: ['Matt Might'],
                 specialty: 'How to Research',
                 focus: ['PhD guidance', 'research visualization', 'academic careers'],
-                qualityRank: 8            }
+                qualityRank: 8
+            },
+            {
+                name: 'kalomaze',
+                institution: "Independent researcher / kalomaze's kalomazing blog",
+                homepage: 'https://kalomaze.bearblog.dev/blog/',
+                avatar: 'https://github.com/kalomaze.png',
+                matches: ['kalomaze'],
+                specialty: 'Trustworthy AI',
+                focus: ['GRPO', 'RL post-training', 'reward and sampling design'],
+                qualityRank: 8
+            },
+            {
+                name: 'Chip Huyen',
+                institution: 'Author of AI Engineering / Designing Machine Learning Systems',
+                homepage: 'https://huyenchip.com/blog/',
+                avatar: 'https://github.com/chiphuyen.png',
+                matches: ['Chip Huyen'],
+                specialty: 'Research Craft',
+                focus: ['ML systems design', 'AI engineering', 'production pitfalls'],
+                qualityRank: 9
+            },
+            {
+                name: 'Song Han',
+                institution: 'MIT HAN Lab / NVIDIA Efficient AI',
+                homepage: 'https://hanlab.mit.edu/',
+                avatar: 'https://github.com/songhan.png',
+                matches: ['Song Han'],
+                specialty: 'Visual Generation',
+                focus: ['efficient video generation', 'inference systems', 'hardware-aware ML'],
+                qualityRank: 8
+            },
+            {
+                name: 'Hugging Face',
+                institution: 'Hugging Face Blog / Open-source ML',
+                homepage: 'https://huggingface.co/blog',
+                avatar: 'https://github.com/huggingface.png',
+                matches: ['Hugging Face'],
+                specialty: 'Efficient AI',
+                focus: ['open models', 'training playbooks', 'inference optimization'],
+                qualityRank: 9
+            },
+            {
+                name: 'Qwen Team',
+                institution: 'Alibaba Qwen',
+                homepage: 'https://qwenlm.github.io/blog/',
+                avatar: 'https://github.com/QwenLM.png',
+                matches: ['Qwen Team', 'qwenlm.github.io'],
+                specialty: 'Multimodal Model',
+                focus: ['vision-language models', 'omni-modal models', 'image generation'],
+                qualityRank: 8
+            },
+            {
+                name: 'Ai2',
+                institution: 'Allen Institute for AI',
+                homepage: 'https://allenai.org/blog',
+                avatar: 'https://github.com/allenai.png',
+                matches: ['allenai.org', 'Ai2'],
+                specialty: 'Foundation Model',
+                focus: ['fully open models', 'post-training recipes', 'evaluation infrastructure'],
+                qualityRank: 9
+            },
+            {
+                name: 'Stanford Hazy Research',
+                institution: 'Stanford University / Chris Ré lab',
+                homepage: 'https://hazyresearch.stanford.edu/blog',
+                avatar: 'https://github.com/HazyResearch.png',
+                matches: ['Hazy Research', 'hazyresearch.stanford.edu'],
+                specialty: 'Efficient AI',
+                focus: ['linear attention', 'GPU kernels', 'data-centric AI'],
+                qualityRank: 9
+            },
+            {
+                name: 'Mistral AI',
+                institution: 'Mistral AI',
+                homepage: 'https://mistral.ai/news',
+                avatar: 'https://github.com/mistralai.png',
+                matches: ['Mistral AI'],
+                specialty: 'Multimodal Model',
+                focus: ['open-weight models', 'multimodal models', 'document intelligence'],
+                qualityRank: 7
+            },
+            {
+                name: 'Thinking Machines Lab',
+                institution: 'Thinking Machines Lab / Connectionism',
+                homepage: 'https://thinkingmachines.ai/blog/',
+                avatar: 'https://www.google.com/s2/favicons?domain=thinkingmachines.ai&sz=128',
+                matches: ['Thinking Machines Lab', 'thinkingmachines.ai'],
+                specialty: 'Foundation Model',
+                focus: ['open-weights models', 'deterministic inference', 'fine-tuning infrastructure'],
+                qualityRank: 8
+            },
+            {
+                name: 'Epoch AI',
+                institution: 'Epoch AI Research',
+                homepage: 'https://epoch.ai/blog',
+                avatar: 'https://www.google.com/s2/favicons?domain=epoch.ai&sz=128',
+                matches: ['Epoch AI', 'epoch.ai'],
+                specialty: 'Frontier',
+                focus: ['compute trends', 'AI forecasting', 'data center economics'],
+                qualityRank: 8
+            },
+            {
+                name: 'METR',
+                institution: 'Model Evaluation & Threat Research',
+                homepage: 'https://metr.org/blog/',
+                avatar: 'https://www.google.com/s2/favicons?domain=metr.org&sz=128',
+                matches: ['metr.org'],
+                specialty: 'Trustworthy AI',
+                focus: ['autonomy evaluations', 'time horizon measurement', 'frontier risk reports'],
+                qualityRank: 8
+            },
+            {
+                name: 'Physical Intelligence',
+                institution: 'Physical Intelligence (π)',
+                homepage: 'https://www.pi.website/blog',
+                avatar: 'https://www.google.com/s2/favicons?domain=pi.website&sz=128',
+                matches: ['Physical Intelligence', 'pi.website'],
+                specialty: 'World Model',
+                focus: ['vision-language-action models', 'generalist robot policies', 'open-world generalization'],
+                qualityRank: 8
+            },
+            {
+                name: 'World Labs',
+                institution: 'World Labs / Spatial Intelligence',
+                homepage: 'https://www.worldlabs.ai/blog',
+                avatar: 'https://www.google.com/s2/favicons?domain=worldlabs.ai&sz=128',
+                matches: ['World Labs', 'worldlabs.ai'],
+                specialty: 'World Model',
+                focus: ['3D world generation', 'spatial intelligence', 'real-time rendering'],
+                qualityRank: 7
+            },
+            {
+                name: 'Apollo Research',
+                institution: 'Apollo Research',
+                homepage: 'https://www.apolloresearch.ai/blog',
+                avatar: 'https://www.google.com/s2/favicons?domain=apolloresearch.ai&sz=128',
+                matches: ['Apollo Research', 'apolloresearch.ai'],
+                specialty: 'Trustworthy AI',
+                focus: ['scheming evaluations', 'loss-of-control preparedness', 'interpretability for safety'],
+                qualityRank: 7
+            },
+            {
+                name: 'UK AI Security Institute',
+                institution: 'UK Government / AISI',
+                homepage: 'https://www.aisi.gov.uk/',
+                avatar: 'https://www.google.com/s2/favicons?domain=aisi.gov.uk&sz=128',
+                matches: ['AI Security Institute', 'aisi.gov.uk'],
+                specialty: 'Trustworthy AI',
+                focus: ['frontier model evaluations', 'control red-teaming', 'safety cases'],
+                qualityRank: 7
+            }
         ];
 
         this.init();

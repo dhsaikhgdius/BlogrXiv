@@ -16374,8 +16374,7 @@ class BlogXiv {
                 matches: ['ByteDance Seed'],
                 specialty: 'Multimodal Model',
                 focus: ['unified multimodal models', 'vision-language', 'video generation'],
-                qualityRank: 7
-            }
+                qualityRank: 7            }
         ];
     }
 
