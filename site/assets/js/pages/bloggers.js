@@ -350,6 +350,186 @@ class BloggersPage {
                 specialty: 'Visual Generation',
                 focus: ['video generation', 'general world models', 'creative tooling'],
                 qualityRank: 7
+            },
+            {
+                name: 'Yang Song',
+                institution: 'OpenAI / Caltech (former)',
+                homepage: 'https://yang-song.net/',
+                avatar: 'https://github.com/yang-song.png',
+                matches: ['Yang Song'],
+                specialty: 'Visual Generation',
+                focus: ['score-based modeling', 'diffusion', 'generative modeling theory'],
+                qualityRank: 9
+            },
+            {
+                name: 'Victoria Krakovna',
+                institution: 'Google DeepMind',
+                homepage: 'https://vkrakovna.wordpress.com/',
+                avatar: 'https://www.google.com/s2/favicons?domain=deepmind.google&sz=128',
+                matches: ['Victoria Krakovna'],
+                specialty: 'Trustworthy AI',
+                focus: ['specification gaming', 'reward hacking', 'AI safety taxonomy'],
+                qualityRank: 9
+            },
+            {
+                name: 'Jacob Steinhardt',
+                institution: 'UC Berkeley',
+                homepage: 'https://www.stanford.edu/~jsteinhardt/',
+                avatar: 'https://www.google.com/s2/favicons?domain=berkeley.edu&sz=128',
+                matches: ['Jacob Steinhardt'],
+                specialty: 'How to Research',
+                focus: ['research strategy', 'advising', 'robust ML'],
+                qualityRank: 9
+            },
+            {
+                name: 'Denny Britz',
+                institution: 'Independent / formerly Google Brain',
+                homepage: 'https://dennybritz.com/',
+                avatar: 'https://github.com/dennybritz.png',
+                matches: ['Denny Britz'],
+                specialty: 'Research Craft',
+                focus: ['replication', 'RL research', 'paper reading'],
+                qualityRank: 8
+            },
+            {
+                name: 'Asankhaya Sharma',
+                institution: 'Hugging Face / CodeLion',
+                homepage: 'https://huggingface.co/codelion',
+                avatar: 'https://github.com/codelion.png',
+                matches: ['Asankhaya Sharma', 'CodeLion'],
+                specialty: 'Foundation Model',
+                focus: ['pretraining mix', 'data curation', 'small-scale scaling laws'],
+                qualityRank: 8
+            },
+            {
+                name: 'David Louapre',
+                institution: 'Science Etonnante / Hugging Face community',
+                homepage: 'https://huggingface.co/dlouapre',
+                avatar: 'https://github.com/dlouapre.png',
+                matches: ['David Louapre'],
+                specialty: 'Trustworthy AI',
+                focus: ['model internals', 'interpretability', 'community research'],
+                qualityRank: 7
+            },
+            {
+                name: 'Charles Frye',
+                institution: 'Modal',
+                homepage: 'https://modal.com/',
+                avatar: 'https://www.google.com/s2/favicons?domain=modal.com&sz=128',
+                matches: ['Charles Frye'],
+                specialty: 'Efficient AI',
+                focus: ['LLM serving', 'speculative decoding', 'production inference'],
+                qualityRank: 8
+            },
+            {
+                name: 'Lei Mao',
+                institution: 'Independent systems engineer',
+                homepage: 'https://leimao.github.io/',
+                avatar: 'https://github.com/leimao.png',
+                matches: ['Lei Mao'],
+                specialty: 'Efficient AI',
+                focus: ['systems profiling', 'batching', 'GPU optimization'],
+                qualityRank: 7
+            },
+            {
+                name: 'Nick Feamster',
+                institution: 'University of Chicago',
+                homepage: 'https://noise-lab.net/',
+                avatar: 'https://www.google.com/s2/favicons?domain=noise-lab.net&sz=128',
+                matches: ['Nick Feamster'],
+                specialty: 'How to Research',
+                focus: ['research methodology', 'PhD training', 'scientific writing'],
+                qualityRank: 8
+            },
+            {
+                name: 'Stefano V. Albrecht',
+                institution: 'University of Edinburgh / phd-in-ai.com',
+                homepage: 'https://www.phd-in-ai.com/',
+                avatar: 'https://www.google.com/s2/favicons?domain=phd-in-ai.com&sz=128',
+                matches: ['Stefano V. Albrecht', 'Stefano Albrecht'],
+                specialty: 'How to Research',
+                focus: ['graduate advising', 'AI research careers', 'lab culture'],
+                qualityRank: 8
+            },
+            {
+                name: 'Simon Peyton Jones',
+                institution: 'Microsoft Research',
+                homepage: 'https://www.microsoft.com/en-us/research/people/simonpj/',
+                avatar: 'https://www.google.com/s2/favicons?domain=microsoft.com&sz=128',
+                matches: ['Simon Peyton Jones'],
+                specialty: 'How to Research',
+                focus: ['paper writing', 'research talks', 'academic communication'],
+                qualityRank: 9
+            },
+            {
+                name: 'Terence Tao',
+                institution: 'UCLA / What\'s new',
+                homepage: 'https://terrytao.wordpress.com/',
+                avatar: 'https://www.google.com/s2/favicons?domain=terrytao.wordpress.com&sz=128',
+                matches: ['Terence Tao'],
+                specialty: 'How to Research',
+                focus: ['research taste', 'problem solving', 'mathematical research practice'],
+                qualityRank: 9
+            },
+            {
+                name: 'Michael Nielsen',
+                institution: 'Independent / quantum computing historian',
+                homepage: 'https://michaelnielsen.org/',
+                avatar: 'https://www.google.com/s2/favicons?domain=michaelnielsen.org&sz=128',
+                matches: ['Michael Nielsen'],
+                specialty: 'How to Research',
+                focus: ['effective research', 'open science', 'scientific communication'],
+                qualityRank: 8
+            },
+            {
+                name: 'John Schulman',
+                institution: 'Thinking Machines Lab / former OpenAI',
+                homepage: 'http://joschu.net/blog/',
+                avatar: 'https://www.google.com/s2/favicons?domain=joschu.net&sz=128',
+                matches: ['John Schulman', 'joschu.net'],
+                specialty: 'How to Research',
+                focus: ['ML research methodology', 'reproducibility', 'research taste'],
+                qualityRank: 8
+            },
+            {
+                name: 'Gian Segato',
+                institution: 'Anthropic Engineering',
+                homepage: 'https://www.anthropic.com/engineering',
+                avatar: 'https://www.google.com/s2/favicons?domain=anthropic.com&sz=128',
+                matches: ['Gian Segato'],
+                specialty: 'AI Agents',
+                focus: ['agent evaluations', 'infrastructure noise', 'coding agents'],
+                qualityRank: 8
+            },
+            {
+                name: 'Colin Raffel',
+                institution: 'Hugging Face / UNC Chapel Hill',
+                homepage: 'https://colinraffel.com/',
+                avatar: 'https://github.com/colinraffel.png',
+                matches: ['Colin Raffel'],
+                specialty: 'Frontier',
+                focus: ['scaling outlook', 'open models', 'research commentary'],
+                qualityRank: 7
+            },
+            {
+                name: 'Jason Wei',
+                institution: 'OpenAI / former Google Brain',
+                homepage: 'https://www.jasonwei.net/',
+                avatar: 'https://www.google.com/s2/favicons?domain=jasonwei.net&sz=128',
+                matches: ['Jason Wei'],
+                specialty: 'How to Research',
+                focus: ['AI research practice', 'chain-of-thought', 'reasoning models'],
+                qualityRank: 8
+            },
+            {
+                name: 'Matt Might',
+                institution: 'University of Alabama at Birmingham',
+                homepage: 'https://matt.might.net/',
+                avatar: 'https://www.google.com/s2/favicons?domain=matt.might.net&sz=128',
+                matches: ['Matt Might'],
+                specialty: 'How to Research',
+                focus: ['PhD guidance', 'research visualization', 'academic careers'],
+                qualityRank: 8
             }
         ];
 
