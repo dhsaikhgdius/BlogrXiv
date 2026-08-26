@@ -185,6 +185,9 @@
 - [x] **A+** · [Weak-to-Strong Generalization](https://openai.com/index/weak-to-strong-generalization/) — OpenAI Superalignment · 2023-12-14。用 GPT-2 级弱监督者对齐 GPT-4，验证 weak-to-strong 泛化作为对齐超人类模型的可实验路径。
 - [x] **A+** · [Core Views on AI Safety: When, Why, What, and How](https://www.anthropic.com/news/core-views-on-ai-safety) — Anthropic · 2023-03-08。以乐观/中性/悲观三种情景组合安全研究组合，是理解 Anthropic 安全策略的基石文章。
 - [x] **A+** · [Detecting Misbehavior in Frontier Reasoning Models](https://openai.com/index/chain-of-thought-monitoring/) — OpenAI · 2025-03-10。展示 CoT 监控可捕捉 reward hacking，且直接优化 CoT 观感会教模型隐藏意图而非停止违规。
+- [x] **A+** · [Multimodal Neurons in Artificial Neural Networks](https://distill.pub/2021/multimodal-neurons/) — Gabriel Goh et al. / Distill · 2021-03-04
+- [x] **A** · [Recent Frontier Models Are Reward Hacking](https://metr.org/blog/2025-06-05-recent-reward-hacking/) — METR · 2025-06-05
+- [x] **A** · [Safety cases at AISI](https://www.aisi.gov.uk/blog/safety-cases-at-aisi) — Geoffrey Irving / UK AISI · 2024-08
 
 ## Research Craft
 
@@ -212,6 +215,9 @@
 - [x] **A** · [What Data-Centric AI Is Not](https://hazyresearch.stanford.edu/what-data-centric-ai-is-not) — Stanford Hazy Research · 2021
 - [x] **A+** · [Introducing the Model Card Toolkit for Easier Model Transparency Reporting](https://research.google/blog/introducing-the-model-card-toolkit-for-easier-model-transparency-reporting/) — Google Research · 2020
 - [x] **A+** · [Data-centric ML benchmarking: Announcing DataPerf’s 2023 challenges](https://research.google/blog/data-centric-ml-benchmarking-announcing-dataperfs-2023-challenges/) — Google Research · 2023
+- [x] **A+** · [Patterns for Building LLM-based Systems & Products](https://eugeneyan.com/writing/llm-patterns/) — Eugene Yan · 2023-07-30
+- [x] **A** · [Fuck You, Show Me The Prompt.](https://hamel.dev/blog/posts/prompt/) — Hamel Husain · 2024-02-14
+- [x] **A+** · [Why Momentum Really Works](https://distill.pub/2017/momentum/) — Gabriel Goh / Distill · 2017-04-04
 
 ## Frontier
 
@@ -270,6 +276,9 @@
 - [x] **A+** · [Introducing Gemini 3.5 Flash Cyber](https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/) — Google DeepMind · 2026
 - [x] **A+** · [FunSearch: Making New Discoveries in Mathematical Sciences Using Large Language Models](https://deepmind.google/discover/blog/funsearch-making-new-discoveries-in-mathematical-sciences-using-large-language-models/) — Google DeepMind · 2023-12-14。LLM 与自动评估器组成进化回路，在 cap set 问题上取得首个 LLM 驱动的数学新构造。
 - [x] **A+** · [The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery](https://sakana.ai/ai-scientist/) — Sakana AI · 2024-08-13。端到端自动化想法生成、实验、写作与自动评审，并坦率讨论失败模式，是研究自动化的标志性文章。
+- [x] **A+** · [Algorithmic Progress in Language Models](https://epoch.ai/publications/algorithmic-progress-in-language-models) — Epoch AI · 2024-03-12
+- [x] **A** · [How Much Does It Cost to Train Frontier AI Models?](https://epoch.ai/publications/how-much-does-it-cost-to-train-frontier-ai-models) — Epoch AI · 2024-06-03
+- [x] **A+** · [Will We Run Out of Data? Limits of LLM Scaling Based on Human-Generated Data](https://epoch.ai/publications/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data) — Epoch AI · 2024-06-06
 
 ## How to Research
 
@@ -330,8 +339,7 @@
 - [x] **A** · [How to Write a Technical Paper](https://homes.cs.washington.edu/~mernst/advice/write-technical-paper.html) — Michael Ernst / University of Washington · 持续更新。观点先行、一段一义、图表设计、命名、回复审稿与反复修订的工作型清单，附真实草稿的前后对照示例。
 - [x] **A+** · [Ten Simple Rules for Structuring Papers](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005619) — Brett Mensh, Konrad Kording / PLOS Computational Biology · 2017-09-28。围绕单一核心贡献的十条结构规则：从句子到全文应用 context-content-conclusion，为时间受限的读者写作。
 
-
-> **跳过说明**： 表示实验室首页、GitHub 组织、新闻索引或 advising 资源页，按 BlogrXiv 规则不入静态语料；单篇 A+ 已优先入库。
+- [x] **A+** · [Augmenting Long-term Memory](https://augmentingcognition.com/ltm.html) — Michael Nielsen · 2018-07
 
 > **跳过说明**：`- [skip]` 表示实验室首页、GitHub 组织、新闻索引或 advising 资源页，按 BlogrXiv 规则不入静态语料；单篇 A+ 已优先入库。
 
